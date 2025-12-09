@@ -1,0 +1,16 @@
+[
+  {
+    "id": "d1",
+    "language": "python",
+    "prompt": "Fix the function to print Hello World",
+    "starter_code": "print('Hello World')",
+    "expected_output": "Hello World"
+  },
+  {
+    "id": "d2",
+    "language": "c",
+    "prompt": "Fix C program to print 42",
+    "starter_code": "#include <stdio.h>\nint main(){ printf(\"42\"); return 0;}",
+    "expected_output": "42"
+  }
+]

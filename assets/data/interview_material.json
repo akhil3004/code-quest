@@ -1,0 +1,15 @@
+[
+  {
+    "topic": "Operating Systems",
+    "items": [
+      {"question": "What is a process?", "answer": "An instance of a program in execution."},
+      {"question": "What is a thread?", "answer": "A lightweight process that shares memory."}
+    ]
+  },
+  {
+    "topic": "Data Structures",
+    "items": [
+      {"question": "Explain a hash table.", "answer": "Stores key-value pairs with fast lookup."}
+    ]
+  }
+]
