@@ -3,8 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 
 class XPService extends ChangeNotifier {
-  final _db = FirebaseFirestore.instance;
-  final _auth = FirebaseAuth.instance;
 
   int _xp = 0;
   int get xp => _xp;
@@ -12,18 +10,18 @@ class XPService extends ChangeNotifier {
   String get title => titleForLevel(level);
 
   Future<void> load() async {
-    final user = _auth.currentUser;
+    final user = FirebaseAuth.instance.currentUser;
     if (user == null) return;
-    final snap = await _db.collection('users').doc(user.uid).get();
+    final snap = await FirebaseFirestore.instance.collection('users').doc(user.uid).get();
     _xp = (snap.data()?['xp'] ?? 0) as int;
     notifyListeners();
   }
 
   Future<void> addXP(int amount) async {
-    final user = _auth.currentUser;
+    final user = FirebaseAuth.instance.currentUser;
     if (user == null) return;
-    final docRef = _db.collection('users').doc(user.uid);
-    await _db.runTransaction((tx) async {
+    final docRef = FirebaseFirestore.instance.collection('users').doc(user.uid);
+    await FirebaseFirestore.instance.runTransaction((tx) async {
       final snap = await tx.get(docRef);
       final currentXP = (snap.data()?['xp'] ?? 0) as int;
       final newXP = currentXP + amount;

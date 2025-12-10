@@ -1,0 +1,8 @@
+[
+  {
+    "id": "dsa_l1_q1",
+    "question": "In-order traversal of BST gives:",
+    "options": ["Random order", "Sorted order", "Reverse order", "Level order"],
+    "correctIndex": 1
+  }
+]

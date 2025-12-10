@@ -1,0 +1,14 @@
+[
+  {
+    "id": "os_l1_q1",
+    "question": "Which is not a scheduling algorithm?",
+    "options": ["FCFS", "Round Robin", "SSTF", "Binary Search"],
+    "correctIndex": 3
+  },
+  {
+    "id": "os_l1_q2",
+    "question": "Page replacement algorithm example?",
+    "options": ["LRU", "DFS", "Dijkstra", "Prim"],
+    "correctIndex": 0
+  }
+]

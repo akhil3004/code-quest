@@ -1,0 +1,15 @@
+[
+  {
+    "topic": "Percentages",
+    "questions": [
+      { "question": "What is 20% of 150?", "answer": "30" },
+      { "question": "Increase 200 by 15%", "answer": "230" }
+    ]
+  },
+  {
+    "topic": "Simple Interest",
+    "questions": [
+      { "question": "SI on 1000 at 10% for 2 years?", "answer": "200" }
+    ]
+  }
+]

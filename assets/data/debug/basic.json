@@ -1,0 +1,9 @@
+[
+  {
+    "id": "b1",
+    "language": "python",
+    "prompt": "Print 1 to 3 on separate lines",
+    "starter_code": "for i in range(1,4): print(i)",
+    "expected_output": "1\n2\n3"
+  }
+]

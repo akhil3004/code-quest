@@ -1,0 +1,8 @@
+[
+  {
+    "id": "oop_l1_q1",
+    "question": "Which is not an OOP concept?",
+    "options": ["Encapsulation", "Polymorphism", "Abstraction", "Normalization"],
+    "correctIndex": 3
+  }
+]

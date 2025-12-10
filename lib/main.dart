@@ -9,8 +9,14 @@ import 'screens/home_screen.dart';
 import 'screens/mcq_screen.dart';
 import 'screens/interview_screen.dart';
 import 'screens/debug_screen.dart';
+import 'screens/debug_categories_screen.dart';
 import 'screens/leaderboard_screen.dart';
 import 'screens/profile_screen.dart';
+import 'screens/mcq_subjects_screen.dart';
+import 'screens/mcq_levels_screen.dart';
+import 'screens/mcq_questions_screen.dart';
+import 'screens/interview_pdfs_screen.dart';
+import 'screens/aptitude_screen.dart';
 import 'services/auth_service.dart';
 import 'services/xp_service.dart';
 
@@ -47,8 +53,14 @@ class CodeQuestApp extends StatelessWidget {
           '/signup': (_) => const SignupScreen(),
           '/home': (_) => const HomeScreen(),
           '/mcq': (_) => const McqScreen(),
+          '/mcqSubjects': (_) => const McqSubjectsScreen(),
+          '/mcqLevels': (_) => const McqLevelsScreen(),
+          '/mcqQuestions': (_) => const McqQuestionsScreen(),
           '/interview': (_) => const InterviewScreen(),
+          '/interviewPdfs': (_) => const InterviewPdfsScreen(),
+          '/aptitude': (_) => const AptitudeScreen(),
           '/debug': (_) => const DebugScreen(),
+          '/debugCategories': (_) => const DebugCategoriesScreen(),
           '/leaderboard': (_) => const LeaderboardScreen(),
           '/profile': (_) => const ProfileScreen(),
         },

@@ -1,0 +1,8 @@
+[
+  {
+    "id": "db_l1_q1",
+    "question": "SQL is:",
+    "options": ["Procedural", "Declarative", "Functional", "Object-oriented"],
+    "correctIndex": 1
+  }
+]

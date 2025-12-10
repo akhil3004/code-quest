@@ -1,0 +1,8 @@
+[
+  {
+    "id": "cd_l1_q1",
+    "question": "Lexer performs:",
+    "options": ["Parsing", "Tokenization", "Code generation", "Optimization"],
+    "correctIndex": 1
+  }
+]

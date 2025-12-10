@@ -16,7 +16,7 @@ class DebugScreen extends StatefulWidget {
 
 class _DebugScreenState extends State<DebugScreen> {
   List<DebugQuestion> _questions = [];
-  int _index = 0;
+  final int _index = 0;
   final _controller = TextEditingController();
   String? _result;
   bool _running = false;
