@@ -31,12 +31,12 @@ flutter:
     - assets/data/debug_questions.json
     - assets/data/aptitude_questions.json
     - assets/data/debug/basic.json
-    - assets/data/mcq/os/level1.json
-    - assets/data/mcq/dbms/level1.json
-    - assets/data/mcq/cn/level1.json
-    - assets/data/mcq/oop/level1.json
-    - assets/data/mcq/dsa/level1.json
-    - assets/data/mcq/cd/level1.json
+    - assets/data/mcq/os/
+    - assets/data/mcq/dbms/
+    - assets/data/mcq/cn/
+    - assets/data/mcq/oop/
+    - assets/data/mcq/dsa/
+    - assets/data/mcq/cd/
     - assets/interview_pdfs/sample.pdf
 
 dependency_overrides:

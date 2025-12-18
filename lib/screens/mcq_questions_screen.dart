@@ -40,13 +40,19 @@ class _McqQuestionsScreenState extends State<McqQuestionsScreen> {
       final path = 'assets/data/mcq/$subject/level$level.json';
       final jsonStr = await rootBundle.loadString(path);
       final data = jsonDecode(jsonStr) as List<dynamic>;
+      final list = data.map((e) => MCQQuestion.fromJson(e as Map<String, dynamic>)).toList();
       setState(() {
-        _questions = data.map((e) => MCQQuestion.fromJson(e as Map<String, dynamic>)).toList();
+        _questions = list;
+        if (_questions.isEmpty) {
+          _feedback = 'No questions found for this level.';
+        } else {
+          _feedback = 'Loaded ${_questions.length} questions.';
+        }
       });
     } catch (e) {
       setState(() {
         _questions = [];
-        _feedback = 'No questions found for this level.';
+        _feedback = 'Failed to load questions: $e';
       });
     }
   }

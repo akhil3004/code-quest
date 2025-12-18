@@ -1,0 +1,62 @@
+[
+  {
+    "id": "os_l2_q1",
+    "question": "What is a process?",
+    "options": ["Program in execution", "Program in memory", "Compiled code", "Thread"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l2_q2",
+    "question": "Which OS component manages processes?",
+    "options": ["Memory manager", "Process scheduler", "File manager", "I/O manager"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l2_q3",
+    "question": "Which state comes after Ready?",
+    "options": ["New", "Waiting", "Running", "Terminated"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l2_q4",
+    "question": "Which state means process is waiting for I/O?",
+    "options": ["Ready", "Waiting", "Running", "New"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l2_q5",
+    "question": "PCB stands for?",
+    "options": ["Process Control Block", "Process Command Block", "Program Control Block", "Primary Control Block"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l2_q6",
+    "question": "Which scheduling is non-preemptive?",
+    "options": ["Round Robin", "SJF", "Priority", "FCFS"],
+    "correctIndex": 3
+  },
+  {
+    "id": "os_l2_q7",
+    "question": "Which scheduling algorithm uses time quantum?",
+    "options": ["FCFS", "SJF", "Round Robin", "Priority"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l2_q8",
+    "question": "Context switching occurs when?",
+    "options": ["Process starts", "Process ends", "CPU switches process", "I/O completes"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l2_q9",
+    "question": "Which queue holds ready processes?",
+    "options": ["Waiting queue", "Job queue", "Ready queue", "Device queue"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l2_q10",
+    "question": "Which scheduling is best for batch systems?",
+    "options": ["Round Robin", "FCFS", "Priority", "Multilevel"],
+    "correctIndex": 1
+  }
+]

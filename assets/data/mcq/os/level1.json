@@ -1,14 +1,62 @@
 [
   {
     "id": "os_l1_q1",
-    "question": "Which is not a scheduling algorithm?",
-    "options": ["FCFS", "Round Robin", "SSTF", "Binary Search"],
-    "correctIndex": 3
+    "question": "What is an operating system?",
+    "options": ["Compiler", "Hardware", "System software", "Application software"],
+    "correctIndex": 2
   },
   {
     "id": "os_l1_q2",
-    "question": "Page replacement algorithm example?",
-    "options": ["LRU", "DFS", "Dijkstra", "Prim"],
+    "question": "Which of the following is NOT an OS?",
+    "options": ["Windows", "Linux", "Oracle", "macOS"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l1_q3",
+    "question": "Main function of OS is to?",
+    "options": ["Run programs", "Manage hardware", "Provide user interface", "All of the above"],
+    "correctIndex": 3
+  },
+  {
+    "id": "os_l1_q4",
+    "question": "Which OS is open-source?",
+    "options": ["Windows", "Linux", "macOS", "DOS"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l1_q5",
+    "question": "Which OS is used in mobile phones?",
+    "options": ["Android", "Windows XP", "Ubuntu Server", "RedHat"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l1_q6",
+    "question": "Who interacts directly with the hardware?",
+    "options": ["User", "Compiler", "Operating System", "Application"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l1_q7",
+    "question": "Which OS feature allows multitasking?",
+    "options": ["Scheduling", "Paging", "Fragmentation", "Deadlock"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l1_q8",
+    "question": "Which OS loads first when computer starts?",
+    "options": ["Application", "Shell", "Kernel", "Browser"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l1_q9",
+    "question": "Which is an example of real-time OS?",
+    "options": ["Windows", "Linux", "RTOS", "macOS"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l1_q10",
+    "question": "Which OS is used in embedded systems?",
+    "options": ["RTOS", "DOS", "Windows", "Ubuntu"],
     "correctIndex": 0
   }
 ]
