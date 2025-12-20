@@ -1,0 +1,12 @@
+[
+  {"id":"apt_ver_l1_q1","question":"Plural of 'child'","options":["childs","children","childes","child"],"correctIndex":1},
+  {"id":"apt_ver_l1_q2","question":"Fill: I ___ to school","options":["go","goes","gone","going"],"correctIndex":0},
+  {"id":"apt_ver_l1_q3","question":"Past of 'eat'","options":["ate","eaten","eat","eated"],"correctIndex":0},
+  {"id":"apt_ver_l1_q4","question":"Antonym of 'hot'","options":["warm","cold","heat","cool"],"correctIndex":1},
+  {"id":"apt_ver_l1_q5","question":"Synonym of 'happy'","options":["sad","joyful","angry","small"],"correctIndex":1},
+  {"id":"apt_ver_l1_q6","question":"Article before 'apple'","options":["a","an","the","none"],"correctIndex":1},
+  {"id":"apt_ver_l1_q7","question":"Spell correctly","options":["recieve","receive","recive","receeve"],"correctIndex":1},
+  {"id":"apt_ver_l1_q8","question":"Choose preposition: on, in, at. We met ___ 5 pm","options":["on","in","at","none"],"correctIndex":2},
+  {"id":"apt_ver_l1_q9","question":"Comparative of 'good'","options":["gooder","better","best","more good"],"correctIndex":1},
+  {"id":"apt_ver_l1_q10","question":"Opposite of 'begin'","options":["start","commence","finish","open"],"correctIndex":2}
+]

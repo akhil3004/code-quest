@@ -37,6 +37,9 @@ flutter:
     - assets/data/mcq/oop/
     - assets/data/mcq/dsa/
     - assets/data/mcq/cd/
+    - assets/data/aptitude/quantitative/
+    - assets/data/aptitude/logical/
+    - assets/data/aptitude/verbal/
     - assets/interview_pdfs/sample.pdf
 
 dependency_overrides:

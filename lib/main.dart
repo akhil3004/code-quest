@@ -17,6 +17,9 @@ import 'screens/mcq_levels_screen.dart';
 import 'screens/mcq_questions_screen.dart';
 import 'screens/interview_pdfs_screen.dart';
 import 'screens/aptitude_screen.dart';
+import 'screens/aptitude_categories_screen.dart';
+import 'screens/aptitude_levels_screen.dart';
+import 'screens/aptitude_questions_screen.dart';
 import 'services/auth_service.dart';
 import 'services/xp_service.dart';
 
@@ -59,6 +62,9 @@ class CodeQuestApp extends StatelessWidget {
           '/interview': (_) => const InterviewScreen(),
           '/interviewPdfs': (_) => const InterviewPdfsScreen(),
           '/aptitude': (_) => const AptitudeScreen(),
+          '/aptitudeCategories': (_) => const AptitudeCategoriesScreen(),
+          '/aptitudeLevels': (_) => const AptitudeLevelsScreen(),
+          '/aptitudeQuestions': (_) => const AptitudeQuestionsScreen(),
           '/debug': (_) => const DebugScreen(),
           '/debugCategories': (_) => const DebugCategoriesScreen(),
           '/leaderboard': (_) => const LeaderboardScreen(),

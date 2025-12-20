@@ -1,0 +1,12 @@
+[
+  {"id":"apt_log_l1_q1","question":"Next in series: 2,4,6,?","options":["7","8","9","10"],"correctIndex":1},
+  {"id":"apt_log_l1_q2","question":"Opposite of TRUE","options":["FALSE","MAYBE","YES","NO"],"correctIndex":0},
+  {"id":"apt_log_l1_q3","question":"If A>B and B>C then","options":["A<C","A>B","B>A","C>A"],"correctIndex":1},
+  {"id":"apt_log_l1_q4","question":"Find odd one: Cat, Dog, Cow, Car","options":["Cat","Dog","Cow","Car"],"correctIndex":3},
+  {"id":"apt_log_l1_q5","question":"X is brother of Y. Y is sister of Z. Then Z is","options":["Brother of X","Sister of X","Sibling of X","Parent of X"],"correctIndex":2},
+  {"id":"apt_log_l1_q6","question":"If 1=3, 2=3 then 3=?","options":["3","2","1","0"],"correctIndex":0},
+  {"id":"apt_log_l1_q7","question":"If today is Monday, 3 days later is","options":["Thursday","Friday","Tuesday","Wednesday"],"correctIndex":3},
+  {"id":"apt_log_l1_q8","question":"Select synonym: Fast","options":["Quick","Slow","Late","Small"],"correctIndex":0},
+  {"id":"apt_log_l1_q9","question":"Complete: A,E,I,?","options":["O","U","Y","AA"],"correctIndex":0},
+  {"id":"apt_log_l1_q10","question":"Binary of 2","options":["10","01","11","00"],"correctIndex":0}
+]
