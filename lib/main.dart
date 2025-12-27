@@ -20,6 +20,9 @@ import 'screens/aptitude_screen.dart';
 import 'screens/aptitude_categories_screen.dart';
 import 'screens/aptitude_levels_screen.dart';
 import 'screens/aptitude_questions_screen.dart';
+import 'screens/achievements_screen.dart';
+import 'services/achievement_service.dart';
+import 'services/title_service.dart';
 import 'services/auth_service.dart';
 import 'services/xp_service.dart';
 
@@ -43,6 +46,8 @@ class CodeQuestApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => XPService()),
         Provider(create: (_) => AuthService()),
+        Provider(create: (_) => AchievementService()),
+        Provider(create: (_) => TitleService()),
       ],
       child: MaterialApp(
         title: 'Code Quest',
@@ -67,6 +72,7 @@ class CodeQuestApp extends StatelessWidget {
           '/aptitudeQuestions': (_) => const AptitudeQuestionsScreen(),
           '/debug': (_) => const DebugScreen(),
           '/debugCategories': (_) => const DebugCategoriesScreen(),
+          '/achievements': (_) => const AchievementsScreen(),
           '/leaderboard': (_) => const LeaderboardScreen(),
           '/profile': (_) => const ProfileScreen(),
         },

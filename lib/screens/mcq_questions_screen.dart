@@ -5,6 +5,8 @@ import 'package:provider/provider.dart';
 import '../models/mcq_model.dart';
 import '../services/xp_service.dart';
 import '../services/progress_service.dart';
+import '../services/achievement_service.dart';
+import '../services/title_service.dart';
 import '../widgets/option_tile.dart';
 import '../widgets/question_card.dart';
 
@@ -22,7 +24,9 @@ class _McqQuestionsScreenState extends State<McqQuestionsScreen> {
   int? _selected;
   bool _answered = false;
   String? _feedback;
+  int _correctCount = 0;
   final _progress = ProgressService();
+  final _achievements = AchievementService();
 
   @override
   void didChangeDependencies() {
@@ -68,6 +72,9 @@ class _McqQuestionsScreenState extends State<McqQuestionsScreen> {
     });
     if (_selected == _questions[_index].correctIndex) {
       await context.read<XPService>().addXP(10);
+      _correctCount++;
+      await _achievements.recordMcqCorrect();
+      await AchievementService().recordXPUpdated();
     }
   }
 
@@ -78,6 +85,10 @@ class _McqQuestionsScreenState extends State<McqQuestionsScreen> {
     if (_index == _questions.length - 1) {
       await _progress.markLevelComplete(subject, level);
       await _progress.unlockNextLevel(subject, level);
+      final perfect = _correctCount == _questions.length && _questions.isNotEmpty;
+      await _achievements.recordMcqLevelComplete(subject, level, perfect: perfect);
+      await AchievementService().recordXPUpdated();
+      await TitleService().recalculateTitle();
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Level completed! Next level unlocked.')));
         Navigator.pop(context);

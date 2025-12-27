@@ -41,5 +41,6 @@ flutter:
     - assets/data/aptitude/logical/
     - assets/data/aptitude/verbal/
     - assets/interview_pdfs/sample.pdf
+    
 
 dependency_overrides:

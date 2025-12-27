@@ -6,6 +6,8 @@ import 'package:provider/provider.dart';
 import '../models/debug_question_model.dart';
 import '../services/judge_api_service.dart';
 import '../services/xp_service.dart';
+import '../services/achievement_service.dart';
+import '../services/title_service.dart';
 
 class DebugScreen extends StatefulWidget {
   const DebugScreen({super.key});
@@ -16,10 +18,12 @@ class DebugScreen extends StatefulWidget {
 
 class _DebugScreenState extends State<DebugScreen> {
   List<DebugQuestion> _questions = [];
-  final int _index = 0;
+  int _index = 0;
   final _controller = TextEditingController();
   String? _result;
   bool _running = false;
+  int _runs = 0;
+  final _achievements = AchievementService();
 
   @override
   void initState() {
@@ -41,6 +45,7 @@ class _DebugScreenState extends State<DebugScreen> {
     setState(() {
       _running = true;
       _result = null;
+      _runs++;
     });
     try {
       final res = await JudgeApiService.runCode(q.language, _controller.text);
@@ -48,6 +53,10 @@ class _DebugScreenState extends State<DebugScreen> {
       setState(() => _result = output.trim());
       if (_result == q.expectedOutput.trim()) {
         await context.read<XPService>().addXP(50);
+        final firstAttempt = _runs == 1;
+        await _achievements.recordDebugSolve(firstAttempt: firstAttempt);
+        await AchievementService().recordXPUpdated();
+        await TitleService().recalculateTitle();
         if (mounted) ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Success! +50 XP')));
       }
     } catch (e) {

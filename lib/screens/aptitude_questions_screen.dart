@@ -5,6 +5,8 @@ import 'package:provider/provider.dart';
 import '../models/mcq_model.dart';
 import '../services/xp_service.dart';
 import '../services/aptitude_progress_service.dart';
+import '../services/achievement_service.dart';
+import '../services/title_service.dart';
 import '../widgets/option_tile.dart';
 import '../widgets/question_card.dart';
 
@@ -23,6 +25,7 @@ class _AptitudeQuestionsScreenState extends State<AptitudeQuestionsScreen> {
   bool _answered = false;
   String? _feedback;
   final _service = AptitudeProgressService();
+  final _achievements = AchievementService();
 
   @override
   void didChangeDependencies() {
@@ -73,6 +76,8 @@ class _AptitudeQuestionsScreenState extends State<AptitudeQuestionsScreen> {
     });
     if (_selected == _questions[_index].correctIndex) {
       await context.read<XPService>().addXP(10);
+      await _achievements.recordAptitudeQuestionCorrect();
+      await AchievementService().recordXPUpdated();
     }
   }
 
@@ -83,6 +88,9 @@ class _AptitudeQuestionsScreenState extends State<AptitudeQuestionsScreen> {
     if (_index == _questions.length - 1) {
       await _service.markComplete(category, level);
       await _service.unlockNext(category, level);
+      await _achievements.recordAptitudeLevelComplete(category, level);
+      await AchievementService().recordXPUpdated();
+      await TitleService().recalculateTitle();
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Level completed')));
         Navigator.pop(context);

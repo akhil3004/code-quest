@@ -5,6 +5,7 @@ import '../services/auth_service.dart';
 import '../services/xp_service.dart';
 import '../widgets/title_badge.dart';
 import '../widgets/xp_progress_bar.dart';
+import '../services/achievement_service.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -19,6 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       context.read<XPService>().load();
+      AchievementService().recordXPUpdated();
     });
   }
 
@@ -43,11 +45,12 @@ class _HomeScreenState extends State<HomeScreen> {
             const SizedBox(height: 12),
             XPProgressBar(xp: xpService.xp),
             const SizedBox(height: 24),
-            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/mcqSubjects'), child: const Text('MCQ Subjects')),
-            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/interviewPdfs'), child: const Text('Interview PDFs')),
-            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/aptitudeCategories'), child: const Text('Aptitude')),
-            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/debug'), child: const Text('Debugging (Judge API)')),
-            ElevatedButton(onPressed: () => Navigator.pushNamed(context, '/debugCategories'), child: const Text('Debug Categories')),
+            ElevatedButton(onPressed: () { AchievementService().recordScreenOpen(); Navigator.pushNamed(context, '/mcqSubjects'); }, child: const Text('MCQ Subjects')),
+            ElevatedButton(onPressed: () { AchievementService().recordScreenOpen(); Navigator.pushNamed(context, '/interviewPdfs'); }, child: const Text('Interview PDFs')),
+            ElevatedButton(onPressed: () { AchievementService().recordScreenOpen(); Navigator.pushNamed(context, '/aptitudeCategories'); }, child: const Text('Aptitude')),
+            ElevatedButton(onPressed: () { AchievementService().recordScreenOpen(); Navigator.pushNamed(context, '/debug'); }, child: const Text('Debugging (Judge API)')),
+            ElevatedButton(onPressed: () { AchievementService().recordScreenOpen(); Navigator.pushNamed(context, '/debugCategories'); }, child: const Text('Debug Categories')),
+            ElevatedButton(onPressed: () { Navigator.pushNamed(context, '/achievements'); }, child: const Text('Achievements')),
           ],
         ),
       ),
