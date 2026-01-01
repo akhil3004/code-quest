@@ -9,7 +9,6 @@ import 'screens/home_screen.dart';
 import 'screens/mcq_screen.dart';
 import 'screens/interview_screen.dart';
 import 'screens/debug_screen.dart';
-import 'screens/debug_categories_screen.dart';
 import 'screens/leaderboard_screen.dart';
 import 'screens/profile_screen.dart';
 import 'screens/mcq_subjects_screen.dart';
@@ -25,6 +24,7 @@ import 'services/achievement_service.dart';
 import 'services/title_service.dart';
 import 'services/auth_service.dart';
 import 'services/xp_service.dart';
+import 'theme/retro_theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -51,10 +51,7 @@ class CodeQuestApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Code Quest',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
-          useMaterial3: true,
-        ),
+        theme: RetroTheme.theme,
         initialRoute: '/login',
         routes: {
           '/login': (_) => const LoginScreen(),
@@ -71,7 +68,6 @@ class CodeQuestApp extends StatelessWidget {
           '/aptitudeLevels': (_) => const AptitudeLevelsScreen(),
           '/aptitudeQuestions': (_) => const AptitudeQuestionsScreen(),
           '/debug': (_) => const DebugScreen(),
-          '/debugCategories': (_) => const DebugCategoriesScreen(),
           '/achievements': (_) => const AchievementsScreen(),
           '/leaderboard': (_) => const LeaderboardScreen(),
           '/profile': (_) => const ProfileScreen(),
