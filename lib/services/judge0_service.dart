@@ -1,27 +1,19 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
+/// Submits code to the Piston API (Free, No Key Required).
+/// Replaces the original Judge0 implementation to avoid payment issues.
 class Judge0Service {
-  // Using public CE instance. 
-  // If using RapidAPI, change baseUrl to 'https://judge0-ce.p.rapidapi.com' 
-  // and add headers in _headers().
-  static const String baseUrl = 'https://ce.judge0.com';
-  
-  static Map<String, String> _headers() {
-    return {
-      'Content-Type': 'application/json',
-      // 'X-RapidAPI-Key': 'YOUR_KEY_HERE',
-      // 'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com'
-    };
-  }
+  static const String baseUrl = 'https://emkc.org/api/v2/piston/execute';
 
-  static int _getLanguageId(String language) {
+  // Map app language codes to Piston language configs
+  static Map<String, String> _getPistonConfig(String language) {
     switch (language.toLowerCase()) {
-      case 'python': return 71; // Python 3.8.1
-      case 'c': return 50;      // GCC 9.2.0
-      case 'cpp': return 54;    // GCC 9.2.0
-      case 'java': return 62;   // OpenJDK 13.0.1
-      default: return 71;
+      case 'python': return {'language': 'python', 'version': '3.10.0'} as Map<String, String>;
+      case 'c': return {'language': 'c', 'version': '10.2.0'} as Map<String, String>;
+      case 'cpp': return {'language': 'c++', 'version': '10.2.0'} as Map<String, String>;
+      case 'java': return {'language': 'java', 'version': '15.0.2'} as Map<String, String>;
+      default: return {'language': 'python', 'version': '3.10.0'} as Map<String, String>;
     }
   }
 
@@ -31,80 +23,63 @@ class Judge0Service {
     required String stdin,
     required String expectedOutput,
   }) async {
-    final uri = Uri.parse('$baseUrl/submissions?base64_encoded=true&wait=false');
-    
-    final encodedSource = base64Encode(utf8.encode(sourceCode));
-    final encodedStdin = base64Encode(utf8.encode(stdin));
-    final encodedExpected = base64Encode(utf8.encode(expectedOutput));
-    
     try {
+      final config = _getPistonConfig(language);
+      
       final response = await http.post(
-        uri,
-        headers: _headers(),
+        Uri.parse(baseUrl),
+        headers: {'Content-Type': 'application/json'},
         body: jsonEncode({
-          'language_id': _getLanguageId(language),
-          'source_code': encodedSource,
-          'stdin': encodedStdin,
-          'expected_output': encodedExpected,
+          "language": config['language'],
+          "version": config['version'],
+          "files": [
+            {
+              "content": sourceCode
+            }
+          ],
+          "stdin": stdin,
         }),
       );
 
-      if (response.statusCode == 201) {
+      if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-        return await _pollSubmission(data['token']);
+        final run = data['run'];
+        
+        // Piston returns: { stdout: "...", stderr: "...", code: 0, ... }
+        final stdout = run['stdout'] ?? '';
+        final stderr = run['stderr'] ?? '';
+        final exitCode = run['code'];
+        
+        // Map Piston exit code to Judge0-style status for compatibility
+        // If exitCode is 0, we consider it "Accepted" (execution successful).
+        // If non-zero, it's a "Runtime Error" or similar.
+        // Compilation errors usually appear in stderr with a non-zero code.
+        
+        String statusDesc = (exitCode == 0) ? 'Accepted' : 'Error (Exit Code $exitCode)';
+        if (exitCode != 0 && stderr.isNotEmpty) {
+            statusDesc = 'Runtime/Compilation Error';
+        }
+
+        return {
+          'stdout': stdout,
+          'stderr': stderr,
+          'status': {'description': statusDesc, 'id': exitCode == 0 ? 3 : 11},
+          'time': '0.1', // Piston doesn't always return time in 'run', mocking it or ignoring
+          'memory': 0,
+        };
       } else {
-        throw Exception('Submission failed: ${response.statusCode}');
+        return {
+          'status': {'description': 'API Error ${response.statusCode}', 'id': 0},
+          'stdout': '',
+          'stderr': 'Failed to execute code. Piston API returned ${response.statusCode}\n${response.body}',
+        };
       }
     } catch (e) {
       return {
-        'status': {'id': 0, 'description': 'Error'},
-        'error': e.toString(),
+        'status': {'description': 'Exception', 'id': 0},
+        'stdout': '',
+        'stderr': 'App Error: $e',
       };
     }
-  }
-
-  Future<Map<String, dynamic>> _pollSubmission(String token) async {
-    final uri = Uri.parse('$baseUrl/submissions/$token?base64_encoded=true');
-    
-    // Poll up to 10 times (10 seconds)
-    for (int i = 0; i < 10; i++) {
-      await Future.delayed(const Duration(seconds: 1));
-      try {
-        final response = await http.get(uri, headers: _headers());
-        if (response.statusCode == 200) {
-          final data = jsonDecode(response.body);
-          final statusId = data['status']['id'];
-          
-          // Status IDs: 1 (In Queue), 2 (Processing)
-          // Finished: 3 (Accepted), >3 (Error/Wrong)
-          if (statusId >= 3) {
-            return _decodeResult(data);
-          }
-        }
-      } catch (e) {
-        // Continue polling on transient network errors
-      }
-    }
-    return {'status': {'id': 0, 'description': 'Timeout'}};
-  }
-
-  Map<String, dynamic> _decodeResult(Map<String, dynamic> data) {
-    String decode(String? s) {
-      if (s == null) return '';
-      try {
-        return utf8.decode(base64Decode(s.replaceAll('\n', '')));
-      } catch (_) {
-        return s;
-      }
-    }
-    
-    return {
-      'status': data['status'], // {id, description}
-      'stdout': decode(data['stdout']),
-      'stderr': decode(data['stderr']),
-      'compile_output': decode(data['compile_output']),
-      'time': data['time'],
-      'memory': data['memory'],
-    };
   }
 }

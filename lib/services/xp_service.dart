@@ -21,20 +21,34 @@ class XPService extends ChangeNotifier {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) return;
     final docRef = FirebaseFirestore.instance.collection('users').doc(user.uid);
-    await FirebaseFirestore.instance.runTransaction((tx) async {
-      final snap = await tx.get(docRef);
-      final currentXP = (snap.data()?['xp'] ?? 0) as int;
-      final newXP = currentXP + amount;
-      final newLevel = calculateLevel(newXP);
-      final newTitle = titleForLevel(newLevel);
-      tx.update(docRef, {
-        'xp': newXP,
-        'level': newLevel,
-        'title': newTitle,
+    try {
+      await FirebaseFirestore.instance.runTransaction((tx) async {
+        final snap = await tx.get(docRef);
+        if (!snap.exists) {
+           tx.set(docRef, {
+             'xp': amount,
+             'level': calculateLevel(amount),
+             'title': titleForLevel(calculateLevel(amount)),
+             'username': user.email?.split('@')[0] ?? 'User',
+           });
+           _xp = amount;
+           return;
+        }
+        final currentXP = (snap.data()?['xp'] ?? 0) as int;
+        final newXP = currentXP + amount;
+        final newLevel = calculateLevel(newXP);
+        final newTitle = titleForLevel(newLevel);
+        tx.update(docRef, {
+          'xp': newXP,
+          'level': newLevel,
+          'title': newTitle,
+        });
+        _xp = newXP;
       });
-      _xp = newXP;
-    });
-    notifyListeners();
+      notifyListeners();
+    } catch (e) {
+      debugPrint('XP Transaction failed: $e');
+    }
   }
 
   static int calculateLevel(int xp) => xp ~/ 100;

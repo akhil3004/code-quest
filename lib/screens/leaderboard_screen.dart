@@ -13,8 +13,14 @@ class LeaderboardScreen extends StatelessWidget {
       body: StreamBuilder<List<UserModel>>(
         stream: service.topUsers(),
         builder: (context, snapshot) {
-          if (!snapshot.hasData) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
+          }
+          if (snapshot.hasError) {
+             return Center(child: Text('Error loading leaderboard: ${snapshot.error}'));
+          }
+          if (!snapshot.hasData || snapshot.data!.isEmpty) {
+             return const Center(child: Text('No users found on the leaderboard.'));
           }
           final users = snapshot.data!;
           return ListView.separated(

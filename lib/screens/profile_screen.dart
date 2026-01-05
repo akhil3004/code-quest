@@ -18,7 +18,16 @@ class ProfileScreen extends StatelessWidget {
       body: StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
         stream: doc.snapshots(),
         builder: (context, snap) {
-          if (!snap.hasData) return const Center(child: CircularProgressIndicator());
+          if (snap.connectionState == ConnectionState.waiting) {
+             return const Center(child: CircularProgressIndicator());
+          }
+          if (snap.hasError) {
+            return Center(child: Text('Error: ${snap.error}'));
+          }
+          if (!snap.hasData || !snap.data!.exists) {
+            // User document might not exist yet if they just signed up and haven't earned XP
+             return const Center(child: Text('No profile data yet. Play some games!'));
+          }
           final d = snap.data!.data() ?? {};
           return StreamBuilder<QuerySnapshot<Map<String, dynamic>>>(
             stream: achCol.snapshots(),
