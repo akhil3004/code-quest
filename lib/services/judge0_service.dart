@@ -9,11 +9,16 @@ class Judge0Service {
   // Map app language codes to Piston language configs
   static Map<String, String> _getPistonConfig(String language) {
     switch (language.toLowerCase()) {
-      case 'python': return {'language': 'python', 'version': '3.10.0'} as Map<String, String>;
-      case 'c': return {'language': 'c', 'version': '10.2.0'} as Map<String, String>;
-      case 'cpp': return {'language': 'c++', 'version': '10.2.0'} as Map<String, String>;
-      case 'java': return {'language': 'java', 'version': '15.0.2'} as Map<String, String>;
-      default: return {'language': 'python', 'version': '3.10.0'} as Map<String, String>;
+      case 'python':
+        return {'language': 'python', 'version': '3.10.0'};
+      case 'c':
+        return {'language': 'c', 'version': '10.2.0'};
+      case 'cpp':
+        return {'language': 'c++', 'version': '10.2.0'};
+      case 'java':
+        return {'language': 'java', 'version': '15.0.2'};
+      default:
+        return {'language': 'python', 'version': '3.10.0'};
     }
   }
 

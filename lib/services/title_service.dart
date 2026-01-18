@@ -38,17 +38,35 @@ class TitleService {
     final achCount = achCol.size;
 
     String best = 'Newbie';
-    if (level >= 10) best = 'Elite Coder';
-    else if (xp >= 1000) best = 'Code Champion';
-    else if (xp >= 500) best = 'XP Grinder';
-    else if (streak >= 7) best = 'Consistent Coder';
-    if (dbg >= 15) best = 'Debug Master';
-    else if (dbg >= 5) best = 'Bug Hunter';
-    if (apt >= 30) best = 'Aptitude Ace';
-    if (mcq >= 50) best = 'Quiz Warrior';
-    if (level >= 4) best = 'Logic Learner';
-    if (level >= 2) best = 'Rookie Coder';
-    if (achCount >= 20) best = 'Quest Master';
+    if (level >= 10) {
+      best = 'Elite Coder';
+    } else if (xp >= 1000) {
+      best = 'Code Champion';
+    } else if (xp >= 500) {
+      best = 'XP Grinder';
+    } else if (streak >= 7) {
+      best = 'Consistent Coder';
+    }
+    if (dbg >= 15) {
+      best = 'Debug Master';
+    } else if (dbg >= 5) {
+      best = 'Bug Hunter';
+    }
+    if (apt >= 30) {
+      best = 'Aptitude Ace';
+    }
+    if (mcq >= 50) {
+      best = 'Quiz Warrior';
+    }
+    if (level >= 4) {
+      best = 'Logic Learner';
+    }
+    if (level >= 2) {
+      best = 'Rookie Coder';
+    }
+    if (achCount >= 20) {
+      best = 'Quest Master';
+    }
 
     final currentPri = _priority[current] ?? 1;
     final bestPri = _priority[best] ?? 1;

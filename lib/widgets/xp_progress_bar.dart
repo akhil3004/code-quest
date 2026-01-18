@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../theme/retro_theme.dart';
+
 class XPProgressBar extends StatelessWidget {
   final int xp;
   const XPProgressBar({super.key, required this.xp});
@@ -8,13 +10,104 @@ class XPProgressBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final current = xp % 100;
     final progress = current / 100.0;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        LinearProgressIndicator(value: progress),
-        const SizedBox(height: 8),
-        Text('XP: $xp  •  To next level: ${100 - current}')
-      ],
+    final level = xp ~/ 100;
+
+    return TweenAnimationBuilder<double>(
+      tween: Tween<double>(begin: 0, end: progress),
+      duration: const Duration(milliseconds: 700),
+      curve: Curves.easeOutCubic,
+      builder: (context, animatedProgress, _) {
+        return Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(6),
+            border: Border.all(
+              color: RetroTheme.primary.withValues(alpha: 0.8),
+              width: 1.5,
+            ),
+            gradient: LinearGradient(
+              colors: [
+                RetroTheme.primary.withValues(alpha: 0.18),
+                Colors.transparent,
+              ],
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: RetroTheme.primary.withValues(alpha: 0.35),
+                blurRadius: 16,
+                spreadRadius: 1,
+              ),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'LEVEL $level',
+                    style: RetroTheme.hudLabel.copyWith(
+                      color: RetroTheme.gold,
+                    ),
+                  ),
+                  Text(
+                    '$xp XP',
+                    style: RetroTheme.bodyMono.copyWith(
+                      fontSize: 12,
+                      color: RetroTheme.text,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
+              SizedBox(
+                height: 10,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(999),
+                  child: Stack(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.white.withValues(alpha: 0.08),
+                              Colors.black.withValues(alpha: 0.7),
+                            ],
+                          ),
+                        ),
+                      ),
+                      FractionallySizedBox(
+                        widthFactor: animatedProgress.clamp(0.0, 1.0),
+                        child: Container(
+                          decoration: const BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                RetroTheme.primary,
+                                RetroTheme.accent,
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                '${100 - current} XP to next level',
+                style: RetroTheme.bodyMono.copyWith(
+                  fontSize: 11,
+                  color: RetroTheme.text.withValues(alpha: 0.7),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }

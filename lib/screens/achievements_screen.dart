@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import '../services/achievement_service.dart';
 import '../models/achievement_model.dart';
+import '../theme/retro_theme.dart';
+import '../widgets/game_hud_appbar.dart';
+import '../widgets/starfield_background.dart';
 
 class AchievementsScreen extends StatefulWidget {
   const AchievementsScreen({super.key});
@@ -8,14 +11,23 @@ class AchievementsScreen extends StatefulWidget {
   State<AchievementsScreen> createState() => _AchievementsScreenState();
 }
 
-class _AchievementsScreenState extends State<AchievementsScreen> {
+class _AchievementsScreenState extends State<AchievementsScreen>
+    with SingleTickerProviderStateMixin {
   final _service = AchievementService();
   late Future<List<AchievementModel>> _future;
+  late TabController _tabController;
 
   @override
   void initState() {
     super.initState();
     _future = _service.userAchievements();
+    _tabController = TabController(length: 4, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
   }
 
   IconData _iconFromName(String name) {
@@ -88,44 +100,185 @@ class _AchievementsScreenState extends State<AchievementsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Achievements')),
-      body: FutureBuilder<List<AchievementModel>>(
-        future: _future,
-        builder: (context, snapshot) {
-          if (!snapshot.hasData) {
-            return const Center(child: CircularProgressIndicator());
-          }
-          final items = snapshot.data!;
-          return GridView.builder(
-            padding: const EdgeInsets.all(16),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              mainAxisSpacing: 12,
-              crossAxisSpacing: 12,
-              childAspectRatio: 1.6,
-            ),
-            itemCount: items.length,
-            itemBuilder: (context, index) {
-              final a = items[index];
-              final color = a.unlocked ? Colors.green : Colors.grey;
-              return Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Icon(_iconFromName(a.icon), color: color),
-                      const SizedBox(height: 8),
-                      Text(a.title, style: Theme.of(context).textTheme.titleSmall),
-                      const SizedBox(height: 4),
-                      Text(a.description, style: Theme.of(context).textTheme.bodySmall),
-                    ],
-                  ),
+      appBar: const GameHudAppBar(
+        showBack: true,
+        subtitle: 'Achievements',
+      ),
+      body: StarfieldBackground(
+        child: Column(
+          children: [
+            Container(
+              margin: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(999),
+                border: Border.all(
+                  color: RetroTheme.accent.withValues(alpha: 0.9),
+                  width: 1.5,
                 ),
-              );
-            },
-          );
-        },
+                gradient: LinearGradient(
+                  colors: [
+                    RetroTheme.accent.withValues(alpha: 0.25),
+                    Colors.transparent,
+                  ],
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                ),
+              ),
+              child: TabBar(
+                controller: _tabController,
+                indicator: BoxDecoration(
+                  borderRadius: BorderRadius.circular(999),
+                  color: RetroTheme.accent.withValues(alpha: 0.3),
+                ),
+                labelStyle: RetroTheme.bodyMono.copyWith(
+                  fontSize: 11,
+                  color: RetroTheme.background,
+                ),
+                unselectedLabelStyle: RetroTheme.bodyMono.copyWith(fontSize: 11),
+                labelColor: RetroTheme.background,
+                unselectedLabelColor: RetroTheme.text,
+                tabs: const [
+                  Tab(text: 'MCQ'),
+                  Tab(text: 'Aptitude'),
+                  Tab(text: 'Debug'),
+                  Tab(text: 'Streak'),
+                ],
+              ),
+            ),
+            Expanded(
+              child: FutureBuilder<List<AchievementModel>>(
+                future: _future,
+                builder: (context, snapshot) {
+                  if (!snapshot.hasData) {
+                    return const Center(child: CircularProgressIndicator());
+                  }
+                  final items = snapshot.data!;
+                  if (items.isEmpty) {
+                    return Center(
+                      child: Text(
+                        'No achievements yet.\nComplete missions to unlock badges.',
+                        textAlign: TextAlign.center,
+                        style: RetroTheme.bodyMono.copyWith(
+                          color: RetroTheme.text.withValues(alpha: 0.7),
+                        ),
+                      ),
+                    );
+                  }
+                  return GridView.builder(
+                    padding: const EdgeInsets.all(16),
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 14,
+                      crossAxisSpacing: 14,
+                      childAspectRatio: 1.5,
+                    ),
+                    itemCount: items.length,
+                    itemBuilder: (context, index) {
+                      final a = items[index];
+                      return _AchievementCard(
+                        model: a,
+                        icon: _iconFromName(a.icon),
+                      );
+                    },
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _AchievementCard extends StatelessWidget {
+  final AchievementModel model;
+  final IconData icon;
+
+  const _AchievementCard({
+    required this.model,
+    required this.icon,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final unlocked = model.unlocked;
+    final borderColor = unlocked ? RetroTheme.gold : Colors.grey.withValues(alpha: 0.6);
+    final glowColor =
+        unlocked ? RetroTheme.gold.withValues(alpha: 0.7) : Colors.black;
+
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 250),
+      curve: Curves.easeOutCubic,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: borderColor, width: 1.5),
+        gradient: LinearGradient(
+          colors: unlocked
+              ? [
+                  RetroTheme.gold.withValues(alpha: 0.24),
+                  RetroTheme.primary.withValues(alpha: 0.18),
+                ]
+              : [
+                  Colors.white.withValues(alpha: 0.04),
+                  Colors.black.withValues(alpha: 0.4),
+                ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: glowColor,
+            blurRadius: unlocked ? 18 : 4,
+            spreadRadius: unlocked ? 1.5 : 0,
+          ),
+        ],
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(
+                  icon,
+                  color: unlocked ? RetroTheme.gold : Colors.grey,
+                  size: 22,
+                ),
+                const SizedBox(width: 8),
+                if (!unlocked)
+                  Icon(
+                    Icons.lock,
+                    color: Colors.grey.withValues(alpha: 0.8),
+                    size: 16,
+                  ),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Text(
+              model.title,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: RetroTheme.bodyMono.copyWith(
+                fontSize: 13,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 6),
+            Expanded(
+              child: Text(
+                model.description,
+                maxLines: 3,
+                overflow: TextOverflow.ellipsis,
+                style: RetroTheme.bodyMono.copyWith(
+                  fontSize: 11,
+                  color: Colors.white.withValues(alpha: 0.75),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -7,6 +7,8 @@ import '../models/mcq_model.dart';
 import '../services/xp_service.dart';
 import '../widgets/option_tile.dart';
 import '../widgets/question_card.dart';
+import '../widgets/game_hud_appbar.dart';
+import '../widgets/starfield_background.dart';
 
 class McqScreen extends StatefulWidget {
   const McqScreen({super.key});
@@ -64,39 +66,64 @@ class _McqScreenState extends State<McqScreen> {
   @override
   Widget build(BuildContext context) {
     if (_questions.isEmpty) {
-      return const Scaffold(body: Center(child: CircularProgressIndicator()));
+      return const Scaffold(
+        appBar: GameHudAppBar(showBack: true, subtitle: 'Loading MCQ'),
+        body: StarfieldBackground(
+          child: Center(child: CircularProgressIndicator()),
+        ),
+      );
     }
     final q = _questions[_index];
     return Scaffold(
-      appBar: AppBar(title: const Text('MCQ')),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(children: [
-          QuestionCard(
-            question: q.question,
-            options: List.generate(q.options.length, (i) {
-              final isSelected = _selected == i;
-              final isCorrect = i == q.correctIndex;
-              return OptionTile(
-                text: q.options[i],
-                selected: isSelected,
-                correct: isSelected ? isCorrect : false,
-                onTap: () => _select(i),
-              );
-            }),
-          ),
-          const SizedBox(height: 12),
-          if (_feedback != null) Text(_feedback!),
-          const SizedBox(height: 12),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      appBar: const GameHudAppBar(
+        showBack: true,
+        subtitle: 'MCQ Mission',
+      ),
+      body: StarfieldBackground(
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
             children: [
-              Text('Question ${_index + 1}/${_questions.length}')
-              ,
-              ElevatedButton(onPressed: _answered ? _next : null, child: const Text('Next')),
+              QuestionCard(
+                question: q.question,
+                options: List.generate(q.options.length, (i) {
+                  final isSelected = _selected == i;
+                  final isCorrect = i == q.correctIndex;
+                  return OptionTile(
+                    text: q.options[i],
+                    selected: isSelected,
+                    correct: isSelected ? isCorrect : false,
+                    onTap: () => _select(i),
+                  );
+                }),
+              ),
+              const SizedBox(height: 16),
+              if (_feedback != null)
+                AnimatedOpacity(
+                  duration: const Duration(milliseconds: 250),
+                  opacity: 1,
+                  child: Text(
+                    _feedback!,
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                ),
+              const SizedBox(height: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Question ${_index + 1}/${_questions.length}',
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                  ElevatedButton(
+                    onPressed: _answered ? _next : null,
+                    child: const Text('Next'),
+                  ),
+                ],
+              ),
             ],
           ),
-        ]),
+        ),
       ),
     );
   }

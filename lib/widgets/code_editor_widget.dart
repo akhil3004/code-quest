@@ -72,6 +72,7 @@ class CodeEditorWidget extends StatelessWidget {
               readOnly: readOnly,
               maxLines: null,
               expands: true,
+              cursorColor: RetroTheme.primary,
               style: GoogleFonts.sourceCodePro(
                 color: const Color(0xFFD4D4D4),
                 fontSize: 14,

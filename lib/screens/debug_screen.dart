@@ -10,6 +10,8 @@ import '../services/title_service.dart';
 import '../theme/retro_theme.dart';
 import '../widgets/code_editor_widget.dart';
 import '../widgets/debug_console.dart';
+import '../widgets/game_hud_appbar.dart';
+import '../widgets/starfield_background.dart';
 
 class DebugScreen extends StatefulWidget {
   const DebugScreen({super.key});
@@ -44,45 +46,83 @@ class _DebugScreenState extends State<DebugScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('DEBUG CHALLENGES'),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
+      appBar: const GameHudAppBar(
+        showBack: true,
+        subtitle: 'Debug Console',
       ),
-      body: _loading
-          ? const Center(child: CircularProgressIndicator())
-          : ListView.builder(
-              padding: const EdgeInsets.all(16),
-              itemCount: _questions.length,
-              itemBuilder: (context, index) {
-                final q = _questions[index];
-                return Card(
-                  margin: const EdgeInsets.only(bottom: 16),
-                  child: ListTile(
-                    contentPadding: const EdgeInsets.all(16),
-                    title: Text(q.title, style: Theme.of(context).textTheme.titleLarge),
-                    subtitle: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 8),
-                        Text('Language: ${q.language.toUpperCase()}', style: Theme.of(context).textTheme.bodyMedium),
-                        Text('Difficulty: ${q.difficulty}/5', style: Theme.of(context).textTheme.bodyMedium),
-                        Text('XP: ${q.xp}', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: RetroTheme.primary)),
+      body: StarfieldBackground(
+        child: _loading
+            ? const Center(child: CircularProgressIndicator())
+            : ListView.builder(
+                padding: const EdgeInsets.all(16),
+                itemCount: _questions.length,
+                itemBuilder: (context, index) {
+                  final q = _questions[index];
+                  return Container(
+                    margin: const EdgeInsets.only(bottom: 16),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: RetroTheme.primary.withValues(alpha: 0.8),
+                        width: 1.5,
+                      ),
+                      gradient: LinearGradient(
+                        colors: [
+                          RetroTheme.primary.withValues(alpha: 0.2),
+                          Colors.transparent,
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: RetroTheme.primary.withValues(alpha: 0.45),
+                          blurRadius: 16,
+                          spreadRadius: 1,
+                        ),
                       ],
                     ),
-                    trailing: const Icon(Icons.arrow_forward_ios, color: RetroTheme.primary),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (_) => DebugEditorScreen(question: q)),
-                      );
-                    },
-                  ),
-                );
-              },
-            ),
+                    child: ListTile(
+                      contentPadding: const EdgeInsets.all(16),
+                      title: Text(
+                        q.title,
+                        style: Theme.of(context).textTheme.titleLarge,
+                      ),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: 8),
+                          Text(
+                            'Language: ${q.language.toUpperCase()}',
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                          Text(
+                            'Difficulty: ${q.difficulty}/5',
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                          Text(
+                            'XP: ${q.xp}',
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium
+                                ?.copyWith(color: RetroTheme.primary),
+                          ),
+                        ],
+                      ),
+                      trailing: const Icon(Icons.arrow_forward_ios, color: RetroTheme.primary),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => DebugEditorScreen(question: q),
+                          ),
+                        );
+                      },
+                    ),
+                  );
+                },
+              ),
+      ),
     );
   }
 }
@@ -185,47 +225,59 @@ class _DebugEditorScreenState extends State<DebugEditorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.question.title)),
-      body: Column(
-        children: [
-          Expanded(
-            flex: 2,
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(widget.question.problem, style: Theme.of(context).textTheme.bodyLarge),
-                  const SizedBox(height: 16),
-                  Expanded(
-                    child: CodeEditorWidget(
-                      controller: _controller,
-                      language: widget.question.language,
+      appBar: GameHudAppBar(
+        showBack: true,
+        subtitle: widget.question.title,
+      ),
+      body: StarfieldBackground(
+        child: Column(
+          children: [
+            Expanded(
+              flex: 2,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      widget.question.problem,
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 16),
+                    Expanded(
+                      child: CodeEditorWidget(
+                        controller: _controller,
+                        language: widget.question.language,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
-          ),
-          DebugConsole(
-            stdout: _stdout,
-            stderr: _stderr,
-            status: _status,
-            isRunning: _isRunning,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: _isRunning ? null : _run,
-                child: _isRunning 
-                  ? const CircularProgressIndicator() 
-                  : const Text('RUN CODE'),
+            DebugConsole(
+              stdout: _stdout,
+              stderr: _stderr,
+              status: _status,
+              isRunning: _isRunning,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: _isRunning ? null : _run,
+                  child: _isRunning
+                      ? const SizedBox(
+                          height: 18,
+                          width: 18,
+                          child: CircularProgressIndicator(strokeWidth: 2),
+                        )
+                      : const Text('RUN CODE'),
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
