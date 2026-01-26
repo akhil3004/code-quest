@@ -4,6 +4,7 @@ import '../services/progress_service.dart';
 import '../theme/retro_theme.dart';
 import '../widgets/game_hud_appbar.dart';
 import '../widgets/starfield_background.dart';
+import '../widgets/floating_chat_button.dart';
 
 class McqLevelsScreen extends StatefulWidget {
   final SubjectModel? subject;
@@ -49,6 +50,7 @@ class _McqLevelsScreenState extends State<McqLevelsScreen> {
         showBack: true,
         subtitle: '${subject.name} Levels',
       ),
+      floatingActionButton: const FloatingChatButton(),
       body: StarfieldBackground(
         child: ListView.separated(
           padding: const EdgeInsets.all(16),

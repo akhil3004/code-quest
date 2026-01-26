@@ -8,6 +8,7 @@ import '../services/achievement_service.dart';
 import '../theme/retro_theme.dart';
 import '../widgets/game_hud_appbar.dart';
 import '../widgets/starfield_background.dart';
+import '../widgets/floating_chat_button.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -31,6 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final xpService = context.watch<XPService>();
     return Scaffold(
       appBar: const GameHudAppBar(),
+      floatingActionButton: const FloatingChatButton(),
       body: StarfieldBackground(
         child: SafeArea(
           child: Padding(

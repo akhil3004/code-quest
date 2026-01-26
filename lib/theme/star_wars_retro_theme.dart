@@ -18,7 +18,6 @@ class StarWarsRetroTheme {
       primary: StarWarsRetroColors.primaryNeon,
       secondary: StarWarsRetroColors.accentPurple,
       surface: StarWarsRetroColors.surfaceDark,
-      background: StarWarsRetroColors.background,
       error: StarWarsRetroColors.dangerRed,
       onPrimary: StarWarsRetroColors.background,
       onSecondary: StarWarsRetroColors.textSoft,
@@ -67,21 +66,21 @@ class StarWarsRetroTheme {
     );
 
     final elevatedButtonStyle = ElevatedButton.styleFrom(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
       textStyle: GoogleFonts.pressStart2p(fontSize: 11, letterSpacing: 1.5),
       backgroundColor: StarWarsRetroColors.primaryNeon,
       foregroundColor: StarWarsRetroColors.background,
       overlayColor:
           StarWarsRetroColors.accentPurple.withValues(alpha: 0.15),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(4),
+        borderRadius: BorderRadius.circular(6),
         side: const BorderSide(
           color: StarWarsRetroColors.primaryNeon,
-          width: 2,
+          width: 1.6,
         ),
       ),
-      elevation: 10,
-      shadowColor: const Color(0x8000FFCC),
+      elevation: 6,
+      shadowColor: StarWarsRetroColors.primaryNeon.withValues(alpha: 0.4),
     );
 
     return base.copyWith(

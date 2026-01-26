@@ -3,6 +3,7 @@ import '../services/aptitude_progress_service.dart';
 import '../theme/retro_theme.dart';
 import '../widgets/game_hud_appbar.dart';
 import '../widgets/starfield_background.dart';
+import '../widgets/floating_chat_button.dart';
 
 class AptitudeLevelsScreen extends StatefulWidget {
   final Map<String, String>? category;
@@ -51,6 +52,7 @@ class _AptitudeLevelsScreenState extends State<AptitudeLevelsScreen> {
         showBack: true,
         subtitle: '$_categoryName Levels',
       ),
+      floatingActionButton: const FloatingChatButton(),
       body: StarfieldBackground(
         child: ListView.separated(
           padding: const EdgeInsets.all(16),

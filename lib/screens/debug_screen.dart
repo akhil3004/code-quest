@@ -12,6 +12,7 @@ import '../widgets/code_editor_widget.dart';
 import '../widgets/debug_console.dart';
 import '../widgets/game_hud_appbar.dart';
 import '../widgets/starfield_background.dart';
+import '../widgets/floating_chat_button.dart';
 
 class DebugScreen extends StatefulWidget {
   const DebugScreen({super.key});
@@ -50,6 +51,7 @@ class _DebugScreenState extends State<DebugScreen> {
         showBack: true,
         subtitle: 'Debug Console',
       ),
+      floatingActionButton: const FloatingChatButton(),
       body: StarfieldBackground(
         child: _loading
             ? const Center(child: CircularProgressIndicator())

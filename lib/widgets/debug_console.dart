@@ -36,7 +36,7 @@ class DebugConsole extends StatelessWidget {
               ),
               const Spacer(),
               if (isRunning)
-                SizedBox(
+                const SizedBox(
                   width: 12,
                   height: 12,
                   child: CircularProgressIndicator(strokeWidth: 2, color: RetroTheme.primary),

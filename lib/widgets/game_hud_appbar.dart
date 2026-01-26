@@ -16,7 +16,7 @@ class GameHudAppBar extends StatelessWidget implements PreferredSizeWidget {
   });
 
   @override
-  Size get preferredSize => const Size.fromHeight(72);
+  Size get preferredSize => const Size.fromHeight(60);
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +27,7 @@ class GameHudAppBar extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: Colors.transparent,
       elevation: 0,
       titleSpacing: 0,
+      toolbarHeight: 56,
       title: Row(
         children: [
           Column(
@@ -35,13 +36,12 @@ class GameHudAppBar extends StatelessWidget implements PreferredSizeWidget {
             children: [
               Text(
                 'CODE QUEST',
-                style: Theme.of(context).textTheme.displaySmall ??
-                    RetroTheme.titlePixel,
+                style: RetroTheme.titlePixel.copyWith(fontSize: 14),
               ),
-              const SizedBox(height: 6),
+              const SizedBox(height: 4),
               Container(
-                height: 3,
-                width: 140,
+                height: 2,
+                width: 120,
                 decoration: BoxDecoration(
                   gradient: const LinearGradient(
                     colors: [
@@ -51,15 +51,15 @@ class GameHudAppBar extends StatelessWidget implements PreferredSizeWidget {
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: RetroTheme.primary.withValues(alpha: 0.6),
-                      blurRadius: 12,
-                      spreadRadius: 1,
+                      color: RetroTheme.primary.withValues(alpha: 0.35),
+                      blurRadius: 8,
+                      spreadRadius: 0.5,
                     ),
                   ],
                 ),
               ),
               if (subtitle != null) ...[
-                const SizedBox(height: 6),
+                const SizedBox(height: 4),
                 Text(
                   subtitle!,
                   style: RetroTheme.hudLabel,
@@ -72,17 +72,64 @@ class GameHudAppBar extends StatelessWidget implements PreferredSizeWidget {
             icon: Icons.leaderboard,
             onTap: () => Navigator.pushNamed(context, '/leaderboard'),
           ),
-          const SizedBox(width: 12),
+          const SizedBox(width: 10),
           _HudIconButton(
             icon: Icons.person,
             onTap: () => Navigator.pushNamed(context, '/profile'),
           ),
-          const SizedBox(width: 16),
+          const SizedBox(width: 10),
           _XPBadge(
             level: xpService.level,
             xp: xpService.xp,
-            onLogoutTap: () =>
-                AuthService().signOut().then((_) => Navigator.pushReplacementNamed(context, '/login')),
+          ),
+          const SizedBox(width: 6),
+          _HudIconButton(
+            icon: Icons.logout,
+            onTap: () async {
+              final navigator = Navigator.of(context);
+              final confirm = await showDialog<bool>(
+                context: context,
+                builder: (ctx) {
+                  return AlertDialog(
+                    backgroundColor: RetroTheme.cardBg,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      side: BorderSide(
+                        color: RetroTheme.primary.withValues(alpha: 0.5),
+                      ),
+                    ),
+                    title: Text(
+                      'Log out?',
+                      style: RetroTheme.bodyMono.copyWith(
+                        fontSize: 14,
+                        color: RetroTheme.text,
+                      ),
+                    ),
+                    content: Text(
+                      'Your progress is saved. Exit the mission?',
+                      style: RetroTheme.bodyMono.copyWith(
+                        fontSize: 12,
+                        color: RetroTheme.text.withValues(alpha: 0.8),
+                      ),
+                    ),
+                    actions: [
+                      TextButton(
+                        onPressed: () => navigator.pop(false),
+                        child: const Text('CANCEL'),
+                      ),
+                      ElevatedButton(
+                        onPressed: () => navigator.pop(true),
+                        child: const Text('LOGOUT'),
+                      ),
+                    ],
+                  );
+                },
+              );
+              if (confirm == true) {
+                await AuthService().signOut();
+                navigator.pushReplacementNamed('/login');
+              }
+            },
           ),
         ],
       ),
@@ -142,12 +189,10 @@ class _HudIconButton extends StatelessWidget {
 class _XPBadge extends StatelessWidget {
   final int level;
   final int xp;
-  final VoidCallback onLogoutTap;
 
   const _XPBadge({
     required this.level,
     required this.xp,
-    required this.onLogoutTap,
   });
 
   @override
@@ -155,73 +200,68 @@ class _XPBadge extends StatelessWidget {
     final current = xp % 100;
     final progress = current / 100.0;
 
-    return InkWell(
-      onTap: onLogoutTap,
-      borderRadius: BorderRadius.circular(999),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(999),
-          border: Border.all(
-            color: RetroTheme.gold.withValues(alpha: 0.9),
-            width: 1.5,
-          ),
-          gradient: LinearGradient(
-            colors: [
-              RetroTheme.gold.withValues(alpha: 0.25),
-              Colors.transparent,
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: RetroTheme.gold.withValues(alpha: 0.6),
-              blurRadius: 12,
-              spreadRadius: 1,
-            ),
-          ],
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(999),
+        border: Border.all(
+          color: RetroTheme.gold.withValues(alpha: 0.8),
+          width: 1.3,
         ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Icon(
-              Icons.auto_awesome,
-              size: 18,
-              color: RetroTheme.gold,
-            ),
-            const SizedBox(width: 8),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'LV $level',
-                  style: RetroTheme.hudLabel.copyWith(
-                    color: RetroTheme.gold,
-                  ),
+        gradient: LinearGradient(
+          colors: [
+            RetroTheme.gold.withValues(alpha: 0.22),
+            Colors.transparent,
+          ],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: RetroTheme.gold.withValues(alpha: 0.4),
+            blurRadius: 10,
+            spreadRadius: 0.5,
+          ),
+        ],
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const Icon(
+            Icons.auto_awesome,
+            size: 18,
+            color: RetroTheme.gold,
+          ),
+          const SizedBox(width: 8),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'LV $level',
+                style: RetroTheme.hudLabel.copyWith(
+                  color: RetroTheme.gold,
                 ),
-                const SizedBox(height: 4),
-                SizedBox(
-                  width: 70,
-                  height: 6,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(999),
-                    child: LinearProgressIndicator(
-                      value: progress,
-                      backgroundColor:
-                          Colors.black.withValues(alpha: 0.6),
-                      valueColor: AlwaysStoppedAnimation<Color>(
-                        RetroTheme.primary,
-                      ),
+              ),
+              const SizedBox(height: 4),
+              SizedBox(
+                width: 70,
+                height: 6,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(999),
+                  child: LinearProgressIndicator(
+                    value: progress,
+                    backgroundColor:
+                        Colors.black.withValues(alpha: 0.6),
+                    valueColor: const AlwaysStoppedAnimation<Color>(
+                      RetroTheme.primary,
                     ),
                   ),
                 ),
-              ],
-            ),
-          ],
-        ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
 }
-
