@@ -11,6 +11,7 @@ import '../widgets/option_tile.dart';
 import '../widgets/question_card.dart';
 import '../widgets/game_hud_appbar.dart';
 import '../widgets/starfield_background.dart';
+import '../theme/star_wars_retro_theme.dart';
 
 class McqQuestionsScreen extends StatefulWidget {
   final String? subject;
@@ -120,7 +121,7 @@ class _McqQuestionsScreenState extends State<McqQuestionsScreen> {
           subtitle: 'MCQ Level',
         ),
         body: StarfieldBackground(
-          child: Center(child: Text(_feedback ?? 'Loading...')),
+          child: Center(child: Text(_feedback ?? 'Loading...', style: const TextStyle(color: Colors.white))),
         ),
       );
     }
@@ -133,41 +134,59 @@ class _McqQuestionsScreenState extends State<McqQuestionsScreen> {
       body: StarfieldBackground(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Column(children: [
-            QuestionCard(
-              question: q.question,
-              options: List.generate(q.options.length, (i) {
-                final isSelected = _selected == i;
-                final isCorrect = i == q.correctIndex;
-                return OptionTile(
-                  text: q.options[i],
-                  selected: isSelected,
-                  correct: isSelected ? isCorrect : false,
-                  onTap: () => _select(i),
-                );
-              }),
-            ),
-            const SizedBox(height: 12),
-            if (_feedback != null)
-              AnimatedOpacity(
-                duration: const Duration(milliseconds: 250),
-                opacity: 1,
-                child: Text(_feedback!),
+          child: SingleChildScrollView(
+            child: Column(children: [
+              QuestionCard(
+                question: q.question,
+                options: List.generate(q.options.length, (i) {
+                  final isSelected = _selected == i;
+                  final isCorrect = i == q.correctIndex;
+                  return OptionTile(
+                    text: q.options[i],
+                    selected: isSelected,
+                    correct: isSelected ? isCorrect : false,
+                    onTap: () => _select(i),
+                  );
+                }),
               ),
-            const SizedBox(height: 12),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Question ${_index + 1}/${_questions.length}'),
-                ElevatedButton(
-                  onPressed: _answered ? _next : null,
-                  child: const Text('Next'),
+              const SizedBox(height: 24),
+              if (_feedback != null)
+                AnimatedOpacity(
+                  duration: const Duration(milliseconds: 250),
+                  opacity: 1,
+                  child: Text(
+                    _feedback!,
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                      color: _feedback!.contains('Correct') ? StarWarsRetroColors.successGreen : StarWarsRetroColors.dangerRed,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
-              ],
-            ),
-          ]),
+              const SizedBox(height: 24),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Question ${_index + 1}/${_questions.length}',
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: StarWarsRetroColors.textSoft),
+                  ),
+                  ElevatedButton(
+                    onPressed: _answered ? _next : null,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: StarWarsRetroColors.primaryNeon,
+                      foregroundColor: Colors.black,
+                      disabledBackgroundColor: Colors.grey.withValues(alpha: 0.3),
+                    ),
+                    child: Text(_index == _questions.length - 1 ? 'Finish' : 'Next'),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 40),
+            ]),
+          ),
         ),
       ),
     );
   }
 }
+

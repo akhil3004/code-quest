@@ -7,7 +7,9 @@ class StarWarsRetroColors {
   static const Color accentPurple = Color(0xFFB983FF);
   static const Color gold = Color(0xFFFFD166);
   static const Color dangerRed = Color(0xFFFF4D6D);
+  static const Color successGreen = Color(0xFF00FF88);
   static const Color textSoft = Color(0xFFF5F7FF);
+  static const Color textBright = Color(0xFFFFFFFF);
   static const Color surfaceDark = Color(0xFF101321);
 }
 
