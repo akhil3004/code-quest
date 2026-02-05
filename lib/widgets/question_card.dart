@@ -12,18 +12,17 @@ class QuestionCard extends StatelessWidget {
       child: Container(
         constraints: const BoxConstraints(maxWidth: 600),
         child: Card(
-          color: StarWarsRetroColors.surfaceDark.withValues(alpha: 0.85),
+          color: StarWarsRetroColors.surfaceDark.withValues(alpha: 0.6),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.circular(24),
             side: BorderSide(
-              color: StarWarsRetroColors.accentPurple.withValues(alpha: 0.3),
+              color: StarWarsRetroColors.accentPurple.withValues(alpha: 0.2),
               width: 1,
             ),
           ),
-          elevation: 8,
-          shadowColor: Colors.black54,
+          elevation: 0,
           child: Padding(
-            padding: const EdgeInsets.all(24.0),
+            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 24.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -33,6 +32,8 @@ class QuestionCard extends StatelessWidget {
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         color: StarWarsRetroColors.textSoft,
                         height: 1.3,
+                        fontSize: 20,
+                        letterSpacing: 0.5,
                       ),
                   textAlign: TextAlign.center,
                 ),

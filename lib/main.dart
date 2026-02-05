@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 
 import 'screens/login_screen.dart';
+import 'screens/splash_screen.dart';
 import 'screens/signup_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/mcq_screen.dart';
@@ -52,8 +53,9 @@ class CodeQuestApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Code Quest',
         theme: RetroTheme.theme,
-        initialRoute: '/login',
+        initialRoute: '/splash',
         routes: {
+          '/splash': (_) => const SplashScreen(),
           '/login': (_) => const LoginScreen(),
           '/signup': (_) => const SignupScreen(),
           '/home': (_) => const HomeScreen(),

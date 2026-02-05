@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../theme/retro_theme.dart';
 import '../widgets/game_hud_appbar.dart';
 import '../widgets/starfield_background.dart';
 import '../widgets/floating_chat_button.dart';
-
 import '../widgets/galaxy_card.dart';
+import '../widgets/fade_slide_transition.dart';
 
 class AptitudeCategoriesScreen extends StatelessWidget {
   const AptitudeCategoriesScreen({super.key});
@@ -25,25 +24,27 @@ class AptitudeCategoriesScreen extends StatelessWidget {
       ),
       floatingActionButton: const FloatingChatButton(),
       body: StarfieldBackground(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: GridView.count(
-            crossAxisCount: 2,
-            mainAxisSpacing: 32,
-            crossAxisSpacing: 32,
-            children: categories
-                .map(
-                  (c) => GalaxyCard(
-                    name: c['name']!,
-                    id: c['id']!,
-                    onTap: () => Navigator.pushNamed(
-                      context,
-                      '/aptitudeLevels',
-                      arguments: c,
+        child: FadeSlideTransition(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: GridView.count(
+              crossAxisCount: 2,
+              mainAxisSpacing: 32,
+              crossAxisSpacing: 32,
+              children: categories
+                  .map(
+                    (c) => GalaxyCard(
+                      name: c['name']!,
+                      id: c['id']!,
+                      onTap: () => Navigator.pushNamed(
+                        context,
+                        '/aptitudeLevels',
+                        arguments: c,
+                      ),
                     ),
-                  ),
-                )
-                .toList(),
+                  )
+                  .toList(),
+            ),
           ),
         ),
       ),

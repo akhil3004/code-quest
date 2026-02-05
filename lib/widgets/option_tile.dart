@@ -21,6 +21,7 @@ class OptionTile extends StatefulWidget {
 
 class _OptionTileState extends State<OptionTile> {
   bool _hovered = false;
+  bool _pressed = false;
 
   @override
   Widget build(BuildContext context) {
@@ -45,41 +46,49 @@ class _OptionTileState extends State<OptionTile> {
       onEnter: (_) => setState(() => _hovered = true),
       onExit: (_) => setState(() => _hovered = false),
       child: GestureDetector(
+        onTapDown: (_) => setState(() => _pressed = true),
+        onTapUp: (_) => setState(() => _pressed = false),
+        onTapCancel: () => setState(() => _pressed = false),
         onTap: widget.onTap,
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
-          margin: const EdgeInsets.only(bottom: 12),
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-          decoration: BoxDecoration(
-            color: backgroundColor,
-            borderRadius: BorderRadius.circular(30), // Pill style
-            border: Border.all(color: borderColor, width: 1.5),
-            boxShadow: [
-              if (widget.selected || _hovered)
-                BoxShadow(
-                  color: borderColor.withValues(alpha: 0.2),
-                  blurRadius: 8,
-                  spreadRadius: 1,
+        child: AnimatedScale(
+          scale: _pressed ? 0.98 : 1.0,
+          duration: const Duration(milliseconds: 100),
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 200),
+            margin: const EdgeInsets.only(bottom: 16), // Increased spacing
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 18), // Tactile padding
+            decoration: BoxDecoration(
+              color: backgroundColor,
+              borderRadius: BorderRadius.circular(50), // Full pill
+              border: Border.all(color: borderColor, width: 1.5),
+              boxShadow: [
+                if (widget.selected || _hovered)
+                  BoxShadow(
+                    color: borderColor.withValues(alpha: 0.2),
+                    blurRadius: 12,
+                    spreadRadius: 1,
+                  ),
+              ],
+            ),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    widget.text,
+                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                          color: textColor,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16, // Readable size
+                        ),
+                  ),
                 ),
-            ],
-          ),
-          child: Row(
-            children: [
-              Expanded(
-                child: Text(
-                  widget.text,
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                        color: textColor,
-                        fontWeight: FontWeight.w600,
-                      ),
-                ),
-              ),
-              if (widget.selected)
-                Icon(
-                  widget.correct ? Icons.check_circle : Icons.cancel,
-                  color: widget.correct ? StarWarsRetroColors.primaryNeon : StarWarsRetroColors.dangerRed,
-                ),
-            ],
+                if (widget.selected)
+                  Icon(
+                    widget.correct ? Icons.check_circle : Icons.cancel,
+                    color: widget.correct ? StarWarsRetroColors.primaryNeon : StarWarsRetroColors.dangerRed,
+                  ),
+              ],
+            ),
           ),
         ),
       ),

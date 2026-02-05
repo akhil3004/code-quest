@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import '../models/subject_model.dart';
-import '../theme/retro_theme.dart';
 import '../widgets/game_hud_appbar.dart';
 import '../widgets/starfield_background.dart';
 import '../widgets/floating_chat_button.dart';
 import '../widgets/galaxy_card.dart';
+import '../widgets/fade_slide_transition.dart';
 
 class McqSubjectsScreen extends StatelessWidget {
   const McqSubjectsScreen({super.key});
@@ -27,25 +27,27 @@ class McqSubjectsScreen extends StatelessWidget {
       ),
       floatingActionButton: const FloatingChatButton(),
       body: StarfieldBackground(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: GridView.count(
-            crossAxisCount: 2,
-            mainAxisSpacing: 32,
-            crossAxisSpacing: 32,
-            children: subjects
-                .map(
-                  (s) => GalaxyCard(
-                    name: s.name,
-                    id: s.id,
-                    onTap: () => Navigator.pushNamed(
-                      context,
-                      '/mcqLevels',
-                      arguments: s,
+        child: FadeSlideTransition(
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: GridView.count(
+              crossAxisCount: 2,
+              mainAxisSpacing: 32,
+              crossAxisSpacing: 32,
+              children: subjects
+                  .map(
+                    (s) => GalaxyCard(
+                      name: s.name,
+                      id: s.id,
+                      onTap: () => Navigator.pushNamed(
+                        context,
+                        '/mcqLevels',
+                        arguments: s,
+                      ),
                     ),
-                  ),
-                )
-                .toList(),
+                  )
+                  .toList(),
+            ),
           ),
         ),
       ),

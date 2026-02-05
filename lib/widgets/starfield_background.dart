@@ -6,8 +6,13 @@ import '../theme/retro_theme.dart';
 
 class StarfieldBackground extends StatefulWidget {
   final Widget child;
+  final double speedMultiplier;
 
-  const StarfieldBackground({super.key, required this.child});
+  const StarfieldBackground({
+    super.key,
+    required this.child,
+    this.speedMultiplier = 1.0,
+  });
 
   @override
   State<StarfieldBackground> createState() => _StarfieldBackgroundState();
@@ -104,6 +109,7 @@ class _StarfieldBackgroundState extends State<StarfieldBackground>
             painter: _StarfieldPainter(
               stars: _stars,
               time: _controller.value,
+              speedMultiplier: widget.speedMultiplier,
             ),
             child: Container(
               decoration: BoxDecoration(
@@ -150,10 +156,12 @@ class _Star {
 class _StarfieldPainter extends CustomPainter {
   final List<_Star> stars;
   final double time;
+  final double speedMultiplier;
 
   const _StarfieldPainter({
     required this.stars,
     required this.time,
+    required this.speedMultiplier,
   });
 
   @override
@@ -171,11 +179,15 @@ class _StarfieldPainter extends CustomPainter {
     }
 
     final starPaint = Paint()..style = PaintingStyle.fill;
+    final isHyperspace = speedMultiplier > 2.0;
 
     for (final star in stars) {
       final layerSpeedMultiplier = 1.0 + star.layer * 0.4;
-      final dy = (star.y + time * star.speed * layerSpeedMultiplier) % 1.0;
-      final dx = (star.x + time * star.speed * 0.2 * layerSpeedMultiplier) % 1.0;
+      final effectiveSpeed = star.speed * layerSpeedMultiplier * speedMultiplier;
+      
+      // Calculate position
+      final dy = (star.y + time * effectiveSpeed) % 1.0;
+      final dx = (star.x + time * effectiveSpeed * 0.2) % 1.0;
 
       final position = Offset(dx * size.width, dy * size.height);
 
@@ -186,13 +198,26 @@ class _StarfieldPainter extends CustomPainter {
 
       starPaint.color = baseColor.withValues(alpha: baseColor.a / 255 * twinkle);
 
-      canvas.drawCircle(position, star.radius * twinkle, starPaint);
+      if (isHyperspace) {
+        // Draw streaks
+        final streakLength = 20.0 * speedMultiplier * star.radius;
+        final endPos = Offset(position.dx, position.dy - streakLength);
+        
+        // Handle wrap-around for streaks
+        if (endPos.dy < 0) {
+           canvas.drawLine(Offset(position.dx, size.height + position.dy), Offset(position.dx, size.height + position.dy - streakLength), starPaint..strokeWidth = star.radius);
+        }
+        
+        canvas.drawLine(position, endPos, starPaint..strokeWidth = star.radius);
+      } else {
+        canvas.drawCircle(position, star.radius * twinkle, starPaint);
 
-      if (star.layer == 2) {
-        final glowPaint = Paint()
-          ..color = RetroTheme.accent.withValues(alpha: 0.4 * twinkle)
-          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 6);
-        canvas.drawCircle(position, star.radius * 3, glowPaint);
+        if (star.layer == 2) {
+          final glowPaint = Paint()
+            ..color = RetroTheme.accent.withValues(alpha: 0.4 * twinkle)
+            ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 6);
+          canvas.drawCircle(position, star.radius * 3, glowPaint);
+        }
       }
     }
   }

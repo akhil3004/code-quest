@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../services/achievement_service.dart';
 import '../models/achievement_model.dart';
 import '../theme/star_wars_retro_theme.dart';
 import '../widgets/game_hud_appbar.dart';
 import '../widgets/starfield_background.dart';
+import '../widgets/fade_slide_transition.dart';
 
 class AchievementsScreen extends StatefulWidget {
   const AchievementsScreen({super.key});
@@ -84,22 +86,24 @@ class _AchievementsScreenState extends State<AchievementsScreen>
                 ),
               );
             }
-            return GridView.builder(
-              padding: const EdgeInsets.all(24),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                mainAxisSpacing: 24,
-                crossAxisSpacing: 24,
-                childAspectRatio: 0.85,
+            return FadeSlideTransition(
+              child: GridView.builder(
+                padding: const EdgeInsets.all(24),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  mainAxisSpacing: 24,
+                  crossAxisSpacing: 24,
+                  childAspectRatio: 0.85,
+                ),
+                itemCount: items.length,
+                itemBuilder: (context, index) {
+                  final a = items[index];
+                  return _BadgeTile(
+                    model: a,
+                    icon: _iconFromName(a.icon),
+                  );
+                },
               ),
-              itemCount: items.length,
-              itemBuilder: (context, index) {
-                final a = items[index];
-                return _BadgeTile(
-                  model: a,
-                  icon: _iconFromName(a.icon),
-                );
-              },
             );
           },
         ),
@@ -122,52 +126,113 @@ class _BadgeTile extends StatelessWidget {
     final unlocked = model.unlocked;
     final color = unlocked ? StarWarsRetroColors.gold : Colors.grey.shade700;
     
-    return Column(
-      children: [
-        Expanded(
-          child: Container(
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: RadialGradient(
-                colors: unlocked 
-                  ? [color.withValues(alpha: 0.3), Colors.transparent] 
-                  : [Colors.grey.shade900, Colors.black],
-                stops: const [0.5, 1.0],
-              ),
-              border: Border.all(
-                color: color.withValues(alpha: unlocked ? 1.0 : 0.5),
-                width: unlocked ? 2 : 1,
-              ),
-              boxShadow: [
-                if (unlocked)
+    return Tooltip(
+      message: unlocked ? model.description : "Locked Relic",
+      waitDuration: const Duration(milliseconds: 500),
+      textStyle: GoogleFonts.spaceMono(fontSize: 12, color: StarWarsRetroColors.background),
+      decoration: BoxDecoration(
+        color: StarWarsRetroColors.gold,
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: GestureDetector(
+        onTap: () {
+          showDialog(
+          context: context,
+          builder: (context) => Dialog(
+            backgroundColor: Colors.transparent,
+            child: Container(
+              padding: const EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                color: StarWarsRetroColors.background.withValues(alpha: 0.9),
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(
+                  color: unlocked ? color : Colors.grey.shade700,
+                  width: 2,
+                ),
+                boxShadow: [
                   BoxShadow(
-                    color: color.withValues(alpha: 0.5),
-                    blurRadius: 12,
-                    spreadRadius: 2,
+                    color: (unlocked ? color : Colors.black).withValues(alpha: 0.5),
+                    blurRadius: 30,
+                    spreadRadius: 5,
+                  )
+                ],
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(icon, size: 64, color: unlocked ? color : Colors.grey.shade600),
+                  const SizedBox(height: 16),
+                  Text(
+                    model.title,
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                      color: unlocked ? StarWarsRetroColors.gold : Colors.grey,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-              ],
-            ),
-            child: Center(
-              child: Icon(
-                icon,
-                color: unlocked ? color : Colors.grey.shade600,
-                size: 32,
+                  const SizedBox(height: 16),
+                  Text(
+                    model.description,
+                    style: Theme.of(context).textTheme.bodyMedium,
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 24),
+                  if (!unlocked)
+                    Text(
+                      "LOCKED RELIC",
+                      style: GoogleFonts.pressStart2p(
+                        color: Colors.red.shade400,
+                        fontSize: 12,
+                      ),
+                    ),
+                ],
               ),
             ),
           ),
-        ),
-        const SizedBox(height: 8),
-        Text(
-          model.title,
-          textAlign: TextAlign.center,
-          maxLines: 2,
-          overflow: TextOverflow.ellipsis,
-          style: Theme.of(context).textTheme.bodySmall?.copyWith(
-            color: unlocked ? StarWarsRetroColors.textBright : StarWarsRetroColors.textSoft,
-            fontSize: 10,
+        );
+      },
+      child: Column(
+        children: [
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: RadialGradient(
+                  colors: unlocked 
+                    ? [color.withValues(alpha: 0.3), Colors.transparent] 
+                    : [Colors.grey.shade900, Colors.black],
+                  stops: const [0.5, 1.0],
+                ),
+                boxShadow: unlocked ? [
+                  BoxShadow(
+                    color: color.withValues(alpha: 0.4),
+                    blurRadius: 15,
+                    spreadRadius: 2,
+                  )
+                ] : null,
+              ),
+              child: Center(
+                child: Icon(
+                  icon, 
+                  size: 48, 
+                  color: unlocked ? color : Colors.grey.shade800
+                ),
+              ),
+            ),
           ),
-        ),
-      ],
-    );
+          const SizedBox(height: 12),
+          Text(
+            model.title,
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+              color: unlocked ? StarWarsRetroColors.textBright : Colors.grey.shade600,
+              fontSize: 11,
+              fontWeight: unlocked ? FontWeight.bold : FontWeight.normal,
+            ),
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ],
+      ),
+    ));
   }
 }

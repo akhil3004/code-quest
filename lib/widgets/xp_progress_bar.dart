@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../theme/retro_theme.dart';
+import '../theme/star_wars_retro_theme.dart';
 
 class XPProgressBar extends StatelessWidget {
   final int xp;
@@ -22,12 +22,12 @@ class XPProgressBar extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
-              color: RetroTheme.primary.withValues(alpha: 0.7),
+              color: StarWarsRetroColors.primaryNeon.withValues(alpha: 0.7),
               width: 1.4,
             ),
             gradient: LinearGradient(
               colors: [
-                RetroTheme.primary.withValues(alpha: 0.16),
+                StarWarsRetroColors.primaryNeon.withValues(alpha: 0.16),
                 Colors.transparent,
               ],
               begin: Alignment.centerLeft,
@@ -35,7 +35,7 @@ class XPProgressBar extends StatelessWidget {
             ),
             boxShadow: [
               BoxShadow(
-                color: RetroTheme.primary.withValues(alpha: 0.28),
+                color: StarWarsRetroColors.primaryNeon.withValues(alpha: 0.28),
                 blurRadius: 12,
                 spreadRadius: 0.8,
               ),
@@ -49,15 +49,15 @@ class XPProgressBar extends StatelessWidget {
                 children: [
                   Text(
                     'LEVEL $level',
-                    style: RetroTheme.hudLabel.copyWith(
-                      color: RetroTheme.gold,
+                    style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                      color: StarWarsRetroColors.gold,
                     ),
                   ),
                   Text(
                     '$xp XP',
-                    style: RetroTheme.bodyMono.copyWith(
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       fontSize: 12,
-                      color: RetroTheme.text,
+                      color: StarWarsRetroColors.textSoft,
                     ),
                   ),
                 ],
@@ -85,8 +85,8 @@ class XPProgressBar extends StatelessWidget {
                           decoration: const BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
-                                RetroTheme.primary,
-                                RetroTheme.accent,
+                                StarWarsRetroColors.primaryNeon,
+                                StarWarsRetroColors.accentPurple,
                               ],
                             ),
                           ),
@@ -99,9 +99,9 @@ class XPProgressBar extends StatelessWidget {
               const SizedBox(height: 6),
               Text(
                 '${100 - current} XP to next level',
-                style: RetroTheme.bodyMono.copyWith(
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
                   fontSize: 11,
-                  color: RetroTheme.text.withValues(alpha: 0.7),
+                  color: StarWarsRetroColors.textSoft.withValues(alpha: 0.7),
                 ),
               ),
             ],
