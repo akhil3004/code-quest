@@ -1,0 +1,112 @@
+[
+  {
+    "id": "eng_l3_q1",
+    "question": "S1: My mother had been overweight since she was a child and lost weight only after she got married. S2: ___ S3: ___ S4: There were no use crying to my grandmother as she was now absolved of her responsibilities.",
+    "options": [
+      "RP",
+      "QR",
+      "PR",
+      "RQ"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "eng_l3_q2",
+    "question": "Identify the error in the sentence: One of the unreturned book was found in the parking lot.",
+    "options": [
+      "The unreturned book",
+      "No error",
+      "was found in the parking lot",
+      "One of"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "eng_l3_q3",
+    "question": "Identify the error in the sentence: All the students of the class decided to head to the principal’s office to complain for the new teacher’s misconduct.",
+    "options": [
+      "to head to the principal’s office",
+      "All the students of the class decided",
+      "to complain for the new teacher’s misconduct",
+      "No error"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "eng_l3_q4",
+    "question": "Mamallapuram, also called Mahabalipuram, is about fifty-five kilometres from the city of Chennai. The East Coast Road takes you to this 1________ which is on the shore of the Bay of Bengal. This 7th century city which was once a 2._____ seaport is now famous for its rock-cut shore temples.",
+    "options": [
+      "(1)-B,(2)-C",
+      "(1)-A,(2)-A",
+      "(1)-A,(2)-B",
+      "(1)-C,(2)-D"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "eng_l3_q5",
+    "question": "Civilisation’s progress must be measured in proportion to man’s success in meeting the challenges of nature. 1. It is once a threat to the sustainable evolution of man. 2. But if the current trend continues going on unchecked, the future of life on earth will be endangered.",
+    "options": [
+      "(1)-B, (2)-A",
+      "(1)-A, (2)-C",
+      "(1)-C, (2)-A",
+      "(1)-A, (2)-B"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "eng_l3_q6",
+    "question": "Identify the error in the sentence: Mrs. Diggle wanted her children to be hardworking, sincere and punctual.",
+    "options": [
+      "sincere and punctual",
+      "Mrs. Diggle wanted her",
+      "No error",
+      "Children to be hardworking"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "eng_l3_q7",
+    "question": "Identify the error in the sentence: The soldiers, in an attempt of showing their loyalty towards their king, fought ruthlessly until the end of the war.",
+    "options": [
+      "The soldiers, in an attempt of showing",
+      "fought ruthlessly until the end of the war",
+      "their loyalty towards their king",
+      "No error"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "eng_l3_q8",
+    "question": "Choose the best revision: My mother made me join seven different sports activities. At the time, I was just nine.",
+    "options": [
+      "My mother made me join seven different sports activities when I was just nine",
+      "Because I was nine, my mother made me join seven different sports activities",
+      "While I was nine my mother made me join seven different sports activities",
+      "Though I was 9, my mother made me join seven different sports activities"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "eng_l3_q9",
+    "question": "Identify the error in the sentence: He had been married with a doctor for five years.",
+    "options": [
+      "For five years",
+      "He had been married",
+      "No Error",
+      "With a doctor"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "eng_l3_q10",
+    "question": "Choose the correct word to complete the sentence: Shreya will keep working for you _____ you are respectful towards her.",
+    "options": [
+      "For",
+      "As long",
+      "As long as",
+      "As soon as"
+    ],
+    "correctIndex": 2
+  }
+]

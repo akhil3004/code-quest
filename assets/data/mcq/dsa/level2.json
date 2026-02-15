@@ -1,0 +1,12 @@
+[
+  {"id": "dsa_l2_q1", "question": "The postfix form of the expression (A+ B)*(C*D- E)*F / G is?", "options": ["AB+ CD*E – FG /**", "AB + CD* E – F **G /", "AB + CD* E – *F *G /", "AB + CDE * – * F *G /"], "correctIndex": 2},
+  {"id": "dsa_l2_q2", "question": "The data structure required to check whether an expression contains balanced parenthesis is?", "options": ["Stack", "Queue", "Array", "Tree"], "correctIndex": 0},
+  {"id": "dsa_l2_q3", "question": "What data structure would you most likely see in non-recursive implementation of recursive algorithm?", "options": ["Linked List", "Stack", "Queue", "Tree"], "correctIndex": 1},
+  {"id": "dsa_l2_q4", "question": "The process of accessing data stored in serial access memory is similar to manipulating data on a ________", "options": ["Heap", "Binary Tree", "Array", "Stack"], "correctIndex": 3},
+  {"id": "dsa_l2_q5", "question": "The postfix form of A*B+C/D is?", "options": ["*AB/CD+", "AB*CD/+", "A*BC+/D", "ABCD+/*"], "correctIndex": 1},
+  {"id": "dsa_l2_q6", "question": "Which data structure is needed to convert infix notation to postfix notation?", "options": ["Branch", "Tree", "Queue", "Stack"], "correctIndex": 3},
+  {"id": "dsa_l2_q7", "question": "The prefix form of A-B/(C*D^E) is?", "options": ["-/*^ACBDE", "-ABCD*^DE", "-A/B*C^DE", "-A/BC*^DE"], "correctIndex": 2},
+  {"id": "dsa_l2_q8", "question": "Result of Top(Push(S,X))?", "options": ["X", "X+S", "S", "XS"], "correctIndex": 0},
+  {"id": "dsa_l2_q9", "question": "The prefix form of infix (p+q)-(r*t) is?", "options": ["+ pq – *rt", "– +pqr * t", "– +pq * rt", "– + * pqrt"], "correctIndex": 2},
+  {"id": "dsa_l2_q10", "question": "Which data structure is used for implementing recursion?", "options": ["Queue", "Stack", "Array", "List"], "correctIndex": 1}
+]

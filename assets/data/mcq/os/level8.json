@@ -1,0 +1,62 @@
+[
+  {
+    "id": "os_l8_q1",
+    "question": "Deadlock occurs when",
+    "options": ["all processes blocked forever", "all terminated", "killing each other", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l8_q2",
+    "question": "Process context does not include",
+    "options": ["registers", "process state", "memory info", "switch time"],
+    "correctIndex": 3
+  },
+  {
+    "id": "os_l8_q3",
+    "question": "TLB need not be saved during",
+    "options": ["context switch", "interrupt", "execution", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l8_q4",
+    "question": "If all processes are I/O bound, ready queue will be",
+    "options": ["full", "empty", "partially full", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l8_q5",
+    "question": "Cascading termination happens when parent terminates",
+    "options": ["normally", "abnormally", "both", "none"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l8_q6",
+    "question": "Restricting child resources prevents",
+    "options": ["storage overuse", "low CPU use", "too many subprocesses", "crash"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l8_q7",
+    "question": "In multiprogramming environment",
+    "options": ["many processes in memory", "many CPUs", "many users", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l8_q8",
+    "question": "Child duplicate of parent means",
+    "options": ["fork", "exec", "wait", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l8_q9",
+    "question": "Zero capacity queue sender",
+    "options": ["blocks", "keeps sending", "discards message", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l8_q10",
+    "question": "Bounded & unbounded queues are",
+    "options": ["programmed buffering", "automatic buffering", "no buffering", "none"],
+    "correctIndex": 1
+  }
+]

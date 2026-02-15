@@ -1,0 +1,62 @@
+[
+  {
+    "id": "os_l6_q1",
+    "question": "Interrupt Service Routine is",
+    "options": ["ISR", "IR", "IVT", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l6_q2",
+    "question": "DMA is used for",
+    "options": ["high-speed devices", "low-speed devices", "CPU usage", "all"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l6_q3",
+    "question": "Memory mapped I/O uses",
+    "options": ["polling", "data register & control bit", "interrupt", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l6_q4",
+    "question": "Programmed I/O uses",
+    "options": ["polling", "interrupt", "DMA", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l6_q5",
+    "question": "Interrupt driven I/O uses",
+    "options": ["polling", "interrupt", "DMA", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l6_q6",
+    "question": "Highest layer in layered OS is",
+    "options": ["hardware", "user interface", "kernel", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l6_q7",
+    "question": "Hardware interrupt is triggered by",
+    "options": ["bus signals", "system call", "program", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l6_q8",
+    "question": "Trap is a",
+    "options": ["hardware interrupt", "software interrupt", "user interrupt", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l6_q9",
+    "question": "Interrupt vector is",
+    "options": ["address of handler", "device number", "interrupt ID", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l6_q10",
+    "question": "Multilevel queue scheduling",
+    "options": ["fixed classification", "movable processes", "no classification", "none"],
+    "correctIndex": 0
+  }
+]

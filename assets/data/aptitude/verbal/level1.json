@@ -1,12 +1,112 @@
 [
-  {"id":"apt_ver_l1_q1","question":"Plural of 'child'","options":["childs","children","childes","child"],"correctIndex":1},
-  {"id":"apt_ver_l1_q2","question":"Fill: I ___ to school","options":["go","goes","gone","going"],"correctIndex":0},
-  {"id":"apt_ver_l1_q3","question":"Past of 'eat'","options":["ate","eaten","eat","eated"],"correctIndex":0},
-  {"id":"apt_ver_l1_q4","question":"Antonym of 'hot'","options":["warm","cold","heat","cool"],"correctIndex":1},
-  {"id":"apt_ver_l1_q5","question":"Synonym of 'happy'","options":["sad","joyful","angry","small"],"correctIndex":1},
-  {"id":"apt_ver_l1_q6","question":"Article before 'apple'","options":["a","an","the","none"],"correctIndex":1},
-  {"id":"apt_ver_l1_q7","question":"Spell correctly","options":["recieve","receive","recive","receeve"],"correctIndex":1},
-  {"id":"apt_ver_l1_q8","question":"Choose preposition: on, in, at. We met ___ 5 pm","options":["on","in","at","none"],"correctIndex":2},
-  {"id":"apt_ver_l1_q9","question":"Comparative of 'good'","options":["gooder","better","best","more good"],"correctIndex":1},
-  {"id":"apt_ver_l1_q10","question":"Opposite of 'begin'","options":["start","commence","finish","open"],"correctIndex":2}
+  {
+    "id": "eng_l1_q1",
+    "question": "Choose the grammatically correct sentence.",
+    "options": [
+      "No sooner had he reached the venue when the program began.",
+      "No sooner he had reached the venue than the program began.",
+      "No sooner had he reached the venue than the program began.",
+      "No sooner did he reach the venue when the program began."
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "eng_l1_q2",
+    "question": "Choose the word that is closest in meaning to “Obfuscate.”",
+    "options": [
+      "Clarify",
+      "Confuse",
+      "Simplify",
+      "Reveal"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l1_q3",
+    "question": "Identify the error in the sentence: Neither the manager nor his assistants was aware of the consequences.",
+    "options": [
+      "Neither",
+      "his assistants",
+      "was aware",
+      "No error"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "eng_l1_q4",
+    "question": "Choose the correct option to fill in the blank: The committee was divided in its opinion; the members argued _____ among themselves for hours.",
+    "options": [
+      "vehemently",
+      "cautiously",
+      "sporadically",
+      "leniently"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "eng_l1_q5",
+    "question": "Choose the correct passive voice: They will have completed the project by next week.",
+    "options": [
+      "The project will completed by next week.",
+      "The project will have been completed by next week.",
+      "The project has been completed by next week.",
+      "The project is being completed by next week."
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l1_q6",
+    "question": "Choose the word that best fits the blank: His argument was so ______ that even his critics were compelled to reconsider their stance.",
+    "options": [
+      "tenuous",
+      "cogent",
+      "redundant",
+      "ambiguous"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l1_q7",
+    "question": "Rearrange the parts of the sentence in the correct order: P. despite numerous setbacks Q. the scientist persisted R. in her groundbreaking research S. with unwavering determination",
+    "options": [
+      "QPSR",
+      "QSPR",
+      "PQSR",
+      "QPRS"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l1_q8",
+    "question": "Choose the correct meaning of the idiom “To bell the cat.”",
+    "options": [
+      "To attempt something dangerous",
+      "To celebrate loudly",
+      "To criticize openly",
+      "To avoid responsibility"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "eng_l1_q9",
+    "question": "Identify the correct indirect speech: She said, “Had I known the truth, I would have acted differently.”",
+    "options": [
+      "She said that if she had known the truth, she would act differently.",
+      "She said that had she known the truth, she would have acted differently.",
+      "She said that if she knew the truth, she would have acted differently.",
+      "She said that she had known the truth and would have acted differently."
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l1_q10",
+    "question": "Choose the correct word to complete the sentence: The CEO’s decision was met with ______ silence from the board members.",
+    "options": [
+      "taciturn",
+      "conspicuous",
+      "deafening",
+      "verbose"
+    ],
+    "correctIndex": 2
+  }
 ]

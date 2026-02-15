@@ -1,0 +1,15 @@
+{
+  "level": 5,
+  "questions": [
+    {"id": "cd_l5_q1", "question": "Ambiguous grammar produces", "options": ["Multiple parse trees", "One parse tree", "No parse tree", "Syntax error"], "correctIndex": 0},
+    {"id": "cd_l5_q2", "question": "Left factoring is used to", "options": ["Remove ambiguity", "Remove left recursion", "Make grammar suitable for predictive parsing", "Generate code"], "correctIndex": 2},
+    {"id": "cd_l5_q3", "question": "Operator precedence parsing is", "options": ["Top-down", "Bottom-up", "Recursive", "Predictive"], "correctIndex": 1},
+    {"id": "cd_l5_q4", "question": "Shift-reduce parser is", "options": ["Top-down", "Bottom-up", "Recursive descent", "LL parser"], "correctIndex": 1},
+    {"id": "cd_l5_q5", "question": "Handle pruning is used in", "options": ["LL parsing", "LR parsing", "Code generation", "Optimization"], "correctIndex": 1},
+    {"id": "cd_l5_q6", "question": "Quadruple representation has fields", "options": ["op, arg1, arg2, result", "op, arg, result", "arg1, arg2", "op only"], "correctIndex": 0},
+    {"id": "cd_l5_q7", "question": "Triples differ from quadruples because", "options": ["no result field", "no operator", "no arguments", "no temporary variables"], "correctIndex": 0},
+    {"id": "cd_l5_q8", "question": "DAG is used for", "options": ["Lexical analysis", "Syntax checking", "Code optimization", "Code generation"], "correctIndex": 2},
+    {"id": "cd_l5_q9", "question": "Common subexpression elimination is a type of", "options": ["Syntax analysis", "Semantic analysis", "Code optimization", "Code generation"], "correctIndex": 2},
+    {"id": "cd_l5_q10", "question": "Dead code elimination removes", "options": ["Unreachable code", "Comments", "Loops", "Variables"], "correctIndex": 0}
+  ]
+}

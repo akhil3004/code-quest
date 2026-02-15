@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cn_l9_q1",
+    "question": "If router J is on the optimal path from router I to router K, then the optimal path from J to K also falls along the same route is known as ....................",
+    "options": ["Routing principle", "Optimality principle", "Sink tree principle", "Network principle"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l9_q2",
+    "question": "The set of optimal routes from all sources to a given destination forms a tree rooted to the destination is known as .................",
+    "options": ["Binary tree", "Sparse tree", "Sink tree", "AVL tree"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l9_q3",
+    "question": "The technique which requires no network information is ….",
+    "options": ["flooding", "variable routing", "fixed routing", "random routing"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l9_q4",
+    "question": "Why do we require Hamming codes?",
+    "options": ["Error correction", "Encryption only", "Decryption", "Bit stuffing"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l9_q5",
+    "question": "The checksum of 1111 and 1111 is _________.",
+    "options": ["0000", "1111", "1110", "0111"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l9_q6",
+    "question": "In cyclic redundancy checking, the divisor is _______ the CRC.",
+    "options": ["one bit less than", "one bit more than", "The same size as", "none of the above"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l9_q7",
+    "question": "The ________ between two words is the number of differences between corresponding bits.",
+    "options": ["Hamming rule", "Hamming code", "Hamming distance", "none of the above"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l9_q8",
+    "question": "In modulo-2 arithmetic, __________ give the same results.",
+    "options": ["addition and subtraction", "addition and multiplication", "addition and division", "none of the above"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l9_q9",
+    "question": "Which error detection method consists of just one redundant bit per data unit?",
+    "options": ["CRC", "Checksum", "Simple parity check", "Two-dimensional parity check"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l9_q10",
+    "question": "In _____ coding, we divide our message into blocks, each of k bits, called ___",
+    "options": ["block; blockwords", "block; datawords", "linear; datawords", "none of the above"],
+    "correctIndex": 1
+  }
+]

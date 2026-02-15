@@ -1,0 +1,67 @@
+[
+  {
+    "id": "cn_l10_q1",
+    "question": "Adding 1 and 1 in modulo-2 arithmetic results in _________.",
+    "options": ["0", "1", "2", "none of the above"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l10_q2",
+    "question": "In modulo-2 arithmetic, we use the ______ operation for both addition and subtraction.",
+    "options": ["OR", "XOR", "AND", "none of the above"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l10_q3",
+    "question": "A generator that contains a factor of ____ can detect all odd-numbered errors.",
+    "options": ["x", "1", "x + 1", "none of the above"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l10_q4",
+    "question": "Version 6 of IP address has how many bits?",
+    "options": ["64 bits", "128 bits", "32 bits", "256 bits"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l10_q5",
+    "question": "What is the use of subnetting?",
+    "options": [
+      "It divides one large network into several smaller ones",
+      "It divides network into network classes",
+      "It speeds up the speed of network",
+      "None of above"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l10_q6",
+    "question": "What IP address class allocates 8 bits for the host identification part?",
+    "options": ["Class A", "Class B", "Class C", "Class D"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l10_q7",
+    "question": "What is the total vulnerable time value of pure Aloha?",
+    "options": ["Tfr", "1/2 Tfr", "2 * Tfr", "4 * Tfr"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l10_q8",
+    "question": "What is the size of the UDP header?",
+    "options": ["8 bytes", "16 bytes", "20 bytes", "64 bytes"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l10_q9",
+    "question": "If there are n signal sources of same data rate, then the TDM link has _______ slots.",
+    "options": ["n", "n/2", "n*2", "2n"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l10_q10",
+    "question": "Transmission delay does not depend on _____________",
+    "options": ["Packet length", "Distance between the routers", "Transmission rate", "Bandwidth of medium"],
+    "correctIndex": 1
+  }
+]

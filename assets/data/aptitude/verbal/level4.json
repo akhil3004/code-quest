@@ -1,0 +1,112 @@
+[
+  {
+    "id": "eng_l4_q1",
+    "question": "Choose the correct sentence: Amar, Binod, Chand and me were all cited for contempt of court.",
+    "options": [
+      "Amar, Binod, Chand and me were all cited",
+      "Amar, Binod, Chand and I were all cited",
+      "Amar, Binod, Chand and I were the ones cited",
+      "Amar, Binod, Chand and I were cited"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l4_q2",
+    "question": "Choose the correct sentence: It is often better to try repairing an old vehicle than to junk it.",
+    "options": [
+      "to try repairing an old vehicle than to junk it.",
+      "to repair an old vehicle than to have it junked.",
+      "to try repairing an old vehicle than to junking it.",
+      "to try to repair an old vehicle than to junk it."
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "eng_l4_q3",
+    "question": "Choose the correct sentence: Vijayendra eats faster than me.",
+    "options": [
+      "Vijayendra eats faster than me.",
+      "Vijayendra eats the fastest of us two.",
+      "Vijayendra eats the fastest of us both.",
+      "Vijayendra eats faster than I."
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "eng_l4_q4",
+    "question": "Choose the correct sentence: I think everybody in this office works faster than me.",
+    "options": [
+      "everybody in this office works faster than me.",
+      "everybody in this office works faster than I.",
+      "everybody in this office works more quickly than me.",
+      "everybody in this office works more quickly than I do."
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "eng_l4_q5",
+    "question": "Choose the correct sentence: Neither of the two boys’ explanations were satisfactory.",
+    "options": [
+      "Neither of the two boys’ explanations were",
+      "Neither of the two boys’ explanation were",
+      "Neither of the two boys’ explanations was",
+      "Neither of the two boy’s explanations were"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "eng_l4_q6",
+    "question": "Many people take spirituality very seriously and _____ about those who do not worrying about them and _____ them to believe.",
+    "options": [
+      "think, criticizing",
+      "pride, appraising",
+      "rationalize, enabling",
+      "wonder, prodding"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "eng_l4_q7",
+    "question": "Unless new reserves are found soon, the world’s supply of coal is being ______ in such a way that with demand continuing to grow at present rates reserves will be ______ by the year 2050.",
+    "options": [
+      "consumed, completed",
+      "depleted, exhausted",
+      "reduced, argument",
+      "brunt, destroyed"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l4_q8",
+    "question": "If you are ______, you tend to respond to stressful situations, in a calm secure, steady and ______ way.",
+    "options": [
+      "resilient, rational",
+      "obdurate, manageable",
+      "propitious, stable",
+      "delectable, flexible"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "eng_l4_q9",
+    "question": "Management can be defined as the process of _____ organizational goals and non-human resources to _____ improve value added to the world.",
+    "options": [
+      "getting, deliberately",
+      "managing, purposefully",
+      "targeting, critically",
+      "reaching, continuously"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "eng_l4_q10",
+    "question": "If you are an introvert, you _______ to prefer working alone and, if possible, will _______ towards projects where you can work by yourself or with as few people as possible.",
+    "options": [
+      "like, depart",
+      "advocate, move",
+      "tend, gravitate",
+      "express, attract"
+    ],
+    "correctIndex": 2
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cn_l5_q1",
+    "question": "Which is more efficient?",
+    "options": ["Parity check", "Cyclic redundancy check", "Parity & Cyclic redundancy check", "None of the mentioned"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l5_q2",
+    "question": "Which can detect two bit errors?",
+    "options": ["Parity check", "Cyclic redundancy check", "Parity & Cyclic redundancy check", "None of the mentioned"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l5_q3",
+    "question": "What frequency range is used for FM radio transmission?",
+    "options": [
+      "Very Low Frequency: 3 kHz to 30 kHz",
+      "Low Frequency: 30 kHz to 300 kHz",
+      "High Frequency: 3 MHz to 30 MHz",
+      "Very High Frequency: 30 MHz to 300 MHz"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "cn_l5_q4",
+    "question": "Frequency and period are ______.",
+    "options": ["proportional to each other", "inverse of each other", "the same", "none of the above"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l5_q5",
+    "question": "________ is a type of transmission impairment in which an outside source such as crosstalk corrupts a signal.",
+    "options": ["Noise", "Distortion", "Attenuation", "Decibel"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l5_q6",
+    "question": "Both Go-Back-N and Selective-Repeat Protocols use a ________.",
+    "options": ["sliding frame", "sliding window", "sliding packet", "none of the above"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l5_q7",
+    "question": "What is the size of the sender window in the Go Back N (ARQ) protocol?",
+    "options": ["0", "1", "10", "n"],
+    "correctIndex": 3
+  },
+  {
+    "id": "cn_l5_q8",
+    "question": "____________ are the random access protocols",
+    "options": [
+      "ALOHA, CSMA, CSMA/CA, CSMA/CD",
+      "Reservation, polling, token passing",
+      "FDMA, TDMA, CDMA",
+      "All of the above"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l5_q9",
+    "question": "_________framing uses two categories of protocols: character-oriented and bit-oriented.",
+    "options": ["Fixed-size", "Variable-size", "Standard", "None of the above"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l5_q10",
+    "question": "In _____________ framing ,there is no need for defining the boundaries of frames.",
+    "options": ["fixed size", "variable size", "standard", "none of the above"],
+    "correctIndex": 0
+  }
+]

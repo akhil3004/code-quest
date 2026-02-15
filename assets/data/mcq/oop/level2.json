@@ -1,0 +1,62 @@
+[
+  {
+    "id": "oops_l2_q01",
+    "question": "Method overriding occurs in",
+    "options": ["Same class", "Different class with inheritance", "Interface", "Constructor"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l2_q02",
+    "question": "Constructor name must be",
+    "options": ["Same as class", "Different from class", "Same as method", "Any name"],
+    "correctIndex": 0
+  },
+  {
+    "id": "oops_l2_q03",
+    "question": "Constructor is used to",
+    "options": ["Destroy object", "Initialize object", "Copy object", "Print object"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l2_q04",
+    "question": "Which is default access modifier?",
+    "options": ["public", "private", "protected", "default"],
+    "correctIndex": 3
+  },
+  {
+    "id": "oops_l2_q05",
+    "question": "Which access modifier gives widest access?",
+    "options": ["private", "protected", "public", "default"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l2_q06",
+    "question": "Which keyword refers to current object?",
+    "options": ["this", "super", "current", "self"],
+    "correctIndex": 0
+  },
+  {
+    "id": "oops_l2_q07",
+    "question": "Which keyword refers to parent class object?",
+    "options": ["parent", "this", "super", "base"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l2_q08",
+    "question": "Which method is called automatically when object is created?",
+    "options": ["main()", "constructor", "finalize()", "start()"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l2_q09",
+    "question": "Java does not support",
+    "options": ["Encapsulation", "Polymorphism", "Operator overloading", "Inheritance"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l2_q10",
+    "question": "Which feature reduces code duplication?",
+    "options": ["Abstraction", "Encapsulation", "Inheritance", "Polymorphism"],
+    "correctIndex": 2
+  }
+]

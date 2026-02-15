@@ -1,0 +1,62 @@
+[
+  {
+    "id": "oops_l9_q01",
+    "question": "Which keyword restricts inheritance to same package?",
+    "options": ["public", "protected", "default", "private"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l9_q02",
+    "question": "Tight coupling is",
+    "options": ["High dependency", "Low dependency", "No dependency", "Loose binding"],
+    "correctIndex": 0
+  },
+  {
+    "id": "oops_l9_q03",
+    "question": "Loose coupling is achieved by",
+    "options": ["Inheritance", "Interfaces", "Static methods", "Constructors"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l9_q04",
+    "question": "Liskov Substitution Principle relates to",
+    "options": ["Encapsulation", "Polymorphism", "Inheritance", "Abstraction"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l9_q05",
+    "question": "Dependency Injection promotes",
+    "options": ["Tight coupling", "Loose coupling", "Inheritance", "Overloading"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l9_q06",
+    "question": "Composition is preferred over inheritance because",
+    "options": ["Faster", "Flexible", "Less memory", "Easier syntax"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l9_q07",
+    "question": "Method reference (::) is related to",
+    "options": ["OOPS", "Functional programming", "Inheritance", "Abstraction"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l9_q08",
+    "question": "Functional interface contains",
+    "options": ["Many abstract methods", "One abstract method", "No methods", "Only static methods"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l9_q09",
+    "question": "Lambda expressions support",
+    "options": ["Encapsulation", "Functional interfaces", "Inheritance", "Polymorphism"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l9_q10",
+    "question": "Enum in Java is",
+    "options": ["Class", "Interface", "Abstract class", "Package"],
+    "correctIndex": 0
+  }
+]

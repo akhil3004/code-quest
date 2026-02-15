@@ -1,0 +1,62 @@
+[
+  {
+    "id": "dbms_l10_q1",
+    "question": "Checkpoint reduces:",
+    "options": ["Deadlock", "Recovery time", "Storage", "Redundancy"],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l10_q2",
+    "question": "Which index is best for range queries?",
+    "options": ["Hash index", "B+ tree", "Bitmap", "Heap"],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l10_q3",
+    "question": "A composite attribute can be:",
+    "options": ["Divided", "Indexed", "Encrypted", "Deleted"],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l10_q4",
+    "question": "Degree of relation means:",
+    "options": ["Number of tuples", "Number of attributes", "Number of keys", "Number of rows"],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l10_q5",
+    "question": "Cardinality of relation means:",
+    "options": ["Number of attributes", "Number of tuples", "Number of keys", "Number of constraints"],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l10_q6",
+    "question": "Dirty read occurs in:",
+    "options": ["Read uncommitted", "Serializable", "Repeatable read", "Snapshot"],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l10_q7",
+    "question": "Snapshot isolation avoids:",
+    "options": ["Dirty reads", "Lost updates", "Deadlocks", "RAID"],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l10_q8",
+    "question": "Which clause removes duplicates?",
+    "options": ["GROUP BY", "DISTINCT", "UNIQUE", "HAVING"],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l10_q9",
+    "question": "Which is DCL command?",
+    "options": ["GRANT", "INSERT", "SELECT", "CREATE"],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l10_q10",
+    "question": "Which language defines schema?",
+    "options": ["DML", "DCL", "DDL", "TCL"],
+    "correctIndex": 2
+  }
+]

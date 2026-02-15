@@ -1,0 +1,67 @@
+[
+  {
+    "id": "cn_l7_q1",
+    "question": "The router has a _____",
+    "options": ["Memory", "Stores routing table", "Both Memory and Stores routing table", "None of the above"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l7_q2",
+    "question": "In slotted ALOHA the time is ___________",
+    "options": ["Discrete", "Not globally synchronized", "Globally synchronized", "Both Discrete and Globally synchronized"],
+    "correctIndex": 3
+  },
+  {
+    "id": "cn_l7_q3",
+    "question": "Machine that places the request to access the data is generally called as __________.",
+    "options": ["Server Machine", "Client Machine", "Request Machine", "None of the above"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l7_q4",
+    "question": "Which is not an application layer protocol?",
+    "options": ["HTTP", "SMTP", "FTP", "TCP"],
+    "correctIndex": 3
+  },
+  {
+    "id": "cn_l7_q5",
+    "question": "Application layer offers _______ service.",
+    "options": ["End to end", "Process to process", "Both End to end and Process to process", "None of the mentioned"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l7_q6",
+    "question": "Electronic mail uses which Application layer protocol?",
+    "options": ["SMTP", "HTTP", "FTP", "SIP"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l7_q7",
+    "question": "When displaying a web page, the application layer uses the _____________",
+    "options": ["HTTP protocol", "FTP protocol", "SMTP protocol", "TCP protocol"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l7_q8",
+    "question": "In FTP protocol, client contacts server using ____ as the transport protocol.",
+    "options": ["Transmission Control Protocol", "User Datagram Protocol", "Datagram Congestion Control Protocol", "Stream Control Transmission Protocol"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l7_q9",
+    "question": "TCP sliding windows are __________ oriented.",
+    "options": ["packet", "segment", "byte", "none of the above"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l7_q10",
+    "question": "Reliable data delivery guarantees that",
+    "options": [
+      "The receiver application receives the complete message data without any loss",
+      "The data will not choke the network",
+      "The data will not overflow the receiver’s buffer",
+      "None of the above"
+    ],
+    "correctIndex": 0
+  }
+]

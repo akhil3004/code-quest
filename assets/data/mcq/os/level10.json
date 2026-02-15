@@ -1,0 +1,62 @@
+[
+  {
+    "id": "os_l10_q1",
+    "question": "CPU utilization improves by",
+    "options": ["scheduling", "deadlock", "blocking", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l10_q2",
+    "question": "Throughput measures",
+    "options": ["response time", "completed processes", "waiting time", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l10_q3",
+    "question": "Ready queue contains",
+    "options": ["blocked processes", "terminated processes", "ready processes", "none"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l10_q4",
+    "question": "Shortest Job First minimizes",
+    "options": ["turnaround time", "waiting time", "response time", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l10_q5",
+    "question": "Preemptive scheduling allows",
+    "options": ["interruption", "blocking only", "no interruption", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l10_q6",
+    "question": "FCFS suffers from",
+    "options": ["starvation", "convoy effect", "deadlock", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l10_q7",
+    "question": "Scheduler latency affects",
+    "options": ["performance", "memory", "I/O", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l10_q8",
+    "question": "I/O completion moves process to",
+    "options": ["running", "ready", "blocked", "terminated"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l10_q9",
+    "question": "Kernel schedules",
+    "options": ["processes only", "kernel threads", "user threads", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l10_q10",
+    "question": "Operating system is",
+    "options": ["application software", "system software", "utility software", "none"],
+    "correctIndex": 1
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "dbms_l7_q1",
+    "question": "Which technique is used for deadlock detection?",
+    "options": [
+      "Wait-for graph",
+      "Locking protocol",
+      "Checkpoint",
+      "RAID"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l7_q2",
+    "question": "In indexing, why is B+ tree preferred?",
+    "options": [
+      "It stores data in root",
+      "It supports sequential access",
+      "It has no internal nodes",
+      "It is faster than hashing in all cases"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l7_q3",
+    "question": "Which recovery technique uses log files?",
+    "options": [
+      "Checkpointing",
+      "Shadow paging",
+      "Log-based recovery",
+      "RAID"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l7_q4",
+    "question": "What does ACID stand for?",
+    "options": [
+      "Atomicity, Consistency, Isolation, Durability",
+      "Accuracy, Control, Isolation, Data",
+      "Atomicity, Control, Integrity, Data",
+      "None"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l7_q5",
+    "question": "Which isolation level prevents dirty reads?",
+    "options": [
+      "Read Uncommitted",
+      "Read Committed",
+      "Repeatable Read",
+      "Serializable"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l7_q6",
+    "question": "A phantom read occurs when:",
+    "options": [
+      "Same row changes",
+      "New row appears during transaction",
+      "Data is deleted",
+      "Table is locked"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l7_q7",
+    "question": "Which join returns unmatched rows from both tables?",
+    "options": [
+      "Inner Join",
+      "Left Join",
+      "Full Outer Join",
+      "Cross Join"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l7_q8",
+    "question": "Which SQL clause is executed first?",
+    "options": [
+      "SELECT",
+      "FROM",
+      "WHERE",
+      "GROUP BY"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l7_q9",
+    "question": "Which command removes all records but keeps table structure?",
+    "options": [
+      "DELETE",
+      "DROP",
+      "TRUNCATE",
+      "REMOVE"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l7_q10",
+    "question": "Which key uniquely identifies a tuple but may contain extra attributes?",
+    "options": [
+      "Candidate key",
+      "Primary key",
+      "Super key",
+      "Foreign key"
+    ],
+    "correctIndex": 2
+  }
+]

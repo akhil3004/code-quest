@@ -1,0 +1,12 @@
+[
+  {"id": "dsa_l4_q1", "question": "A linear collection of data elements where the linear node is given by means of pointer is called?", "options": ["Linked list", "Node list", "Primitive list", "Unordered list"], "correctIndex": 0},
+  {"id": "dsa_l4_q2", "question": "Consider an implementation of unsorted singly linked list with head pointer only. Which operations can be implemented in O(1) time?", "options": ["Insertion at front only", "Insertion at front and deletion at front", "Insertion at end only", "Deletion at end only"], "correctIndex": 1},
+  {"id": "dsa_l4_q3", "question": "In linked list each node contains a minimum of two fields. One field is data field to store the data, second field is?", "options": ["Pointer to character", "Pointer to integer", "Pointer to node", "Node"], "correctIndex": 2},
+  {"id": "dsa_l4_q4", "question": "What would be the asymptotic time complexity to add a node at the end of singly linked list, if the pointer is initially pointing to the head?", "options": ["O(1)", "O(n)", "θ(n)", "θ(1)"], "correctIndex": 2},
+  {"id": "dsa_l4_q5", "question": "What would be the asymptotic time complexity to insert an element at the front of the linked list (head is known)?", "options": ["O(1)", "O(n)", "O(n²)", "O(n³)"], "correctIndex": 0},
+  {"id": "dsa_l4_q6", "question": "What would be the asymptotic time complexity to find an element in the linked list?", "options": ["O(1)", "O(n)", "O(n²)", "O(n⁴)"], "correctIndex": 1},
+  {"id": "dsa_l4_q7", "question": "What would be the asymptotic time complexity to insert an element at the second position in the linked list?", "options": ["O(1)", "O(n)", "O(n²)", "O(n³)"], "correctIndex": 0},
+  {"id": "dsa_l4_q8", "question": "The concatenation of two lists can be performed in O(1) time. Which variation of linked list can be used?", "options": ["Singly linked list", "Doubly linked list", "Circular doubly linked list", "Array implementation of list"], "correctIndex": 2},
+  {"id": "dsa_l4_q9", "question": "Which kind of linked list is best to answer questions like 'What is the item at position n?'", "options": ["Singly linked list", "Doubly linked list", "Circular linked list", "Array implementation of linked list"], "correctIndex": 3},
+  {"id": "dsa_l4_q10", "question": "Linked lists are not suitable for the implementation of ___________", "options": ["Insertion sort", "Radix sort", "Polynomial manipulation", "Binary search"], "correctIndex": 3}
+]

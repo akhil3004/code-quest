@@ -1,0 +1,62 @@
+[
+  {
+    "id": "oops_l8_q01",
+    "question": "Diamond problem occurs in",
+    "options": ["Multiple inheritance", "Multithreading", "Polymorphism", "Encapsulation"],
+    "correctIndex": 0
+  },
+  {
+    "id": "oops_l8_q02",
+    "question": "Java avoids diamond problem using",
+    "options": ["Abstract class", "Interface", "final", "super"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l8_q03",
+    "question": "Covariant return type means",
+    "options": ["Same return type", "Subclass return type", "Primitive return type", "Different parameters"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l8_q04",
+    "question": "Method hiding occurs when",
+    "options": ["Instance method overridden", "Static method redefined", "Constructor overloaded", "Method overloaded"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l8_q05",
+    "question": "Which binding happens at runtime?",
+    "options": ["Static binding", "Dynamic binding", "Early binding", "Compile-time binding"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l8_q06",
+    "question": "Object slicing is",
+    "options": ["Copying object", "Losing child part when assigned to parent", "Deleting object", "Casting object"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l8_q07",
+    "question": "Which cannot be instantiated?",
+    "options": ["Class", "Interface", "Object", "Method"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l8_q08",
+    "question": "Abstract class constructor is used for",
+    "options": ["Creating object", "Initializing common data", "Hiding data", "Overriding"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l8_q09",
+    "question": "Which method must be overridden in abstract class?",
+    "options": ["Concrete method", "Static method", "Abstract method", "Final method"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l8_q10",
+    "question": "Serializable interface is",
+    "options": ["Functional interface", "Marker interface", "Abstract class", "Utility class"],
+    "correctIndex": 1
+  }
+]

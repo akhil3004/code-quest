@@ -1,0 +1,62 @@
+[
+  {
+    "id": "logic_l3_q1",
+    "question": "Pointing to a photograph of a boy, Suresh said, 'He is the son of the only son of my mother.' How is Suresh related to that boy?",
+    "options": ["Brother", "Uncle", "Cousin", "Father"],
+    "correctIndex": 0
+  },
+  {
+    "id": "logic_l3_q2",
+    "question": "If A is brother of B, B sister of C, C father of D. How is D related to A?",
+    "options": ["Brother", "Sister", "Nephew", "Cannot be determined"],
+    "correctIndex": 2
+  },
+  {
+    "id": "logic_l3_q3",
+    "question": "A + B means A brother of B; A - B means A sister of B; A x B means A father of B. Which means C is son of M?",
+    "options": ["M - N x C + F", "F - C + N x M", "N + M - F x C", "M x N - C + F"],
+    "correctIndex": 3
+  },
+  {
+    "id": "logic_l3_q4",
+    "question": "Introducing a boy, a girl said, 'He is son of daughter of father of my uncle.' How is boy related to girl?",
+    "options": ["Brother", "Nephew", "Uncle", "Son-in-law"],
+    "correctIndex": 1
+  },
+  {
+    "id": "logic_l3_q5",
+    "question": "Pointing to photo Lata says: 'He is son of only son of my grandfather.' Relation of man to Lata?",
+    "options": ["Brother", "Uncle", "Cousin", "Data inadequate"],
+    "correctIndex": 1
+  },
+  {
+    "id": "logic_l3_q6",
+    "question": "If A + B means brother, A x B means son, A % B means daughter. Which shows M is maternal uncle of N?",
+    "options": ["M + O x N", "M % O x N + P", "M + O % N", "None of these"],
+    "correctIndex": 0
+  },
+  {
+    "id": "logic_l3_q7",
+    "question": "If A + B father, A - B brother, A % B wife, A x B mother. Which shows M is maternal grandmother of T?",
+    "options": ["M x N % S + T", "M x N - S % T", "M x S - N % T", "M x N x S % T"],
+    "correctIndex": 0
+  },
+  {
+    "id": "logic_l3_q8",
+    "question": "Bajpai said: 'He is son of only daughter of father of my brother.' Relation to Bajpai?",
+    "options": ["Nephew", "Brother", "Father", "Maternal Uncle"],
+    "correctIndex": 0
+  },
+  {
+    "id": "logic_l3_q9",
+    "question": "Abhijit said: 'Her granddaughter is only daughter of my brother.' Relation of woman to Abhijit?",
+    "options": ["Sister", "Grandmother", "Mother-in-law", "Mother"],
+    "correctIndex": 1
+  },
+  {
+    "id": "logic_l3_q10",
+    "question": "A and B are children of D. Which statements are necessary to find father of A? 1) C brother of A, son of E 2) F is mother of B",
+    "options": ["Only 1", "Only 2", "Either 1 or 2", "Both 1 and 2"],
+    "correctIndex": 0
+  }
+]

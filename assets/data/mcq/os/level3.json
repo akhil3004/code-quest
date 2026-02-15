@@ -1,0 +1,62 @@
+[
+  {
+    "id": "os_l3_q1",
+    "question": "When a process issues I/O request, it is placed in",
+    "options": ["I/O queue", "Waiting queue", "Ready queue", "Job queue"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l3_q2",
+    "question": "What happens when a process terminates?",
+    "options": ["Removed from all queues", "Removed except job queue", "PCB never deleted", "None"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l3_q3",
+    "question": "What is interprocess communication?",
+    "options": ["Synchronization only", "Communication & synchronization", "Communication only", "None"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l3_q4",
+    "question": "Which process can be affected by others?",
+    "options": ["Cooperating", "Child", "Parent", "Init"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l3_q5",
+    "question": "Which is a synchronization tool?",
+    "options": ["Thread", "Pipe", "Semaphore", "Socket"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l3_q6",
+    "question": "Semaphore is a shared variable that",
+    "options": ["cannot go below zero", "cannot exceed zero", "cannot exceed one", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l3_q7",
+    "question": "Mutual exclusion can be provided by",
+    "options": ["Mutex", "Binary semaphore", "Both", "None"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l3_q8",
+    "question": "Race condition occurs when",
+    "options": ["concurrent access affects output", "deadlock happens", "starvation occurs", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l3_q9",
+    "question": "Zombie process means",
+    "options": ["parent finished first", "child finished, parent running", "both finished", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l3_q10",
+    "question": "Orphan process means",
+    "options": ["child running, parent finished", "child finished", "both finished", "none"],
+    "correctIndex": 0
+  }
+]

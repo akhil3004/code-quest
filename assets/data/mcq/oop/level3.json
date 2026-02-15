@@ -1,0 +1,62 @@
+[
+  {
+    "id": "oops_l3_q01",
+    "question": "Compile-time polymorphism is",
+    "options": ["Overriding", "Overloading", "Abstraction", "Encapsulation"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l3_q02",
+    "question": "Runtime polymorphism is achieved by",
+    "options": ["Overloading", "Overriding", "Constructor", "Encapsulation"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l3_q03",
+    "question": "Which keyword prevents inheritance?",
+    "options": ["static", "final", "abstract", "private"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l3_q04",
+    "question": "Abstract class can have",
+    "options": ["Only abstract methods", "Only concrete methods", "Both abstract and concrete methods", "No methods"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l3_q05",
+    "question": "Interface methods are by default",
+    "options": ["private", "protected", "public abstract", "static"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l3_q06",
+    "question": "Which keyword is used to implement interface?",
+    "options": ["extends", "implements", "inherits", "super"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l3_q07",
+    "question": "A class implementing interface must",
+    "options": ["Implement all methods", "Implement some methods", "Implement none", "Override constructor"],
+    "correctIndex": 0
+  },
+  {
+    "id": "oops_l3_q08",
+    "question": "Java supports multiple inheritance through",
+    "options": ["Classes", "Interfaces", "Abstract classes", "Objects"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l3_q09",
+    "question": "Which method is from Object class?",
+    "options": ["equals()", "print()", "scan()", "read()"],
+    "correctIndex": 0
+  },
+  {
+    "id": "oops_l3_q10",
+    "question": "Which method returns string representation?",
+    "options": ["toString()", "equals()", "hashCode()", "valueOf()"],
+    "correctIndex": 0
+  }
+]

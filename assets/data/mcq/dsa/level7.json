@@ -1,0 +1,12 @@
+[
+  {"id": "dsa_l7_q1", "question": "How many children can a binary tree node have?", "options": ["2", "Any number", "0, 1, or 2", "0 or 1"], "correctIndex": 2},
+  {"id": "dsa_l7_q2", "question": "What is a disadvantage of implementing a tree using normal arrays?", "options": ["Difficulty in knowing children nodes", "Difficult to find parent", "Need to know maximum number of nodes before creation", "Difficult to implement"], "correctIndex": 2},
+  {"id": "dsa_l7_q3", "question": "What is the ideal size of array to represent a complete binary tree of height L?", "options": ["2^L - 1", "L - 1", "L", "2^L"], "correctIndex": 0},
+  {"id": "dsa_l7_q4", "question": "In array representation of complete binary tree, children of node w are at?", "options": ["2w and 2w+1", "2+w and 2-w", "w+1/2 and w/2", "w-1/2 and w+1/2"], "correctIndex": 0},
+  {"id": "dsa_l7_q5", "question": "In a B+ tree, which nodes contain keys?", "options": ["Both internal and leaves", "Only leaves", "Only internal nodes", "None"], "correctIndex": 1},
+  {"id": "dsa_l7_q6", "question": "Which statement is true for B+ tree?", "options": ["Allows only rapid random access", "Allows only rapid sequential access", "Allows rapid random and sequential access", "Rapid random access and slower sequential access"], "correctIndex": 2},
+  {"id": "dsa_l7_q7", "question": "A B+ tree node can have a maximum of 7 pointers. Minimum number of keys in leaves?", "options": ["6", "3", "4", "7"], "correctIndex": 1},
+  {"id": "dsa_l7_q8", "question": "Which statement is false about B+ tree?", "options": ["Grows downwards", "Is balanced", "Sibling pointers allow sequential search", "Shallower than B-tree"], "correctIndex": 0},
+  {"id": "dsa_l7_q9", "question": "In a simple graph, sum of degrees of vertices is equal to?", "options": ["Twice the number of edges", "Number of edges", "Half the number of edges", "Number of vertices"], "correctIndex": 0},
+  {"id": "dsa_l7_q10", "question": "A connected planar graph with 6 vertices and 7 edges has how many regions?", "options": ["15", "3", "1", "11"], "correctIndex": 1}
+]

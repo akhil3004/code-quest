@@ -1,0 +1,62 @@
+[
+  {
+    "id": "os_l5_q1",
+    "question": "Short-term scheduler performs",
+    "options": ["swapping", "CPU allocation", "job admission", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l5_q2",
+    "question": "Time-sharing OS moves process from running to",
+    "options": ["blocked", "ready", "suspended", "terminated"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l5_q3",
+    "question": "Context switch does not save",
+    "options": ["registers", "process state", "memory info", "switch time"],
+    "correctIndex": 3
+  },
+  {
+    "id": "os_l5_q4",
+    "question": "Which does not interrupt a process?",
+    "options": ["Timer", "Device", "Scheduler process", "Power failure"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l5_q5",
+    "question": "Priority inversion occurs when",
+    "options": ["low priority blocks high priority", "priority removed", "priority exchanged", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l5_q6",
+    "question": "Monitor encapsulates",
+    "options": ["shared data", "procedures", "synchronization", "all"],
+    "correctIndex": 3
+  },
+  {
+    "id": "os_l5_q7",
+    "question": "In direct communication, link exists between",
+    "options": ["many processes", "exactly two", "N/2", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l5_q8",
+    "question": "Non-blocking send means",
+    "options": ["sender waits", "sender resumes immediately", "sender retries", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l5_q9",
+    "question": "Stub in RPC does",
+    "options": ["parameter packing", "message transmission", "server invocation", "all"],
+    "correctIndex": 3
+  },
+  {
+    "id": "os_l5_q10",
+    "question": "Machine-independent representation solves",
+    "options": ["OS issues", "hardware differences", "data representation", "none"],
+    "correctIndex": 2
+  }
+]

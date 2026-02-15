@@ -1,8 +1,72 @@
 [
   {
     "id": "cn_l1_q1",
-    "question": "TCP works at which layer?",
-    "options": ["Application", "Transport", "Network", "Data Link"],
+    "question": "The _______ is the physical path over which a message travels.",
+    "options": ["Protocol", "Path", "Medium", "Route"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l1_q2",
+    "question": "What kind of transmission medium is most appropriate to carry data in a computer network that is exposed to electrical interferences?",
+    "options": ["Unshielded twisted pair", "Optical fiber", "Coaxial cable", "Microwave"],
     "correctIndex": 1
+  },
+  {
+    "id": "cn_l1_q3",
+    "question": "Communication between a computer and a keyboard involves ______________ transmission.",
+    "options": ["Automatic", "Half-duplex", "Full-duplex", "Simplex"],
+    "correctIndex": 3
+  },
+  {
+    "id": "cn_l1_q4",
+    "question": "The first Network was called ________.",
+    "options": ["CNNET", "NSFNET", "ASAPNET", "ARPANET"],
+    "correctIndex": 3
+  },
+  {
+    "id": "cn_l1_q5",
+    "question": "A _________ set of rules that governs data communication.",
+    "options": ["Protocols", "Standards", "RFCs", "Servers"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l1_q6",
+    "question": "Three or more devices share a link in ________ connection.",
+    "options": ["Unipoint", "Multipoint", "Point to point", "Simplex"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l1_q7",
+    "question": "Two devices are in network if __________",
+    "options": [
+      "A process in one device is able to exchange information with a process in another device",
+      "A process is running on both devices",
+      "PIDs of the processes running on different devices are same",
+      "A process is active and another is inactive"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l1_q8",
+    "question": "A __________ is a device that forwards packets between networks by processing the routing information included in the packet.",
+    "options": ["Bridge", "Firewall", "Router", "Hub"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l1_q9",
+    "question": "Network congestion occurs _________",
+    "options": [
+      "In case of traffic overloading",
+      "When a system terminates",
+      "When connection between two nodes terminates",
+      "In case of transfer failure"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l1_q10",
+    "question": "Which network topology requires a central controller or hub?",
+    "options": ["Star", "Mesh", "Ring", "Bus"],
+    "correctIndex": 0
   }
 ]

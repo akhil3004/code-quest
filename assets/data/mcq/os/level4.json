@@ -1,0 +1,62 @@
+[
+  {
+    "id": "os_l4_q1",
+    "question": "Message passing allows processes to",
+    "options": ["share memory", "communicate without shared memory", "share data directly", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l4_q2",
+    "question": "Which two operations IPC provides?",
+    "options": ["write & delete", "delete & receive", "send & receive", "none"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l4_q3",
+    "question": "Zero capacity queue means",
+    "options": ["buffering", "no buffering", "infinite buffering", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l4_q4",
+    "question": "RPC is used for communication",
+    "options": ["same process", "same system", "different systems", "none"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l4_q5",
+    "question": "The initial program when computer starts is",
+    "options": ["boot program", "bootloader", "initializer", "bootstrap program"],
+    "correctIndex": 3
+  },
+  {
+    "id": "os_l4_q6",
+    "question": "A process can be terminated due to",
+    "options": ["normal exit", "fatal error", "killed by another process", "all"],
+    "correctIndex": 3
+  },
+  {
+    "id": "os_l4_q7",
+    "question": "Degree of multiprogramming refers to",
+    "options": ["processes per time", "ready queue size", "I/O queue size", "processes in memory"],
+    "correctIndex": 3
+  },
+  {
+    "id": "os_l4_q8",
+    "question": "Which system call makes parent wait for child?",
+    "options": ["wait", "fork", "exit", "exec"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l4_q9",
+    "question": "Long-term scheduler selects",
+    "options": ["processes into ready queue", "CPU allocation", "swap out process", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l4_q10",
+    "question": "Medium-term scheduler performs",
+    "options": ["CPU allocation", "swapping", "dispatching", "none"],
+    "correctIndex": 1
+  }
+]

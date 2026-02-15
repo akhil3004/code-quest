@@ -1,0 +1,62 @@
+[
+  {
+    "id": "oops_l6_q01",
+    "question": "Multiple interfaces are implemented using",
+    "options": ["extends", "implements", "super", "interface"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l6_q02",
+    "question": "A class can extend",
+    "options": ["Multiple classes", "One class", "No class", "Any number"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l6_q03",
+    "question": "Method signature includes",
+    "options": ["Name + parameters", "Name only", "Parameters only", "Return type only"],
+    "correctIndex": 0
+  },
+  {
+    "id": "oops_l6_q04",
+    "question": "Return type is not part of",
+    "options": ["Method signature", "Method definition", "Class", "Interface"],
+    "correctIndex": 0
+  },
+  {
+    "id": "oops_l6_q05",
+    "question": "Which is marker interface?",
+    "options": ["Runnable", "Serializable", "Comparable", "Cloneable"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l6_q06",
+    "question": "Anonymous class is",
+    "options": ["Class without name", "Class without constructor", "Class without methods", "Abstract class"],
+    "correctIndex": 0
+  },
+  {
+    "id": "oops_l6_q07",
+    "question": "Inner class can access",
+    "options": ["Only static members", "Only private members", "All members of outer class", "None"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l6_q08",
+    "question": "Which keyword is used for exception handling?",
+    "options": ["try", "catch", "throw", "All"],
+    "correctIndex": 3
+  },
+  {
+    "id": "oops_l6_q09",
+    "question": "Finally block executes",
+    "options": ["Only when exception occurs", "Always", "Only when no exception", "Never"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l6_q10",
+    "question": "Which is checked exception?",
+    "options": ["ArithmeticException", "IOException", "NullPointerException", "ArrayIndexOutOfBoundsException"],
+    "correctIndex": 1
+  }
+]

@@ -1,8 +1,62 @@
 [
   {
-    "id": "oop_l1_q1",
-    "question": "Which is not an OOP concept?",
-    "options": ["Encapsulation", "Polymorphism", "Abstraction", "Normalization"],
+    "id": "oops_l1_q1",
+    "question": "OOPS stands for",
+    "options": ["Object Oriented Programming System", "Object Oriented Programming Structure", "Object Oriented Programming Systematic", "Object Oriented Programming"],
     "correctIndex": 3
+  },
+  {
+    "id": "oops_l1_q2",
+    "question": "Which is not an OOPS principle?",
+    "options": ["Encapsulation", "Polymorphism", "Compilation", "Inheritance"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l1_q3",
+    "question": "A class is",
+    "options": ["Object", "Blueprint of object", "Function", "Variable"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l1_q4",
+    "question": "An object is",
+    "options": ["Instance of class", "Variable", "Method", "Data type"],
+    "correctIndex": 0
+  },
+  {
+    "id": "oops_l1_q5",
+    "question": "Which keyword creates an object in Java?",
+    "options": ["class", "new", "create", "object"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l1_q6",
+    "question": "Which feature hides internal details?",
+    "options": ["Abstraction", "Encapsulation", "Inheritance", "Polymorphism"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l1_q7",
+    "question": "Wrapping data and methods together is",
+    "options": ["Abstraction", "Encapsulation", "Polymorphism", "Inheritance"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l1_q8",
+    "question": "Which keyword is used for inheritance?",
+    "options": ["implement", "extends", "inherits", "super"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l1_q9",
+    "question": "Java supports",
+    "options": ["Multiple inheritance of classes", "Multiple inheritance via interfaces", "No inheritance", "Only single inheritance"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l1_q10",
+    "question": "Which concept allows same method name with different parameters?",
+    "options": ["Overriding", "Overloading", "Abstraction", "Encapsulation"],
+    "correctIndex": 1
   }
 ]

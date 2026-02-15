@@ -1,0 +1,62 @@
+[
+  {
+    "id": "cn_l4_q1",
+    "question": "The sharing of a medium and its link by two or more devices is called _________",
+    "options": ["Fully duplexing", "Multiplexing", "Microplexing", "Duplexing"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l4_q2",
+    "question": "Multiplexing is used in _______",
+    "options": ["Packet switching", "Circuit switching", "Data switching", "Packet & Circuit switching"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l4_q3",
+    "question": "In TDM, the transmission rate of a multiplexed path is always _______ the sum of the transmission rates of the signal sources.",
+    "options": ["Greater than", "Lesser than", "Equal to", "Equal to or greater than"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l4_q4",
+    "question": "What is the max length of the Shielded twisted pair cable?",
+    "options": ["100 ft", "200 ft", "100 m", "200 m"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l4_q5",
+    "question": "A local telephone network is an example of a _______ network.",
+    "options": ["Packet switched", "Circuit switched", "Bit switched", "Line switched"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l4_q6",
+    "question": "Most packet switches use this principle ____________",
+    "options": ["Stop and wait", "Store and forward", "Store and wait", "Stop and forward"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l4_q7",
+    "question": "The ______ field is used to detect errors over the entire user datagram.",
+    "options": ["UDP header", "Checksum", "Source port", "Destination port"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l4_q8",
+    "question": "MAC address is also called ______.",
+    "options": ["Physical address", "Logical address", "Source address", "Destination address"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l4_q9",
+    "question": "Which has continuous transmission?",
+    "options": ["Asynchronous", "Synchronous", "Asynchronous & Synchronous", "None of the mentioned"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l4_q10",
+    "question": "How error detection and correction is done?",
+    "options": ["By passing it through equalizer", "By passing it through filter", "By amplifying it", "By adding redundancy bits"],
+    "correctIndex": 3
+  }
+]

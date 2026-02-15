@@ -1,0 +1,62 @@
+[
+  {
+    "id": "qa_l2_q1",
+    "question": "Express speed of 36 km per hr in metres per second.",
+    "options": ["10 m/sec", "8 m/sec", "12 m/sec", "18 m/sec"],
+    "correctIndex": 0
+  },
+  {
+    "id": "qa_l2_q2",
+    "question": "A car runs at 60 km per hr. A man runs at one-third the speed of the car and reaches office from his house in 15 minutes. How far is his office from his house?",
+    "options": ["7 km", "5.5 km", "6 km", "5 km"],
+    "correctIndex": 2
+  },
+  {
+    "id": "qa_l2_q3",
+    "question": "A train running between two towns arrives at its destination 10 minutes late when it goes at 60 km/hr and 16 minutes late when it goes at 40 km/hr. Determine the distance between the two towns.",
+    "options": ["12 km", "20 km", "18 km", "24 km"],
+    "correctIndex": 2
+  },
+  {
+    "id": "qa_l2_q4",
+    "question": "Find the distance between A and B if it took one hour more when travelling at 80 kmph than at 90 kmph.",
+    "options": ["720 km", "740 km", "600 km", "850 km"],
+    "correctIndex": 0
+  },
+  {
+    "id": "qa_l2_q5",
+    "question": "Robert is travelling on his cycle and has calculated to reach point A at 2 P.M. If he travels at 10 kmph, he will reach at 12 noon; if he travels at 15 kmph, at what speed must he travel to reach A at 1 P.M.?",
+    "options": ["8 km/hr", "12 km/hr", "14 km/hr", "11 km/hr"],
+    "correctIndex": 3
+  },
+  {
+    "id": "qa_l2_q6",
+    "question": "A train running at 25 km/hr takes 18 seconds to pass a platform. Next, it takes 12 seconds to pass a man walking at 5 km/hr in the same direction. Find the length of the platform.",
+    "options": ["25 metres", "20 metres", "24 metres", "28 metres"],
+    "correctIndex": 2
+  },
+  {
+    "id": "qa_l2_q7",
+    "question": "A train 180 m long moving at 20 m/sec overtakes a man moving at 10 m/sec in the same direction. The train passes the man in:",
+    "options": ["6 sec", "9 sec", "18 sec", "27 sec"],
+    "correctIndex": 1
+  },
+  {
+    "id": "qa_l2_q8",
+    "question": "In a 200 meter race, A beats B by 20 meters; while in a 100 meter race, B beats C by 5 meters. Assuming speeds remain constant, by how many meters will A beat C in a 1 km race?",
+    "options": ["140 m", "145 m", "135 m", "125 m"],
+    "correctIndex": 0
+  },
+  {
+    "id": "qa_l2_q9",
+    "question": "A farmer travelled a distance of 61 km in 9 hours. He travelled partly on foot at 4 kmph and partly on bicycle at 9 kmph. The distance travelled on foot is:",
+    "options": ["16 km", "17 km", "14 km", "15 km"],
+    "correctIndex": 1
+  },
+  {
+    "id": "qa_l2_q10",
+    "question": "The speed of a train going from Nagpur to Allahabad is 100 kmph, while its speed is 150 kmph when coming back. What is the average speed for the whole journey?",
+    "options": ["125 kmph", "135 kmph", "140 kmph", "120 kmph"],
+    "correctIndex": 0
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "oops_l10_q01",
+    "question": "Records in Java are used for",
+    "options": ["Mutable data", "Immutable data classes", "Interfaces", "Enums"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l10_q02",
+    "question": "Sealed classes restrict",
+    "options": ["Object creation", "Inheritance", "Method calls", "Variable access"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l10_q03",
+    "question": "Reflection allows",
+    "options": ["Compile-time inspection", "Runtime inspection", "Syntax checking", "Optimization"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l10_q04",
+    "question": "Which breaks encapsulation?",
+    "options": ["Getters", "Setters", "Reflection", "Constructors"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l10_q05",
+    "question": "Cloneable interface is used for",
+    "options": ["Copying objects", "Comparing objects", "Serializing objects", "Destroying objects"],
+    "correctIndex": 0
+  },
+  {
+    "id": "oops_l10_q06",
+    "question": "Shallow copy copies",
+    "options": ["Entire object graph", "Only references", "Only primitives", "Nothing"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l10_q07",
+    "question": "Deep copy copies",
+    "options": ["Only references", "Entire object graph", "Only primitives", "Methods"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l10_q08",
+    "question": "equals() and hashCode() must be consistent for",
+    "options": ["Arrays", "Hash collections", "Strings", "Exceptions"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l10_q09",
+    "question": "Object class is in package",
+    "options": ["java.util", "java.io", "java.lang", "java.awt"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l10_q10",
+    "question": "Main goal of OOPS is",
+    "options": ["Speed", "Memory saving", "Modularity and reusability", "Compilation"],
+    "correctIndex": 2
+  }
+]

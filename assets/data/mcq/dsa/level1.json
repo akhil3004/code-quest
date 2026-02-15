@@ -1,8 +1,12 @@
 [
-  {
-    "id": "dsa_l1_q1",
-    "question": "In-order traversal of BST gives:",
-    "options": ["Random order", "Sorted order", "Reverse order", "Level order"],
-    "correctIndex": 1
-  }
+  {"id": "dsa_l1_q1", "question": "Process of inserting an element in stack is called ____________", "options": ["Create", "Push", "Evaluation", "Pop"], "correctIndex": 1},
+  {"id": "dsa_l1_q2", "question": "Process of removing an element from stack is called __________", "options": ["Create", "Push", "Evaluation", "Pop"], "correctIndex": 3},
+  {"id": "dsa_l1_q3", "question": "In a stack, if a user tries to remove an element from an empty stack it is called _________", "options": ["Underflow", "Empty collection", "Overflow", "Garbage Collection"], "correctIndex": 0},
+  {"id": "dsa_l1_q4", "question": "Pushing an element into stack already having five elements and stack size of 5, then stack becomes ___________", "options": ["Overflow", "Crash", "Underflow", "User flow"], "correctIndex": 0},
+  {"id": "dsa_l1_q5", "question": "Entries in a stack are 'ordered'. What is the meaning of this statement?", "options": ["A collection of stacks is sortable", "Stack entries may be compared with the ‘<' operation", "The entries are stored in a linked list", "There is a Sequential entry that is one by one"], "correctIndex": 3},
+  {"id": "dsa_l1_q6", "question": "Which of the following is not the application of stack?", "options": ["A parentheses balancing program", "Tracking of local variables at run time", "Compiler Syntax Analyzer", "Data Transfer between two asynchronous process"], "correctIndex": 3},
+  {"id": "dsa_l1_q7", "question": "Maximum number of parentheses that appear on stack for sequence: (()(())(()))?", "options": ["1", "2", "3", "4 or more"], "correctIndex": 2},
+  {"id": "dsa_l1_q8", "question": "Maximum number of parentheses in stack for 2 left and 3 right parentheses in any order?", "options": ["1", "2", "3", "4 or more"], "correctIndex": 1},
+  {"id": "dsa_l1_q9", "question": "Value of postfix expression 6 3 2 4 + - *?", "options": ["1", "40", "74", "-18"], "correctIndex": 3},
+  {"id": "dsa_l1_q10", "question": "Maximum number of symbols in stack during infix to postfix conversion of 4 + 3*(6*3-12)?", "options": ["1", "2", "3", "4"], "correctIndex": 3}
 ]

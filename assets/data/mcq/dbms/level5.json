@@ -1,0 +1,112 @@
+[
+  {
+    "id": "dbms_l5_q1",
+    "question": "When the ROLLUP operator is used in a GROUP BY clause, what does it do?",
+    "options": [
+      "Find groups that make up subtotal in a row",
+      "Create group-wise grand totals",
+      "Group columns from right to left to compute subtotals",
+      "Produce cross-tabular report in all directions"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l5_q2",
+    "question": "What is the best way to represent attributes in a large database?",
+    "options": [
+      "Dot representation",
+      "Concatenation",
+      "Relational-and",
+      "All of the mentioned"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l5_q3",
+    "question": "Which subset of SQL commands manipulates Oracle structures including tables?",
+    "options": [
+      "Data Described Language",
+      "Data Retrieval Language",
+      "Data Manipulation Language",
+      "Data Definition Language"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "dbms_l5_q4",
+    "question": "Which function constructs histograms and uses buckets for ranking?",
+    "options": [
+      "Ntile()",
+      "Newtil()",
+      "Rank()",
+      "All of the mentioned"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l5_q5",
+    "question": "Which command is used to issue multiple CREATE TABLE, CREATE VIEW and GRANT statements in a single transaction?",
+    "options": [
+      "CREATE CLUSTER",
+      "CREATE PACKAGE",
+      "CREATE SCHEMA",
+      "All of the mentioned"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l5_q6",
+    "question": "Which key is required to decrypt encrypted data so unauthorized users cannot access it?",
+    "options": [
+      "Primary key",
+      "Authorized key",
+      "Encryption key",
+      "Decryption key"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "dbms_l5_q7",
+    "question": "What is the process of viewing cross-tab with a fixed value of one attribute called?",
+    "options": [
+      "Dicing",
+      "Pivoting",
+      "Slicing",
+      "Both Pivoting and Dicing"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l5_q8",
+    "question": "Which normal form is considered adequate for designing a normal RDBMS?",
+    "options": [
+      "4NF",
+      "3NF",
+      "2NF",
+      "5NF"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l5_q9",
+    "question": "Which RAID level is popular for log file storage due to best write performance?",
+    "options": [
+      "RAID 0",
+      "RAID 1",
+      "RAID 2",
+      "RAID 3"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l5_q10",
+    "question": "Which represents a query in tuple relational calculus?",
+    "options": [
+      "{ }{P(t) | t }",
+      "{t | P(t)}",
+      "t | P() | t",
+      "All of the mentioned"
+    ],
+    "correctIndex": 1
+  }
+]

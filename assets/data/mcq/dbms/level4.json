@@ -1,0 +1,112 @@
+[
+  {
+    "id": "dbms_l4_q1",
+    "question": "Why is the following SQL statement erroneous?\nSELECT dept_name, ID, avg(salary)\nFROM instructor\nGROUP BY dept_name;",
+    "options": [
+      "Dept_id should not be used in group by clause",
+      "Group by clause is not valid in this query",
+      "Avg(salary) should not be selected",
+      "None"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l4_q2",
+    "question": "Traditional storage of data organized in separate folders in filing cabinets is an example of which database type?",
+    "options": [
+      "Object-oriented DBMS",
+      "Relational DBMS",
+      "Network DBMS",
+      "Hierarchical DBMS"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "dbms_l4_q3",
+    "question": "After groups have been established, SQL applies predicates in which clause allowing aggregate functions to be used?",
+    "options": [
+      "WHERE",
+      "HAVING",
+      "GROUP BY",
+      "WITH"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "dbms_l4_q4",
+    "question": "Which of the following is NOT a utility of DBMS?",
+    "options": [
+      "Backup",
+      "Loading",
+      "Process Organization",
+      "File organization"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l4_q5",
+    "question": "What does a foreign key combined with a primary key create?",
+    "options": [
+      "Network model between the tables",
+      "Parent-Child relationship",
+      "One to many relationship",
+      "All of the mentioned"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l4_q6",
+    "question": "Which technology is used by DBMS to maintain transactional integrity and consistency?",
+    "options": [
+      "Pointers",
+      "Cursors",
+      "Locks",
+      "Triggers"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l4_q7",
+    "question": "Which of the following is correct regarding the file produced by a spreadsheet?",
+    "options": [
+      "Can be used as it is by the DBMS",
+      "Stored on disk in an ASCII text format",
+      "All of the mentioned",
+      "None of the mentioned"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l4_q8",
+    "question": "What is the function of the command: Delete from r where P;",
+    "options": [
+      "Clears entries from relation",
+      "Deletes relation",
+      "Deletes particular tuple from relation",
+      "All of the mentioned"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l4_q9",
+    "question": "Which statement resembles 'Create view'?",
+    "options": [
+      "Create table ... as",
+      "Create view as",
+      "Create table ... like",
+      "With data"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l4_q10",
+    "question": "A SQL view is updatable if which conditions are met?",
+    "options": [
+      "Select clause contains only attribute names without expressions or aggregates",
+      "From clause has only one relation",
+      "Query does not have GROUP BY or HAVING clause",
+      "All of the mentioned"
+    ],
+    "correctIndex": 3
+  }
+]

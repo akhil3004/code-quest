@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cn_l8_q1",
+    "question": "A DNS client is called _________",
+    "options": ["DNS updater", "DNS resolver", "DNS handler", "None of the mentioned"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l8_q2",
+    "question": "DNS database contains _______",
+    "options": ["name server records", "hostname-to-address records", "hostname aliases", "all of the mentioned"],
+    "correctIndex": 3
+  },
+  {
+    "id": "cn_l8_q3",
+    "question": "The domain name system is maintained by _______",
+    "options": ["distributed database system", "a single server", "a single computer", "none of the mentioned"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l8_q4",
+    "question": "In Go-Back-N window, when the timer of the packet times out, several packets have to be resent even if some may have arrived safely. Whereas in Selective Repeat window, the sender resends ________",
+    "options": [
+      "Packet which are not lost",
+      "Only those packets which are lost or corrupted",
+      "Packet from starting",
+      "All the packets"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l8_q5",
+    "question": "_______ allows you to connect and login to a remote computer",
+    "options": ["Telnet", "FTP", "HTTP", "SMTP"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l8_q6",
+    "question": "Which operating mode of telnet is full duplex?",
+    "options": ["default mode", "server mode", "line mode", "character mode"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l8_q7",
+    "question": "To do multicast routing, each router computes a .....................",
+    "options": ["Binary tree", "AVL tree", "Spanning tree", "None of these"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l8_q8",
+    "question": "Sending a packet to all destinations simultaneously is called ...................",
+    "options": ["Multicasting", "Unicasting", "Telecasting", "Broadcasting"],
+    "correctIndex": 3
+  },
+  {
+    "id": "cn_l8_q9",
+    "question": "Sending a message to a well defined group that are numerically large in size but small compared to the network as a whole is called ...................",
+    "options": ["Unicasting", "Multicasting", "Broadcasting", "None of these"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l8_q10",
+    "question": "The router algorithm takes the decision to change the route when .................",
+    "options": [
+      "router changes",
+      "topology changes",
+      "user changes",
+      "transmission time does not change"
+    ],
+    "correctIndex": 1
+  }
+]

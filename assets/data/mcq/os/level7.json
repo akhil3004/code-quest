@@ -1,0 +1,62 @@
+[
+  {
+    "id": "os_l7_q1",
+    "question": "Multilevel feedback queue allows",
+    "options": ["queue movement", "fixed queue", "no classification", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l7_q2",
+    "question": "Which thread kernel cannot schedule?",
+    "options": ["kernel thread", "user thread", "process", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l7_q3",
+    "question": "CPU & I/O bursts are steps of",
+    "options": ["execution", "scheduling", "deadlock", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l7_q4",
+    "question": "I/O bound program has",
+    "options": ["many short CPU bursts", "few long CPU bursts", "many I/O bursts", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l7_q5",
+    "question": "Non-preemptive scheduling occurs when",
+    "options": ["running → waiting", "waiting → ready", "ready → running", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l7_q6",
+    "question": "Context switch is",
+    "options": ["process termination", "CPU switch", "task creation", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l7_q7",
+    "question": "Dispatch latency means",
+    "options": ["delay in execution", "time to switch processes", "waiting time", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l7_q8",
+    "question": "Scheduling aims to",
+    "options": ["increase CPU utilization", "keep CPU idle", "decrease throughput", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l7_q9",
+    "question": "Scheduling also aims to",
+    "options": ["increase throughput", "decrease throughput", "increase delay", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l7_q10",
+    "question": "Waiting time excludes",
+    "options": ["ready queue", "blocked queue", "running time", "none"],
+    "correctIndex": 2
+  }
+]

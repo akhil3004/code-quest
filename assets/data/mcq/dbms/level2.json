@@ -1,0 +1,112 @@
+[
+  {
+    "id": "dbms_l2_q1",
+    "question": "Which of the following is NOT a function of the database?",
+    "options": [
+      "Managing stored data",
+      "Manipulating data",
+      "Security for stored data",
+      "Analysing code"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "dbms_l2_q2",
+    "question": "Which of the following is a function of the DBMS?",
+    "options": [
+      "Storing data",
+      "Providing multi-users access control",
+      "Data Integrity",
+      "All of the above"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "dbms_l2_q3",
+    "question": "Which of the following is a component of the DBMS?",
+    "options": [
+      "Data",
+      "Data Languages",
+      "Data Manager",
+      "All of the above"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "dbms_l2_q4",
+    "question": "Which of the following is known as a set of entities of the same type that share same properties or attributes?",
+    "options": [
+      "Relation set",
+      "Tuples",
+      "Entity set",
+      "Entity Relation model"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l2_q5",
+    "question": "What is information about data called?",
+    "options": [
+      "Hyper data",
+      "Tera data",
+      "Meta data",
+      "Relations"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l2_q6",
+    "question": "What does an RDBMS consist of?",
+    "options": [
+      "Collection of Records",
+      "Collection of Keys",
+      "Collection of Tables",
+      "Collection of Fields"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l2_q7",
+    "question": "The integrity constraint that ensures values in referencing relation occur in referenced relation is called:",
+    "options": [
+      "Referential",
+      "Primary",
+      "Referencing",
+      "Specific"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l2_q8",
+    "question": "Which hardware component is most important for DBMS operation?",
+    "options": [
+      "Microphone",
+      "High speed, large capacity disk to store data",
+      "High-resolution video display",
+      "Printer"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l2_q9",
+    "question": "The DBMS acts as an interface between:",
+    "options": [
+      "Data and the DBMS",
+      "Application and SQL",
+      "Database application and the database",
+      "The user and the software"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l2_q10",
+    "question": "The ability to query data, as well as insert, delete, and alter tuples, is offered by:",
+    "options": [
+      "TCL (Transaction Control Language)",
+      "DCL (Data Control Language)",
+      "DDL (Data Definition Language)",
+      "DML (Data Manipulation Language)"
+    ],
+    "correctIndex": 3
+  }
+]

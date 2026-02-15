@@ -1,0 +1,112 @@
+[
+  {
+    "id": "eng_l2_q1",
+    "question": "Identify the error in the sentence: Everyday life have become more complicated with the advancement in mobile technology.",
+    "options": [
+      "More complicated with the",
+      "Everyday life have become",
+      "No error",
+      "Advancement in mobile technology"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l2_q2",
+    "question": "The following three sentences can be revised into one better sentence: (i) I was at the fair. (ii) I got lost. (iii) I got scared.",
+    "options": [
+      "I am scared after I am lost at the fair.",
+      "I went to fair and got scared as I was lost.",
+      "I am lost at the fair so I am too scared.",
+      "I got lost at the fair and was scared."
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "eng_l2_q3",
+    "question": "In which of the following sentences does NOT use informal language?",
+    "options": [
+      "Did you locate our office quite easily?",
+      "You will be working with different managers during your training.",
+      "We shall endeavour to inform you of the position in two weeks time.",
+      "Is there anything else you want to ask me?"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l2_q4",
+    "question": "Choose the correct word to fill in the blank: The lady _____ purse was lost lodged a complaint at the police station.",
+    "options": [
+      "Who",
+      "Whose",
+      "Whom",
+      "Where"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l2_q5",
+    "question": "Choose the correct option: The final report on the project was ______ into three parts.",
+    "options": [
+      "Broken up",
+      "Broken off",
+      "Broken away",
+      "Broken out"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "eng_l2_q6",
+    "question": "Identify the error in the sentence: The new computation algorithm combines scores with multiple measures of quantitative assessment.",
+    "options": [
+      "The new computation algorithm combines",
+      "scores with multiple measures",
+      "No error",
+      "of quantitative assessment"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "eng_l2_q7",
+    "question": "Albert Einstein always had a clear view of the problems of physics. (1) He had a strategy of his own and was able to visualize the main stages on the way to his goal. (2) He received the Nobel Prize in physics in 1921.",
+    "options": [
+      "(1)-B, (2)-C",
+      "(1)-A, (2)-B",
+      "(1)-C, (2)-B",
+      "(1)-B, (2)-A"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "eng_l2_q8",
+    "question": "Choose the correct preposition: Children were quite sad when they did not see butterflies flitting _____ the flowers.",
+    "options": [
+      "In",
+      "With",
+      "Among",
+      "Between"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "eng_l2_q9",
+    "question": "Identify the error in the sentence: The children are quick to grasp, isn’t it?",
+    "options": [
+      "No error",
+      "Isn’t it?",
+      "The children are",
+      "Quick to grasp"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l2_q10",
+    "question": "Choose the correct word to complete the sentence: We have found that between Vinaya and Akruti, Vinaya makes _____ errors in her work.",
+    "options": [
+      "Largest",
+      "Smallest",
+      "Shortest",
+      "Fewer"
+    ],
+    "correctIndex": 3
+  }
+]

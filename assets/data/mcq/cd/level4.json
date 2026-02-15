@@ -1,0 +1,15 @@
+{
+  "level": 4,
+  "questions": [
+    {"id": "cd_l4_q1", "question": "Which phase handles scope rules?", "options": ["Syntax", "Semantic", "Code generation", "Optimization"], "correctIndex": 1},
+    {"id": "cd_l4_q2", "question": "Which phase assigns memory locations?", "options": ["Code generation", "Syntax analysis", "Lexical analysis", "Parsing"], "correctIndex": 0},
+    {"id": "cd_l4_q3", "question": "A DFA is used in", "options": ["Parsing", "Lexical analysis", "Code generation", "Optimization"], "correctIndex": 1},
+    {"id": "cd_l4_q4", "question": "An AST stands for", "options": ["Abstract Syntax Tree", "Automatic Syntax Tree", "Abstract Symbol Table", "Assembly Syntax Tree"], "correctIndex": 0},
+    {"id": "cd_l4_q5", "question": "Which phase reports undeclared variables?", "options": ["Syntax", "Semantic", "Code generation", "Optimization"], "correctIndex": 1},
+    {"id": "cd_l4_q6", "question": "Regular expressions are used in", "options": ["Parsing", "Lexical analysis", "Code generation", "Optimization"], "correctIndex": 1},
+    {"id": "cd_l4_q7", "question": "Left recursion must be removed for", "options": ["LR parsing", "LL parsing", "Bottom-up parsing", "Shift-reduce parsing"], "correctIndex": 1},
+    {"id": "cd_l4_q8", "question": "Which parser is top-down?", "options": ["LR", "LL", "SLR", "LALR"], "correctIndex": 1},
+    {"id": "cd_l4_q9", "question": "Which parser is bottom-up?", "options": ["LL", "Recursive descent", "LR", "Predictive"], "correctIndex": 2},
+    {"id": "cd_l4_q10", "question": "FIRST and FOLLOW sets are used in", "options": ["Lexical analysis", "LL parsing", "Code generation", "Optimization"], "correctIndex": 1}
+  ]
+}

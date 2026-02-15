@@ -1,0 +1,62 @@
+[
+  {
+    "id": "qa_l3_q1",
+    "question": "A man buys a cycle for 1400 and sells it at a loss of 15%. What is the selling price of the cycle?",
+    "options": ["1202", "1190", "1160", "1000"],
+    "correctIndex": 2
+  },
+  {
+    "id": "qa_l3_q2",
+    "question": "If there is a profit of 20% on the CP of an article, the percentage of profit calculated on its SP will be:",
+    "options": ["24%", "16.667%", "8.333%", "20%"],
+    "correctIndex": 1
+  },
+  {
+    "id": "qa_l3_q3",
+    "question": "A person bought 50 pens for Rs. 50 each. He sold 40 of them at a loss of 5%. He wants to gain 10% on the whole. Then his gain percent on the remaining pens should be:",
+    "options": ["15%", "40%", "50%", "70%"],
+    "correctIndex": 0
+  },
+  {
+    "id": "qa_l3_q4",
+    "question": "The ratio in which tea costing 192 per kg is to be mixed with tea costing 150 per kg so that the mixed tea, when sold for 194.40 per kg, gives a profit of 20% is:",
+    "options": ["2:5", "3:5", "5:3", "5:2"],
+    "correctIndex": 2
+  },
+  {
+    "id": "qa_l3_q5",
+    "question": "Find the selling price of an article if a shopkeeper allows two successive discounts of 5% each on the marked price of 80.",
+    "options": ["70.20", "70.10", "72.00", "72.20"],
+    "correctIndex": 0
+  },
+  {
+    "id": "qa_l3_q6",
+    "question": "By selling an article for 240, a man incurs a loss of 10%. At what price should he sell it, so that he makes a profit of 20%?",
+    "options": ["264", "288", "300", "320"],
+    "correctIndex": 2
+  },
+  {
+    "id": "qa_l3_q7",
+    "question": "Applied to a bill for 1,00,000, the difference between a discount of 40% and two successive discounts of 36% and 4% is:",
+    "options": ["Nil", "1,440", "2,500", "4,000"],
+    "correctIndex": 1
+  },
+  {
+    "id": "qa_l3_q8",
+    "question": "A tradesman marks his goods 10% above his cost price. If he allows his customers 10% discount on the marked price, how much profit or loss does he make?",
+    "options": ["1% gain", "1% loss", "5% gain", "No gain, no loss"],
+    "correctIndex": 0
+  },
+  {
+    "id": "qa_l3_q9",
+    "question": "The ratio of cost price and selling price is 5:4. The loss percent is:",
+    "options": ["20%", "25%", "40%", "50%"],
+    "correctIndex": 1
+  },
+  {
+    "id": "qa_l3_q10",
+    "question": "A shopkeeper earns a profit of 10% after allowing a discount of 20% on the MP. The CP of the article whose MP is 800 is:",
+    "options": ["704", "600", "774", "680"],
+    "correctIndex": 0
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "eng_l5_q1",
+    "question": "Choose the grammatically correct sentence.",
+    "options": [
+      "Hardly had she entered the auditorium than the lights went out.",
+      "Hardly she had entered the auditorium when the lights went out.",
+      "Hardly had she entered the auditorium when the lights went out.",
+      "Hardly did she enter the auditorium than the lights went out."
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "eng_l5_q2",
+    "question": "Choose the word closest in meaning to “Recalcitrant.”",
+    "options": [
+      "Obedient",
+      "Defiant",
+      "Generous",
+      "Flexible"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l5_q3",
+    "question": "Identify the error in the sentence: Each of the participants in the debate were given ten minutes to present their arguments.",
+    "options": [
+      "Each of the participants",
+      "were given",
+      "ten minutes",
+      "No error"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l5_q4",
+    "question": "Choose the correct option to fill in the blank: His explanation was so ______ that it failed to resolve even the most basic doubts.",
+    "options": [
+      "lucid",
+      "coherent",
+      "convoluted",
+      "succinct"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "eng_l5_q5",
+    "question": "Choose the correct passive voice: People believe that the committee has taken the wrong decision.",
+    "options": [
+      "The committee is believed to have taken the wrong decision.",
+      "The committee was believed to take the wrong decision.",
+      "It is believed the committee has taken the wrong decision.",
+      "The wrong decision has believed to be taken by the committee."
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "eng_l5_q6",
+    "question": "Rearrange the parts of the sentence in the correct order: P. despite facing severe criticism Q. the author continued R. to defend his controversial thesis S. with remarkable composure",
+    "options": [
+      "QPSR",
+      "PQRS",
+      "QPRS",
+      "PQSR"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "eng_l5_q7",
+    "question": "Choose the correct meaning of the idiom “Burn the midnight oil.”",
+    "options": [
+      "Waste resources recklessly",
+      "Work late into the night",
+      "Destroy evidence secretly",
+      "Celebrate extravagantly"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l5_q8",
+    "question": "Choose the correct indirect speech: He said, “If I had known about the meeting, I would have attended it.”",
+    "options": [
+      "He said that if he knew about the meeting, he would attend it.",
+      "He said that if he had known about the meeting, he would have attended it.",
+      "He said that if he has known about the meeting, he would have attended it.",
+      "He said that had he known about the meeting, he would attend it."
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l5_q9",
+    "question": "Choose the word that best completes the sentence: The judge’s remarks were so ______ that they left no room for ambiguity.",
+    "options": [
+      "equivocal",
+      "explicit",
+      "tentative",
+      "ambiguous"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "eng_l5_q10",
+    "question": "All researchers who falsify data are dismissed. Some scientists have been dismissed. Which conclusion logically follows?",
+    "options": [
+      "All dismissed scientists falsified data.",
+      "Some scientists falsified data.",
+      "No scientist falsified data.",
+      "None of the above."
+    ],
+    "correctIndex": 3
+  }
+]

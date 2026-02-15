@@ -1,0 +1,12 @@
+[
+  {"id": "dsa_l3_q1", "question": "A linear list of elements in which deletion can be done from one end (front) and insertion can take place only at the other end (rear) is known as _____________", "options": ["Queue", "Stack", "Tree", "Linked list"], "correctIndex": 0},
+  {"id": "dsa_l3_q2", "question": "The data structure required for Breadth First Traversal on a graph is?", "options": ["Stack", "Array", "Queue", "Tree"], "correctIndex": 2},
+  {"id": "dsa_l3_q3", "question": "A queue follows __________", "options": ["FIFO (First In First Out) principle", "LIFO (Last In First Out) principle", "Ordered array", "Linear tree"], "correctIndex": 0},
+  {"id": "dsa_l3_q4", "question": "Circular Queue is also known as ________", "options": ["Ring Buffer", "Square Buffer", "Rectangle Buffer", "Curve Buffer"], "correctIndex": 0},
+  {"id": "dsa_l3_q5", "question": "If the elements “A”, “B”, “C” and “D” are placed in a queue and are deleted one at a time, in what order will they be removed?", "options": ["ABCD", "DCBA", "DCAB", "ABDC"], "correctIndex": 0},
+  {"id": "dsa_l3_q6", "question": "A data structure in which elements can be inserted or deleted at/from both ends but not in the middle is?", "options": ["Queue", "Circular queue", "Dequeue", "Priority queue"], "correctIndex": 2},
+  {"id": "dsa_l3_q7", "question": "A normal queue, if implemented using an array of size MAX_SIZE, gets full when?", "options": ["Rear = MAX_SIZE – 1", "Front = (rear + 1)mod MAX_SIZE", "Front = rear + 1", "Rear = front"], "correctIndex": 0},
+  {"id": "dsa_l3_q8", "question": "Queues serve major role in ______________", "options": ["Simulation of recursion", "Simulation of arbitrary linked list", "Simulation of limited resource allocation", "Simulation of heap sort"], "correctIndex": 2},
+  {"id": "dsa_l3_q9", "question": "Which of the following is not the type of queue?", "options": ["Ordinary queue", "Single ended queue", "Circular queue", "Priority queue"], "correctIndex": 1},
+  {"id": "dsa_l3_q10", "question": "Queue insertion and deletion follows which principle?", "options": ["FIFO", "LIFO", "Both FIFO and LIFO", "None"], "correctIndex": 0}
+]

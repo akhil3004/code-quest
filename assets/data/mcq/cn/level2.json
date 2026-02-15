@@ -1,0 +1,67 @@
+[
+  {
+    "id": "cn_l2_q1",
+    "question": "_______ topology requires a multipoint connection.",
+    "options": ["Star", "Mesh", "Ring", "Bus"],
+    "correctIndex": 3
+  },
+  {
+    "id": "cn_l2_q2",
+    "question": "Data communication system within a building or campus is________",
+    "options": ["LAN", "WAN", "MAN", "PAN"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l2_q3",
+    "question": "In TDM, slots are further divided into __________",
+    "options": ["Seconds", "Frames", "Packets", "Bits"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l2_q4",
+    "question": "_____ is the multiplexing technique that shifts each signal to a different carrier frequency.",
+    "options": ["FDM", "TDM", "Both FDM & TDM", "PDM"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l2_q5",
+    "question": "The network layer is concerned with __________ of data.",
+    "options": ["Bits", "Frames", "Packets", "Bytes"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l2_q6",
+    "question": "Which one of the following is not a function of network layer?",
+    "options": ["Routing", "Inter-networking", "Congestion control", "Error control"],
+    "correctIndex": 3
+  },
+  {
+    "id": "cn_l2_q7",
+    "question": "In virtual circuit network each packet contains ___________",
+    "options": [
+      "Full source and destination address",
+      "A short VC number",
+      "Only source address",
+      "Only destination address"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l2_q8",
+    "question": "A subset of a network that includes all the routers but contains no loops is called ________",
+    "options": ["Spanning tree", "Spider structure", "Spider tree", "Special tree"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l2_q9",
+    "question": "The vast network of computers that connects millions of people all over the world is called",
+    "options": ["Internet", "Hypertext", "LAN", "Web"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l2_q10",
+    "question": "A term related sending data to a satellite is?",
+    "options": ["Downlink", "Modulate", "Demodulate", "Uplink"],
+    "correctIndex": 3
+  }
+]

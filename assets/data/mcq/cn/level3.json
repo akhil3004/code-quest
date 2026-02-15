@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cn_l3_q1",
+    "question": "The common name for a modulator-demodulator is",
+    "options": ["Modem", "Joiner", "Networker", "Connector"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l3_q2",
+    "question": "Which of the following device is used to connect two systems, especially if the systems use different protocols?",
+    "options": ["Repeater", "Gateway", "Bridge", "Hub"],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l3_q3",
+    "question": "Which of the following is correct IPv4 address?",
+    "options": ["124.201.3.1.52", "01.200.128.123", "300.142.210.64", "128.64.0.0"],
+    "correctIndex": 3
+  },
+  {
+    "id": "cn_l3_q4",
+    "question": "How many versions available of IP?",
+    "options": ["6 version", "4 version", "2 version", "1 version"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l3_q5",
+    "question": "Which layer of the TCP / IP stack corresponds to the OSI model transport layer?",
+    "options": ["Host to host", "Application", "Internet", "Network Access"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l3_q6",
+    "question": "Which sublayer of the data link layer performs data link functions that depend upon the type of medium?",
+    "options": [
+      "Logical link control sublayer",
+      "Media access control sublayer",
+      "Network interface control sublayer",
+      "Error control sublayer"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l3_q7",
+    "question": "Which of the following is the multiple access protocol for channel access control?",
+    "options": ["CSMA/CD", "CSMA/CA", "Both CSMA/CD & CSMA/CA", "HDLC"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l3_q8",
+    "question": "The technique of temporarily delaying outgoing acknowledgements so that they can be hooked onto the next outgoing data frame is called ____________",
+    "options": ["Piggybacking", "Cyclic redundancy check", "Fletcher’s checksum", "Parity check"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l3_q9",
+    "question": "A 4 byte IP address consists of __________",
+    "options": ["Only network address", "Only host address", "Network address & host address", "Network address & MAC address"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l3_q10",
+    "question": "Transmission control protocol ___________",
+    "options": [
+      "Is a connection-oriented protocol",
+      "Uses a three way handshake to establish a connection",
+      "Receives data from application as a single stream",
+      "All of the mentioned"
+    ],
+    "correctIndex": 3
+  }
+]

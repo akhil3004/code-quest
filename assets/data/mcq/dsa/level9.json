@@ -1,0 +1,12 @@
+[
+  {"id": "dsa_l9_q1", "question": "Process of inserting an element in a stack is called?", "options": ["Create", "Push", "Evaluation", "Pop"], "correctIndex": 1},
+  {"id": "dsa_l9_q2", "question": "Process of removing an element from stack is called?", "options": ["Create", "Push", "Evaluation", "Pop"], "correctIndex": 3},
+  {"id": "dsa_l9_q3", "question": "If a user tries to remove an element from an empty stack, it is called?", "options": ["Underflow", "Empty collection", "Overflow", "Garbage Collection"], "correctIndex": 0},
+  {"id": "dsa_l9_q4", "question": "A linear list where deletion is from front and insertion is at rear is called?", "options": ["Queue", "Stack", "Tree", "Linked list"], "correctIndex": 0},
+  {"id": "dsa_l9_q5", "question": "Which data structure is used for Breadth First Search traversal of a graph?", "options": ["Stack", "Array", "Queue", "Tree"], "correctIndex": 2},
+  {"id": "dsa_l9_q6", "question": "A data structure where elements can be inserted or deleted at both ends but not in the middle is?", "options": ["Queue", "Circular Queue", "Deque", "Priority Queue"], "correctIndex": 2},
+  {"id": "dsa_l9_q7", "question": "Which data structure is used to implement recursion?", "options": ["Queue", "Stack", "Array", "List"], "correctIndex": 1},
+  {"id": "dsa_l9_q8", "question": "The postfix form of the expression (A+B)*(C*D-E)*F/G is?", "options": ["AB+ CD*E– FG/**", "AB+ CD*E– F**G/", "AB+ CD*E-*F*G/", "AB+ CDE*–*F*G/"], "correctIndex": 2},
+  {"id": "dsa_l9_q9", "question": "The prefix form of the infix expression (p+q)-(r*t) is?", "options": ["+pq–*rt", "–+pqr*t", "–+pq*rt", "–+*pqrt"], "correctIndex": 2},
+  {"id": "dsa_l9_q10", "question": "In a normal queue implemented using array of size MAX_SIZE, it gets full when?", "options": ["Rear = MAX_SIZE-1", "Front = (rear+1)mod MAX_SIZE", "Front = rear+1", "Rear = front"], "correctIndex": 0}
+]

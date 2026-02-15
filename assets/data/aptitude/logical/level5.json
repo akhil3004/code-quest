@@ -1,0 +1,62 @@
+[
+  {
+    "id": "logic_l5_q1",
+    "question": "Look at this series: 3, 6, 12, 24, 48, ... What number should come next?",
+    "options": ["96", "72", "100", "84"],
+    "correctIndex": 0
+  },
+  {
+    "id": "logic_l5_q2",
+    "question": "Look at this series: 5, 10, 20, 40, 80, ... What number comes next?",
+    "options": ["100", "160", "120", "200"],
+    "correctIndex": 1
+  },
+  {
+    "id": "logic_l5_q3",
+    "question": "A, B, C, D, E, F are sitting in a row. D is between B and F. C is to the left of E. A is at one end. Who is at the other end?",
+    "options": ["B", "C", "D", "E"],
+    "correctIndex": 1
+  },
+  {
+    "id": "logic_l5_q4",
+    "question": "Pointing to a man, Riya says, 'He is the brother of my father’s only son.' How is the man related to Riya?",
+    "options": ["Father", "Uncle", "Brother", "Cousin"],
+    "correctIndex": 1
+  },
+  {
+    "id": "logic_l5_q5",
+    "question": "Pointing to a photograph of a girl, Raj says, 'She is the daughter of the only daughter of my mother.' How is the girl related to Raj?",
+    "options": ["Sister", "Cousin", "Daughter", "Niece"],
+    "correctIndex": 2
+  },
+  {
+    "id": "logic_l5_q6",
+    "question": "A man walks 10 km South, then 6 km East, then 10 km North. How far is he from his starting point?",
+    "options": ["4 km", "6 km", "10 km", "16 km"],
+    "correctIndex": 1
+  },
+  {
+    "id": "logic_l5_q7",
+    "question": "If Monday is coded as 1, Tuesday as 2, ..., Sunday as 7. What will be the code for a day 100 days after Monday?",
+    "options": ["2", "3", "4", "5"],
+    "correctIndex": 2
+  },
+  {
+    "id": "logic_l5_q8",
+    "question": "In a row of 20 students, A is 7th from the left and B is 5th from the right. How many students are between A and B?",
+    "options": ["8", "9", "10", "11"],
+    "correctIndex": 1
+  },
+  {
+    "id": "logic_l5_q9",
+    "question": "Five friends – R, S, T, U, V – are sitting in a circle. T is opposite R. U is to the left of S. V is to the right of R. Who is opposite V?",
+    "options": ["R", "S", "T", "U"],
+    "correctIndex": 3
+  },
+  {
+    "id": "logic_l5_q10",
+    "question": "A series of numbers: 2, 6, 12, 20, 30, ... Find the next number.",
+    "options": ["40", "42", "50", "56"],
+    "correctIndex": 1
+  }
+]

@@ -1,62 +1,62 @@
 [
   {
     "id": "os_l2_q1",
-    "question": "What is a process?",
-    "options": ["Program in execution", "Program in memory", "Compiled code", "Thread"],
-    "correctIndex": 0
-  },
-  {
-    "id": "os_l2_q2",
-    "question": "Which OS component manages processes?",
-    "options": ["Memory manager", "Process scheduler", "File manager", "I/O manager"],
+    "question": "Which queue contains processes ready to execute?",
+    "options": ["Job queue", "Ready queue", "Device queue", "PCB queue"],
     "correctIndex": 1
   },
   {
+    "id": "os_l2_q2",
+    "question": "Which module gives control of CPU to the process selected?",
+    "options": ["Dispatcher", "Interrupt", "Scheduler", "None"],
+    "correctIndex": 0
+  },
+  {
     "id": "os_l2_q3",
-    "question": "Which state comes after Ready?",
-    "options": ["New", "Waiting", "Running", "Terminated"],
-    "correctIndex": 2
+    "question": "Which scheduling algorithm uses time quantum?",
+    "options": ["SJF", "Round Robin", "Priority", "Multilevel queue"],
+    "correctIndex": 1
   },
   {
     "id": "os_l2_q4",
-    "question": "Which state means process is waiting for I/O?",
-    "options": ["Ready", "Waiting", "Running", "New"],
+    "question": "CPU scheduling is the basis of",
+    "options": ["Multiprocessor systems", "Multiprogramming OS", "Large memory systems", "None"],
     "correctIndex": 1
   },
   {
     "id": "os_l2_q5",
-    "question": "PCB stands for?",
-    "options": ["Process Control Block", "Process Command Block", "Program Control Block", "Primary Control Block"],
-    "correctIndex": 0
-  },
-  {
-    "id": "os_l2_q6",
-    "question": "Which scheduling is non-preemptive?",
-    "options": ["Round Robin", "SJF", "Priority", "FCFS"],
+    "question": "What is turnaround time?",
+    "options": ["Waiting time", "Ready queue time", "Running time", "Submission to completion"],
     "correctIndex": 3
   },
   {
+    "id": "os_l2_q6",
+    "question": "What is waiting time?",
+    "options": ["Time in blocked queue", "Time in ready queue", "Running time", "Completion time"],
+    "correctIndex": 1
+  },
+  {
     "id": "os_l2_q7",
-    "question": "Which scheduling algorithm uses time quantum?",
-    "options": ["FCFS", "SJF", "Round Robin", "Priority"],
+    "question": "In UNIX, fork returns",
+    "options": ["zero to child", "non-zero to parent", "both a and b", "none"],
     "correctIndex": 2
   },
   {
     "id": "os_l2_q8",
-    "question": "Context switching occurs when?",
-    "options": ["Process starts", "Process ends", "CPU switches process", "I/O completes"],
-    "correctIndex": 2
+    "question": "A process stack does not contain",
+    "options": ["Function parameters", "Local variables", "Return address", "PID of child"],
+    "correctIndex": 3
   },
   {
     "id": "os_l2_q9",
-    "question": "Which queue holds ready processes?",
-    "options": ["Waiting queue", "Job queue", "Ready queue", "Device queue"],
-    "correctIndex": 2
+    "question": "What is the ready state?",
+    "options": ["Scheduled to run", "Waiting for I/O", "Using CPU", "None"],
+    "correctIndex": 0
   },
   {
     "id": "os_l2_q10",
-    "question": "Which scheduling is best for batch systems?",
-    "options": ["Round Robin", "FCFS", "Priority", "Multilevel"],
+    "question": "Which of the following is not a process queue?",
+    "options": ["Job queue", "PCB queue", "Ready queue", "Device queue"],
     "correctIndex": 1
   }
 ]

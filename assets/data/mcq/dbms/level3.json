@@ -1,0 +1,112 @@
+[
+  {
+    "id": "dbms_l3_q1",
+    "question": "A set of one or more attributes taken collectively to uniquely identify a record is called:",
+    "options": [
+      "Primary Key",
+      "Foreign Key",
+      "Super Key",
+      "Candidate Key"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l3_q2",
+    "question": "Which command is used to remove a relation from SQL?",
+    "options": [
+      "Drop table",
+      "Delete",
+      "Purge",
+      "Remove"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l3_q3",
+    "question": "Which set should be associated with a weak entity set for it to be meaningful?",
+    "options": [
+      "Neighbour set",
+      "Strong entity set",
+      "Owner set",
+      "Identifying set"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "dbms_l3_q4",
+    "question": "Which command correctly deletes all values in the relation 'teaches'?",
+    "options": [
+      "Delete from teaches;",
+      "Delete from teaches where Id ='Null';",
+      "Remove table teaches;",
+      "Drop table teaches;"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l3_q5",
+    "question": "Which of the following is a procedural language?",
+    "options": [
+      "Domain relational calculus",
+      "Tuple relational calculus",
+      "Relational algebra",
+      "Query language"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l3_q6",
+    "question": "Which join operation does NOT preserve non-matched tuples?",
+    "options": [
+      "Left outer join",
+      "Inner join",
+      "Natural join",
+      "Right outer join"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l3_q7",
+    "question": "Which normal form ensures that for every non-trivial multivalued dependency X →→ Y, X is a superkey?",
+    "options": [
+      "4NF",
+      "2NF",
+      "5NF",
+      "3NF"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l3_q8",
+    "question": "The top level of the hierarchy consists of ______ each of which can contain ______.",
+    "options": [
+      "Schemas, Catalogs",
+      "Schemas, Environment",
+      "Environment, Schemas",
+      "Catalogs, Schemas"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "dbms_l3_q9",
+    "question": "______ indicates the maximum number of entities that can be involved in a relationship.",
+    "options": [
+      "Greater Entity Count",
+      "Minimum cardinality",
+      "Maximum cardinality",
+      "ERD"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l3_q10",
+    "question": "User IDs can be added or removed using which fixed role?",
+    "options": [
+      "db_sysadmin",
+      "db_accessadmin",
+      "db_securityadmin",
+      "db_setupadmin"
+    ],
+    "correctIndex": 1
+  }
+]

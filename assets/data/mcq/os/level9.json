@@ -1,0 +1,62 @@
+[
+  {
+    "id": "os_l9_q1",
+    "question": "Mailbox is used in",
+    "options": ["direct communication", "indirect communication", "shared memory", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l9_q2",
+    "question": "Remote Method Invocation allows",
+    "options": ["process invoke remote method", "thread invoke remote method", "memory invoke method", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l9_q3",
+    "question": "RPC uses which side interface?",
+    "options": ["stub", "port", "socket", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l9_q4",
+    "question": "Ports differentiate",
+    "options": ["services", "processes", "users", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l9_q5",
+    "question": "Interrupt handler performs",
+    "options": ["save state", "execute ISR", "restore state", "all"],
+    "correctIndex": 3
+  },
+  {
+    "id": "os_l9_q6",
+    "question": "Bootstrap program is stored in",
+    "options": ["ROM", "RAM", "cache", "disk"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l9_q7",
+    "question": "Software interrupt is triggered by",
+    "options": ["system call", "bus signal", "DMA", "none"],
+    "correctIndex": 0
+  },
+  {
+    "id": "os_l9_q8",
+    "question": "Priority scheduling compares arriving process with",
+    "options": ["all processes", "running process", "parent", "none"],
+    "correctIndex": 1
+  },
+  {
+    "id": "os_l9_q9",
+    "question": "Starvation occurs in",
+    "options": ["FCFS", "SJF", "Priority scheduling", "Round Robin"],
+    "correctIndex": 2
+  },
+  {
+    "id": "os_l9_q10",
+    "question": "Dispatcher performs",
+    "options": ["context switch", "jump to user program", "mode switch", "all"],
+    "correctIndex": 3
+  }
+]

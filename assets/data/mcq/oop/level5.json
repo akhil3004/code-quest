@@ -1,0 +1,62 @@
+[
+  {
+    "id": "oops_l5_q01",
+    "question": "this() is used to",
+    "options": ["Call parent constructor", "Call same class constructor", "Refer parent object", "Refer class"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l5_q02",
+    "question": "super() is used to",
+    "options": ["Call child constructor", "Call parent constructor", "Call method", "Refer object"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l5_q03",
+    "question": "Constructor overloading is",
+    "options": ["Runtime polymorphism", "Compile-time polymorphism", "Abstraction", "Inheritance"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l5_q04",
+    "question": "Dynamic method dispatch is related to",
+    "options": ["Overloading", "Overriding", "Encapsulation", "Abstraction"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l5_q05",
+    "question": "Which keyword allows subclass access only?",
+    "options": ["private", "public", "protected", "default"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l5_q06",
+    "question": "Can we override static method?",
+    "options": ["Yes", "No", "Sometimes", "Only in interface"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l5_q07",
+    "question": "Which cannot be overridden?",
+    "options": ["Instance method", "Static method", "Abstract method", "Public method"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l5_q08",
+    "question": "Interface can contain",
+    "options": ["Only abstract methods", "Abstract + default + static methods", "Only static methods", "Only default methods"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l5_q09",
+    "question": "Default methods were introduced in",
+    "options": ["Java 6", "Java 7", "Java 8", "Java 11"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l5_q10",
+    "question": "Which supports abstraction 100%?",
+    "options": ["Class", "Abstract class", "Interface", "Method"],
+    "correctIndex": 2
+  }
+]

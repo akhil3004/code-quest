@@ -1,0 +1,15 @@
+{
+  "level": 3,
+  "questions": [
+    {"id": "cd_l3_q1", "question": "Comments in source code are removed during", "options": ["Parsing", "Lexical analysis", "Optimization", "Code generation"], "correctIndex": 1},
+    {"id": "cd_l3_q2", "question": "White spaces are ignored by", "options": ["Parser", "Code generator", "Lexical analyzer", "Optimizer"], "correctIndex": 2},
+    {"id": "cd_l3_q3", "question": "Which phase detects syntax errors?", "options": ["Lexical", "Syntax", "Semantic", "Optimization"], "correctIndex": 1},
+    {"id": "cd_l3_q4", "question": "Which phase detects type mismatch?", "options": ["Syntax", "Semantic", "Lexical", "Code generation"], "correctIndex": 1},
+    {"id": "cd_l3_q5", "question": "Intermediate code is", "options": ["Machine dependent", "Machine independent", "Assembly code", "Executable code"], "correctIndex": 1},
+    {"id": "cd_l3_q6", "question": "Which is not intermediate code form?", "options": ["Three address code", "Quadruples", "Triples", "Machine code"], "correctIndex": 3},
+    {"id": "cd_l3_q7", "question": "Compiler error detected earliest is", "options": ["Semantic", "Syntax", "Lexical", "Runtime"], "correctIndex": 2},
+    {"id": "cd_l3_q8", "question": "Which phase builds parse tree?", "options": ["Syntax analysis", "Lexical analysis", "Optimization", "Code generation"], "correctIndex": 0},
+    {"id": "cd_l3_q9", "question": "The part of compiler independent of source language is", "options": ["Front end", "Back end", "Parser", "Scanner"], "correctIndex": 1},
+    {"id": "cd_l3_q10", "question": "The part dependent on source language is", "options": ["Back end", "Front end", "Code generator", "Optimizer"], "correctIndex": 1}
+  ]
+}

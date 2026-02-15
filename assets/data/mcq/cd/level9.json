@@ -1,0 +1,15 @@
+{
+  "level": 9,
+  "questions": [
+    {"id": "cd_l9_q1", "question": "Reaching definition analysis helps in", "options": ["Register allocation", "Dead code elimination", "Syntax checking", "Parsing"], "correctIndex": 1},
+    {"id": "cd_l9_q2", "question": "Available expression analysis detects", "options": ["Constant values", "Common subexpressions", "Syntax errors", "Loop bounds"], "correctIndex": 1},
+    {"id": "cd_l9_q3", "question": "Copy propagation replaces", "options": ["Constants", "Variable copies", "Loops", "Expressions"], "correctIndex": 1},
+    {"id": "cd_l9_q4", "question": "Induction variable elimination is applied in", "options": ["Loops", "Functions", "Recursion", "Parsing"], "correctIndex": 0},
+    {"id": "cd_l9_q5", "question": "Code motion moves code", "options": ["Inside loops", "Outside loops", "Between functions", "Into symbol table"], "correctIndex": 1},
+    {"id": "cd_l9_q6", "question": "Peephole optimization is machine", "options": ["Independent", "Dependent", "Grammar based", "Parsing based"], "correctIndex": 1},
+    {"id": "cd_l9_q7", "question": "LR(1) parser uses", "options": ["No lookahead", "One lookahead symbol", "Two lookahead symbols", "Infinite lookahead"], "correctIndex": 1},
+    {"id": "cd_l9_q8", "question": "GLR parser is useful for", "options": ["Regular grammar", "Deterministic grammar", "Ambiguous grammar", "LL grammar"], "correctIndex": 2},
+    {"id": "cd_l9_q9", "question": "Predictive parser uses", "options": ["Backtracking", "No backtracking", "Shift-reduce", "Operator precedence"], "correctIndex": 1},
+    {"id": "cd_l9_q10", "question": "Attribute grammar helps in", "options": ["Lexical analysis", "Syntax-directed translation", "Code execution", "Linking"], "correctIndex": 1}
+  ]
+}

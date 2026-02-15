@@ -1,62 +1,62 @@
 [
   {
     "id": "os_l1_q1",
-    "question": "What is an operating system?",
-    "options": ["Compiler", "Hardware", "System software", "Application software"],
-    "correctIndex": 2
+    "question": "Which of the following is not the state of a process?",
+    "options": ["New", "Old", "Waiting", "Running"],
+    "correctIndex": 1
   },
   {
     "id": "os_l1_q2",
-    "question": "Which of the following is NOT an OS?",
-    "options": ["Windows", "Linux", "Oracle", "macOS"],
+    "question": "In UNIX, each process is identified by its",
+    "options": ["Process Control Block", "Device Queue", "Process Identifier", "None of the mentioned"],
     "correctIndex": 2
   },
   {
     "id": "os_l1_q3",
-    "question": "Main function of OS is to?",
-    "options": ["Run programs", "Manage hardware", "Provide user interface", "All of the above"],
-    "correctIndex": 3
+    "question": "In Unix, which system call creates the new process?",
+    "options": ["fork", "create", "new", "none of the mentioned"],
+    "correctIndex": 0
   },
   {
     "id": "os_l1_q4",
-    "question": "Which OS is open-source?",
-    "options": ["Windows", "Linux", "macOS", "DOS"],
+    "question": "The number of processes completed per unit time is known as",
+    "options": ["Output", "Throughput", "Efficiency", "Capacity"],
     "correctIndex": 1
   },
   {
     "id": "os_l1_q5",
-    "question": "Which OS is used in mobile phones?",
-    "options": ["Android", "Windows XP", "Ubuntu Server", "RedHat"],
-    "correctIndex": 0
+    "question": "What is interprocess communication?",
+    "options": ["communication within the process", "communication between two process", "communication between two threads", "none of the mentioned"],
+    "correctIndex": 1
   },
   {
     "id": "os_l1_q6",
-    "question": "Who interacts directly with the hardware?",
-    "options": ["User", "Compiler", "Operating System", "Application"],
-    "correctIndex": 2
+    "question": "A single thread of control allows the process to perform",
+    "options": ["only one task at a time", "multiple tasks", "only two tasks", "all of the mentioned"],
+    "correctIndex": 0
   },
   {
     "id": "os_l1_q7",
-    "question": "Which OS feature allows multitasking?",
-    "options": ["Scheduling", "Paging", "Fragmentation", "Deadlock"],
-    "correctIndex": 0
+    "question": "What is a Process Control Block?",
+    "options": ["Process type variable", "Data Structure", "A secondary storage section", "A Block in memory"],
+    "correctIndex": 1
   },
   {
     "id": "os_l1_q8",
-    "question": "Which OS loads first when computer starts?",
-    "options": ["Application", "Shell", "Kernel", "Browser"],
-    "correctIndex": 2
+    "question": "The address of the next instruction to be executed is stored in",
+    "options": ["CPU registers", "Program counter", "Process stack", "Pipe"],
+    "correctIndex": 1
   },
   {
     "id": "os_l1_q9",
-    "question": "Which is an example of real-time OS?",
-    "options": ["Windows", "Linux", "RTOS", "macOS"],
-    "correctIndex": 2
+    "question": "Which of the following is not the state of a process?",
+    "options": ["New", "Old", "Waiting", "Running"],
+    "correctIndex": 1
   },
   {
     "id": "os_l1_q10",
-    "question": "Which OS is used in embedded systems?",
-    "options": ["RTOS", "DOS", "Windows", "Ubuntu"],
-    "correctIndex": 0
+    "question": "What is the objective of multiprogramming?",
+    "options": ["Have a process running at all time", "Programs waiting in queue", "Increase CPU utilization", "None"],
+    "correctIndex": 2
   }
 ]

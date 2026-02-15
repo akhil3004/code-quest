@@ -1,0 +1,77 @@
+[
+  {
+    "id": "cn_l6_q1",
+    "question": "The type of transmission impairment in which the signal loses strength due to different propagation speeds of each frequency that makes up the signal is called ________.",
+    "options": ["Attenuation", "Noise", "Distortion", "Decibel"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l6_q2",
+    "question": "The wavelength of a signal depends on the ________.",
+    "options": ["Frequencies of the signal", "Medium", "Phase of the signal", "Frequencies of the signal and Medium"],
+    "correctIndex": 3
+  },
+  {
+    "id": "cn_l6_q3",
+    "question": "A _________ sine wave is not useful in data communications; we need to send a _________ signal.",
+    "options": [
+      "composite; single-frequency",
+      "single-frequency; composite",
+      "single-frequency; double-frequency",
+      "none of the above"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l6_q4",
+    "question": "A periodic signal completes one cycle in 0.001 s. What is the frequency?",
+    "options": ["1 Hz", "100 Hz", "1 KHz", "1 MHz"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l6_q5",
+    "question": "_________ is a multiple-access method in which the available bandwidth of a link is shared in time, frequency, or through code, between different stations.",
+    "options": ["Random access", "Controlled access", "Channelization", "None of the above"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l6_q6",
+    "question": "In _________ each station sends a frame whenever it has a frame to send.",
+    "options": ["pure ALOHA", "slotted ALOHA", "both (a) and (b)", "neither (a) nor (b)"],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l6_q7",
+    "question": "An IPv6 address consists of _________ bytes (octets).",
+    "options": ["4", "8", "16", "none of the above"],
+    "correctIndex": 2
+  },
+  {
+    "id": "cn_l6_q8",
+    "question": "When does the fixed path get established between the source and destination in the virtual packet switching network?",
+    "options": [
+      "Before the transmission of packets",
+      "After the transmission of packets",
+      "During the transmission of packets",
+      "All of the above"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "cn_l6_q9",
+    "question": "Which ARQ mechanism deals with the transmission of only damaged or lost frames despite the other multiple frames by increasing the efficiency & its utility in noisy channels?",
+    "options": [
+      "Go-Back-N ARQ",
+      "Selective Repeat ARQ",
+      "Stop-and-Wait ARQ",
+      "All of the above"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "cn_l6_q10",
+    "question": "The ability of a single network to span multiple physical networks is known as ______.",
+    "options": ["Subnetting", "Masking", "Fragmenting", "Hopping"],
+    "correctIndex": 0
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "oops_l7_q01",
+    "question": "Which is unchecked exception?",
+    "options": ["SQLException", "IOException", "NullPointerException", "FileNotFoundException"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l7_q02",
+    "question": "Java supports garbage collection via",
+    "options": ["delete", "free", "System.gc()", "remove"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l7_q03",
+    "question": "finalize() is called by",
+    "options": ["User", "Compiler", "Garbage collector", "OS"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l7_q04",
+    "question": "Which principle is achieved by private variables?",
+    "options": ["Abstraction", "Encapsulation", "Inheritance", "Polymorphism"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l7_q05",
+    "question": "Which principle allows treating objects as parent type?",
+    "options": ["Encapsulation", "Abstraction", "Polymorphism", "Inheritance"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l7_q06",
+    "question": "instanceof checks",
+    "options": ["Equality", "Object type", "Memory", "Value"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l7_q07",
+    "question": "Which is immutable class?",
+    "options": ["String", "StringBuilder", "StringBuffer", "Object"],
+    "correctIndex": 0
+  },
+  {
+    "id": "oops_l7_q08",
+    "question": "Wrapper classes are in package",
+    "options": ["java.util", "java.lang", "java.io", "java.net"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l7_q09",
+    "question": "Autoboxing means",
+    "options": ["Primitive → Object", "Object → Primitive", "Class → Interface", "Interface → Class"],
+    "correctIndex": 0
+  },
+  {
+    "id": "oops_l7_q10",
+    "question": "Unboxing means",
+    "options": ["Object → Primitive", "Primitive → Object", "Class → Interface", "None"],
+    "correctIndex": 0
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "logic_l2_q1",
+    "question": "A, P, R, X, S and Z are sitting in a row. S and Z are in the centre. A and P are at the ends. R is sitting to the left of A. Who is to the right of P?",
+    "options": ["A", "X", "S", "Z"],
+    "correctIndex": 1
+  },
+  {
+    "id": "logic_l2_q2",
+    "question": "A, B, C, D and E are sitting on a bench. A is to the right of B and E. C is second from right. A and C are together. Who is sitting in which position?",
+    "options": ["Between B and D", "Between B and C", "Between E and D", "Between C and E"],
+    "correctIndex": 1
+  },
+  {
+    "id": "logic_l2_q3",
+    "question": "P, Q, R, S, T, U, V, W are sitting in a circle facing centre. P is second right of T who is neighbour of R and V. S is not neighbour of P. V is neighbour of U. Q is not between S and W. W is not between U and S. Which two are not neighbours?",
+    "options": ["RV", "UV", "RP", "QW"],
+    "correctIndex": 3
+  },
+  {
+    "id": "logic_l2_q4",
+    "question": "Who is immediate right to V?",
+    "options": ["P", "U", "R", "T"],
+    "correctIndex": 1
+  },
+  {
+    "id": "logic_l2_q5",
+    "question": "What is the position of S?",
+    "options": ["Between U and V", "Second to right of P", "Immediate right of W", "Data inadequate"],
+    "correctIndex": 0
+  },
+  {
+    "id": "logic_l2_q6",
+    "question": "Five girls on a bench: Seema is left of Rani, right of Bindu. Mary is right of Rani. Reeta is between Rani and Mary. Who is immediate right of Reeta?",
+    "options": ["Bindu", "Rani", "Mary", "Seema"],
+    "correctIndex": 2
+  },
+  {
+    "id": "logic_l2_q7",
+    "question": "Who is in the middle of photograph?",
+    "options": ["Bindu", "Rani", "Reeta", "Seema"],
+    "correctIndex": 2
+  },
+  {
+    "id": "logic_l2_q8",
+    "question": "Who is second from right?",
+    "options": ["Mary", "Rani", "Reeta", "Bindu"],
+    "correctIndex": 1
+  },
+  {
+    "id": "logic_l2_q9",
+    "question": "Who is second from left?",
+    "options": ["Reeta", "Mary", "Bindu", "Seema"],
+    "correctIndex": 3
+  },
+  {
+    "id": "logic_l2_q10",
+    "question": "Six girls sitting in circle: P, Q, R, S, T, V. T is not between Q and S. P is next left of V. R is 4th right of P. Which statement is NOT true?",
+    "options": ["S is next right to R", "T is next right of V", "R is second left of T", "P is second right of R"],
+    "correctIndex": 3
+  }
+]

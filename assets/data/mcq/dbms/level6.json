@@ -1,0 +1,112 @@
+[
+  {
+    "id": "dbms_l6_q1",
+    "question": "The oldest DB model is:",
+    "options": [
+      "Network",
+      "Physical",
+      "Hierarchical",
+      "Relational"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l6_q2",
+    "question": "After executing the given role and privilege statements, what will be the outcome for user SCOTT?",
+    "options": [
+      "REVOKE statement will give error",
+      "SELECT privilege removed from SCOTT and role R1",
+      "SCOTT would be able to query the OE.ORDERS table",
+      "SCOTT would not be able to query the OE.ORDERS table"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l6_q3",
+    "question": "Which schema establishes a top-to-bottom relationship among items?",
+    "options": [
+      "Relational schema",
+      "Network schema",
+      "Hierarchical schema",
+      "All of the mentioned"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l6_q4",
+    "question": "Which component helps minimize block transfers between disk and memory?",
+    "options": [
+      "Secondary storage",
+      "Storage",
+      "Catalog",
+      "Buffer"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "dbms_l6_q5",
+    "question": "If data is stored in two places in a database, what happens?",
+    "options": [
+      "Storage wasted and data inconsistency may occur",
+      "It can be more easily accessed",
+      "Only data inconsistency occurs",
+      "Only storage is wasted"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l6_q6",
+    "question": "Logical design and snapshot of data at a given time are known as:",
+    "options": [
+      "Instance & Relation",
+      "Relation & Schema",
+      "Domain & Schema",
+      "Schema & Instance"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "dbms_l6_q7",
+    "question": "Which normal form removes transitive dependency?",
+    "options": [
+      "1NF",
+      "2NF",
+      "3NF",
+      "BCNF"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l6_q8",
+    "question": "Which normal form removes partial dependency?",
+    "options": [
+      "1NF",
+      "2NF",
+      "3NF",
+      "4NF"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l6_q9",
+    "question": "A schedule is conflict serializable if:",
+    "options": [
+      "It has no precedence graph",
+      "Its precedence graph has no cycles",
+      "It uses locks",
+      "It uses timestamps"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l6_q10",
+    "question": "Two-phase locking protocol ensures:",
+    "options": [
+      "Serializability",
+      "Deadlock prevention",
+      "Starvation",
+      "Data redundancy"
+    ],
+    "correctIndex": 0
+  }
+]

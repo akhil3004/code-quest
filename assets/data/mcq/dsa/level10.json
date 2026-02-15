@@ -1,0 +1,12 @@
+[
+  {"id": "dsa_l10_q1", "question": "A linear collection of data elements where each node is linked by pointer is called?", "options": ["Linked list", "Node list", "Primitive list", "Unordered list"], "correctIndex": 0},
+  {"id": "dsa_l10_q2", "question": "In a singly linked list with only head pointer, which operations can be done in O(1) time?", "options": ["Insertion at front", "Insertion at end", "Deletion of front node", "Deletion of last node"], "correctIndex": 0},
+  {"id": "dsa_l10_q3", "question": "Each node in a linked list contains data and?", "options": ["Pointer to character", "Pointer to integer", "Pointer to node", "Node"], "correctIndex": 2},
+  {"id": "dsa_l10_q4", "question": "Time complexity to add a node at the end of a singly linked list (head known) is?", "options": ["O(1)", "O(n)", "θ(n)", "θ(1)"], "correctIndex": 2},
+  {"id": "dsa_l10_q5", "question": "Which linked list variation allows concatenation of two lists in O(1) time?", "options": ["Singly linked list", "Doubly linked list", "Circular doubly linked list", "Array implementation"], "correctIndex": 2},
+  {"id": "dsa_l10_q6", "question": "B-tree of order n, non-root node contains at least how many keys?", "options": ["(n-1)/2", "n-1", "2n", "(n+1)/2"], "correctIndex": 0},
+  {"id": "dsa_l10_q7", "question": "Maximum elements in a complete binary tree of height l is?", "options": ["2^l -1", "l-1", "l", "2^l"], "correctIndex": 0},
+  {"id": "dsa_l10_q8", "question": "In a B+ tree, which nodes contain keys?", "options": ["Internal nodes only", "Leaves only", "Both internal nodes and leaves", "None"], "correctIndex": 1},
+  {"id": "dsa_l10_q9", "question": "A connected graph with all vertices having equal degree is called?", "options": ["Multi Graph", "Regular Graph", "Simple Graph", "Complete Graph"], "correctIndex": 1},
+  {"id": "dsa_l10_q10", "question": "For a connected graph with v vertices and e edges, no cycles, which is true?", "options": ["v = e", "v = e+1", "v+1 = e", "v = e-1"], "correctIndex": 1}
+]

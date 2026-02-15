@@ -1,0 +1,12 @@
+[
+  {"id": "dsa_l6_q1", "question": "Which of the following is an infix expression?", "options": ["(a+b)*(c+d)", "ab+c*", "+ab", "abc+*"], "correctIndex": 0},
+  {"id": "dsa_l6_q2", "question": "What is the time complexity of an infix to postfix conversion algorithm?", "options": ["O(N log N)", "O(N)", "O(N^2)", "O(M log N)"], "correctIndex": 1},
+  {"id": "dsa_l6_q3", "question": "What is the postfix expression for the infix expression a + b * c + (d * e)?", "options": ["abc*+de*+", "abc+*de*+", "a+bc*de+*", "abc*+(de)*+"], "correctIndex": 0},
+  {"id": "dsa_l6_q4", "question": "Parentheses are simply ignored in infix to postfix conversion. True or False?", "options": ["True", "False"], "correctIndex": 1},
+  {"id": "dsa_l6_q5", "question": "It is easier for a computer to process a postfix expression than an infix expression. True or False?", "options": ["True", "False"], "correctIndex": 0},
+  {"id": "dsa_l6_q6", "question": "Which of the following is the most widely used external memory data structure?", "options": ["AVL tree", "B-tree", "Red-black tree", "Both AVL tree and Red-black tree"], "correctIndex": 1},
+  {"id": "dsa_l6_q7", "question": "B-tree of order n is a multiway tree in which each non-root node contains at least how many keys?", "options": ["At most (n-1)/2 keys", "Exactly (n-1)/2 keys", "At least 2n keys", "At least (n-1)/2 keys"], "correctIndex": 3},
+  {"id": "dsa_l6_q8", "question": "A B-tree of order 4 and height 3 has maximum number of keys equal to?", "options": ["255", "63", "127", "188"], "correctIndex": 0},
+  {"id": "dsa_l6_q9", "question": "If five node splitting operations occurred when inserting into a B-tree, how many nodes are written?", "options": ["14", "7", "11", "5"], "correctIndex": 2},
+  {"id": "dsa_l6_q10", "question": "2-3-4 trees are B-trees of order 4. They are isometric to which type of trees?", "options": ["AVL", "AA", "2-3", "Red-Black"], "correctIndex": 3}
+]

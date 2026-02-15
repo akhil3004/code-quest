@@ -1,0 +1,112 @@
+[
+  {
+    "id": "dbms_l9_q1",
+    "question": "Join dependency is handled in:",
+    "options": [
+      "3NF",
+      "4NF",
+      "5NF",
+      "BCNF"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l9_q2",
+    "question": "In an ER diagram, a double rectangle represents:",
+    "options": [
+      "Strong entity",
+      "Weak entity",
+      "Relationship",
+      "Attribute"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l9_q3",
+    "question": "In an ER diagram, a double diamond represents:",
+    "options": [
+      "Weak relationship",
+      "Strong relationship",
+      "Attribute",
+      "Key"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l9_q4",
+    "question": "Total participation is shown using:",
+    "options": [
+      "Double line",
+      "Single line",
+      "Arrow",
+      "Dashed line"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l9_q5",
+    "question": "A surrogate key is:",
+    "options": [
+      "Natural key",
+      "Artificial key",
+      "Composite key",
+      "Foreign key"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l9_q6",
+    "question": "Denormalization is used to:",
+    "options": [
+      "Remove redundancy",
+      "Improve performance",
+      "Increase anomalies",
+      "Remove keys"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l9_q7",
+    "question": "Which SQL constraint ensures uniqueness?",
+    "options": [
+      "CHECK",
+      "UNIQUE",
+      "DEFAULT",
+      "INDEX"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l9_q8",
+    "question": "A clustered index:",
+    "options": [
+      "Changes physical order",
+      "Does not change order",
+      "Is always secondary",
+      "Is hash-based"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l9_q9",
+    "question": "Deadlock prevention technique:",
+    "options": [
+      "Wait-die",
+      "Timestamp",
+      "Logging",
+      "RAID"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l9_q10",
+    "question": "Write-Ahead Logging ensures:",
+    "options": [
+      "Log before data write",
+      "Data before log",
+      "No logging",
+      "Buffer skip"
+    ],
+    "correctIndex": 0
+  }
+]

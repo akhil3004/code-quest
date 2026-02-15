@@ -1,0 +1,62 @@
+[
+  {
+    "id": "qa_l4_q1",
+    "question": "If 80% of A = 50% of B and B = x% of A, then the value of x is:",
+    "options": ["400", "300", "160", "150"],
+    "correctIndex": 2
+  },
+  {
+    "id": "qa_l4_q2",
+    "question": "What is 20% of 25% of 300?",
+    "options": ["150", "60", "45", "15"],
+    "correctIndex": 3
+  },
+  {
+    "id": "qa_l4_q3",
+    "question": "What is to be added to 15% of 160 so that the sum may be equal to 25% of 240?",
+    "options": ["24", "84", "60", "36"],
+    "correctIndex": 3
+  },
+  {
+    "id": "qa_l4_q4",
+    "question": "A worker suffers a 20% cut in his wages. He may regain his original wages by obtaining a rise of:",
+    "options": ["27.5%", "25.0%", "22.5%", "20.0%"],
+    "correctIndex": 0
+  },
+  {
+    "id": "qa_l4_q5",
+    "question": "If A exceeds B by 40%, B is less than C by 20%, then A : C is:",
+    "options": ["28:25", "26:25", "3:2", "3:1"],
+    "correctIndex": 0
+  },
+  {
+    "id": "qa_l4_q6",
+    "question": "If 4 litres of water is evaporated on boiling from 12 litres of salt solution containing 7% salt, the percentage of salt in the remaining solution is:",
+    "options": ["10.5%", "11.5%", "12%", "13%"],
+    "correctIndex": 1
+  },
+  {
+    "id": "qa_l4_q7",
+    "question": "B got 20% marks less than A. What percent marks did A get more than B?",
+    "options": ["20%", "25%", "12%", "80%"],
+    "correctIndex": 1
+  },
+  {
+    "id": "qa_l4_q8",
+    "question": "In a big garden, 60% of the trees are coconut trees, 25% of the number of coconut trees are mango trees, and 20% of the number of mango trees are apple trees. If the number of apple trees is 1500, then the number of trees in the garden is:",
+    "options": ["48000", "50000", "51000", "45000"],
+    "correctIndex": 1
+  },
+  {
+    "id": "qa_l4_q9",
+    "question": "Price of sugar rises by 20%. By how much percent should the consumption of sugar be reduced so that the expenditure does not change?",
+    "options": ["20%", "10%", "16.67%", "15%"],
+    "correctIndex": 2
+  },
+  {
+    "id": "qa_l4_q10",
+    "question": "8% of the voters in an election did not cast their votes. In this election, there were only two candidates. The winner, by obtaining 48% of the total votes, defeated his contestant by 1100 votes. The total number of voters in the election was:",
+    "options": ["21000", "23500", "22000", "27500"],
+    "correctIndex": 2
+  }
+]

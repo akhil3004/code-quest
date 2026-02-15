@@ -1,0 +1,62 @@
+[
+  {
+    "id": "oops_l4_q01",
+    "question": "Which method compares object contents?",
+    "options": ["==", "equals()", "compare()", "match()"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l4_q02",
+    "question": "Which method returns hash value?",
+    "options": ["toString()", "equals()", "hashCode()", "value()"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l4_q03",
+    "question": "Which class is parent of all classes?",
+    "options": ["String", "System", "Object", "Class"],
+    "correctIndex": 2
+  },
+  {
+    "id": "oops_l4_q04",
+    "question": "Which keyword is used to inherit interface to interface?",
+    "options": ["extends", "implements", "super", "inherit"],
+    "correctIndex": 0
+  },
+  {
+    "id": "oops_l4_q05",
+    "question": "Static members belong to",
+    "options": ["Object", "Class", "Method", "Interface"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l4_q06",
+    "question": "Static methods cannot access",
+    "options": ["Static variables", "Instance variables directly", "Other static methods", "Static blocks"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l4_q07",
+    "question": "Which block executes first?",
+    "options": ["Constructor", "Static block", "Instance block", "Main method"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l4_q08",
+    "question": "Order of constructor execution in inheritance",
+    "options": ["Child → Parent", "Parent → Child", "Random", "Depends"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l4_q09",
+    "question": "final method means",
+    "options": ["Cannot be inherited", "Cannot be overridden", "Cannot be accessed", "Cannot be compiled"],
+    "correctIndex": 1
+  },
+  {
+    "id": "oops_l4_q10",
+    "question": "final class means",
+    "options": ["Cannot create object", "Cannot inherit", "Cannot override", "Cannot instantiate"],
+    "correctIndex": 1
+  }
+]

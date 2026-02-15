@@ -1,0 +1,12 @@
+[
+  {"id": "dsa_l5_q1", "question": "What would be the Prefix notation for the given equation? A + (B * C)", "options": ["+A*CB", "*B+AC", "+A*BC", "*A+CB"], "correctIndex": 2},
+  {"id": "dsa_l5_q2", "question": "What would be the Prefix notation for the given equation? (A * B) + (C * D)", "options": ["+*AB*CD", "*+AB*CD", "**AB+CD", "+*BA*CD"], "correctIndex": 0},
+  {"id": "dsa_l5_q3", "question": "What would be the Prefix notation for the given equation? A + B * C ^ D", "options": ["+A*B^CD", "+A^B*CD", "*A+B^CD", "^A*B+CD"], "correctIndex": 0},
+  {"id": "dsa_l5_q4", "question": "Out of the following operators (^, *, +, &, $), the one having highest priority is?", "options": ["+", "$", "^", "&"], "correctIndex": 2},
+  {"id": "dsa_l5_q5", "question": "Out of the following operators (|, *, +, &, $), the one having lowest priority is?", "options": ["+", "$", "|", "&"], "correctIndex": 2},
+  {"id": "dsa_l5_q6", "question": "What would be the Prefix notation for the given equation? A ^ B ^ C ^ D", "options": ["^^^ABCD", "^A^B^CD", "ABCD^^^", "AB^C^D"], "correctIndex": 0},
+  {"id": "dsa_l5_q7", "question": "What would be the Prefix notation for the given equation? a + b - c / d & e | f", "options": ["|&-+ab/cdef", "&|-+ab/cdef", "|&-ab+/cdef", "|&-+/abcdef"], "correctIndex": 0},
+  {"id": "dsa_l5_q8", "question": "What would be the Prefix notation for the given equation? (a + (b / c) * (d ^ e) - f)", "options": ["-+a*/^bcdef", "-+a*/bc^def", "-+a*b/c^def", "-a+*/bc^def"], "correctIndex": 1},
+  {"id": "dsa_l5_q9", "question": "When an operand is read during infix to postfix conversion, what is done?", "options": ["Placed on output", "Placed in operator stack", "Ignored", "Operator stack is emptied"], "correctIndex": 0},
+  {"id": "dsa_l5_q10", "question": "What should be done when a left parenthesis '(' is encountered during infix to postfix conversion?", "options": ["Ignored", "Placed in output", "Placed in operator stack", "Operator stack emptied"], "correctIndex": 2}
+]

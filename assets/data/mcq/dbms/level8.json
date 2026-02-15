@@ -1,0 +1,112 @@
+[
+  {
+    "id": "dbms_l8_q1",
+    "question": "A weak entity must have:",
+    "options": [
+      "Primary key",
+      "Composite key",
+      "Partial key",
+      "Super key"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l8_q2",
+    "question": "A view with GROUP BY clause is:",
+    "options": [
+      "Always updatable",
+      "Never updatable",
+      "Conditionally updatable",
+      "Depends on DBMS"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l8_q3",
+    "question": "Which anomaly is removed in 2NF?",
+    "options": [
+      "Update anomaly",
+      "Deletion anomaly",
+      "Insertion anomaly",
+      "Partial dependency anomaly"
+    ],
+    "correctIndex": 3
+  },
+  {
+    "id": "dbms_l8_q4",
+    "question": "Which storage structure uses hashing?",
+    "options": [
+      "B-tree",
+      "Hash index",
+      "Bitmap",
+      "Heap"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l8_q5",
+    "question": "Which RAID level provides both striping and parity?",
+    "options": [
+      "RAID 0",
+      "RAID 1",
+      "RAID 5",
+      "RAID 10"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l8_q6",
+    "question": "Timestamp ordering ensures:",
+    "options": [
+      "Deadlock",
+      "Serializability",
+      "Data redundancy",
+      "Logging"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l8_q7",
+    "question": "Cascading rollback occurs due to:",
+    "options": [
+      "Dirty reads",
+      "Deadlock",
+      "Locking",
+      "Checkpoint"
+    ],
+    "correctIndex": 0
+  },
+  {
+    "id": "dbms_l8_q8",
+    "question": "Which clause filters groups?",
+    "options": [
+      "WHERE",
+      "HAVING",
+      "GROUP BY",
+      "ORDER BY"
+    ],
+    "correctIndex": 1
+  },
+  {
+    "id": "dbms_l8_q9",
+    "question": "Which dependency causes BCNF violation?",
+    "options": [
+      "Trivial dependency",
+      "Functional dependency",
+      "Non-super key determining attribute",
+      "Multivalued dependency"
+    ],
+    "correctIndex": 2
+  },
+  {
+    "id": "dbms_l8_q10",
+    "question": "Multivalued dependency is handled in:",
+    "options": [
+      "3NF",
+      "BCNF",
+      "4NF",
+      "5NF"
+    ],
+    "correctIndex": 2
+  }
+]
