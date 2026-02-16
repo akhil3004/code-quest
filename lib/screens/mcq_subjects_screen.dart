@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../models/subject_model.dart';
 import '../widgets/game_hud_appbar.dart';
 import '../widgets/starfield_background.dart';
-import '../widgets/floating_chat_button.dart';
 import '../widgets/galaxy_card.dart';
 import '../widgets/fade_slide_transition.dart';
 
@@ -25,7 +24,6 @@ class McqSubjectsScreen extends StatelessWidget {
         showBack: true,
         subtitle: 'MCQ Galaxies',
       ),
-      floatingActionButton: const FloatingChatButton(),
       body: StarfieldBackground(
         child: FadeSlideTransition(
           child: Padding(

@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../services/auth_service.dart';
 import '../services/xp_service.dart';
 import '../theme/retro_theme.dart';
+import 'floating_chat_button.dart';
 
 class GameHudAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool showBack;
@@ -68,24 +69,39 @@ class GameHudAppBar extends StatelessWidget implements PreferredSizeWidget {
             ],
           ),
           const Spacer(),
-          _HudIconButton(
-            icon: Icons.leaderboard,
-            onTap: () => Navigator.pushNamed(context, '/leaderboard'),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              _HeaderIcon(icon: Icons.emoji_events, route: '/leaderboard'),
+              const SizedBox(width: 10),
+              _HeaderIcon(icon: Icons.public, route: '/globalChat'),
+              const SizedBox(width: 10),
+              _HeaderIcon(
+                icon: Icons.smart_toy_outlined,
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    backgroundColor: Colors.transparent,
+                    isScrollControlled: true,
+                    builder: (sheetContext) {
+                      return const AiAssistantPanel(screen: 'header');
+                    },
+                  );
+                },
+              ),
+              const SizedBox(width: 10),
+              _HeaderIcon(icon: Icons.person, route: '/profile'),
+            ],
           ),
-          const SizedBox(width: 10),
-          _HudIconButton(
-            icon: Icons.person,
-            onTap: () => Navigator.pushNamed(context, '/profile'),
-          ),
-          const SizedBox(width: 10),
           _XPBadge(
             level: xpService.level,
             xp: xpService.xp,
           ),
           const SizedBox(width: 6),
-          _HudIconButton(
+          const SizedBox(width: 6),
+          _HeaderIcon(
             icon: Icons.logout,
-            onTap: () async {
+            onPressed: () async {
               final navigator = Navigator.of(context);
               final confirm = await showDialog<bool>(
                 context: context,
@@ -137,55 +153,29 @@ class GameHudAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 }
 
-class _HudIconButton extends StatelessWidget {
-  final IconData icon;
-  final VoidCallback onTap;
 
-  const _HudIconButton({
-    required this.icon,
-    required this.onTap,
-  });
+class _HeaderIcon extends StatelessWidget {
+  final IconData icon;
+  final String? route;
+  final VoidCallback? onPressed;
+
+  const _HeaderIcon({required this.icon, this.route, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(999),
-      child: Container(
-        width: 36,
-        height: 36,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(999),
-          border: Border.all(
-            color: RetroTheme.primary.withValues(alpha: 0.9),
-            width: 1.5,
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: RetroTheme.primary.withValues(alpha: 0.4),
-              blurRadius: 10,
-              spreadRadius: 1,
-            ),
-          ],
-          gradient: LinearGradient(
-            colors: [
-              RetroTheme.primary.withValues(alpha: 0.18),
-              Colors.transparent,
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-        ),
-        child: Icon(
-          icon,
-          size: 18,
-          color: RetroTheme.primary,
-        ),
-      ),
+    return IconButton(
+      icon: Icon(icon),
+      iconSize: 22,
+      padding: EdgeInsets.zero,
+      constraints: const BoxConstraints(),
+      onPressed: onPressed ?? () {
+        if (route != null) {
+          Navigator.pushNamed(context, route!);
+        }
+      },
     );
   }
 }
-
 class _XPBadge extends StatelessWidget {
   final int level;
   final int xp;

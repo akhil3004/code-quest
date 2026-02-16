@@ -1,0 +1,42 @@
+[
+  {
+    "id": "java_loop_fix_1",
+    "title": "Fix Java For Loop",
+    "difficulty": 1,
+    "language": "java",
+    "problem": "Loop prints wrong numbers. Print 1 2 3 4 5 with spaces.",
+    "starterCode": "import java.util.*; class Main{ public static void main(String[] args){ for(int i=1;i<5;i++){ System.out.print(i+\" \"); } } }",
+    "testCases": [
+      { "input": "", "output": "1 2 3 4 5 " }
+    ],
+    "hidden": false,
+    "xp": 40
+  },
+  {
+    "id": "java_missing_semicolon_1",
+    "title": "Missing Semicolon",
+    "difficulty": 1,
+    "language": "java",
+    "problem": "Fix compilation error caused by missing semicolon and print OK.",
+    "starterCode": "class Main{ public static void main(String[] args){ System.out.println(\"OK\") } }",
+    "testCases": [
+      { "input": "", "output": "OK\n" }
+    ],
+    "hidden": false,
+    "xp": 30
+  },
+  {
+    "id": "java_string_compare_1",
+    "title": "String Comparison",
+    "difficulty": 2,
+    "language": "java",
+    "problem": "Compare strings correctly and print YES if equal, else NO.",
+    "starterCode": "import java.util.*; class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String a=sc.nextLine(); String b=sc.nextLine(); if(a==b){ System.out.println(\"YES\"); } else { System.out.println(\"NO\"); } } }",
+    "testCases": [
+      { "input": "abc\nabc", "output": "YES\n" },
+      { "input": "abc\nabd", "output": "NO\n" }
+    ],
+    "hidden": false,
+    "xp": 50
+  }
+]

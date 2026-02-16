@@ -29,6 +29,10 @@ class _AptitudeQuestionsScreenState extends State<AptitudeQuestionsScreen> {
   String? _feedback;
   final _service = AptitudeProgressService();
   final _achievements = AchievementService();
+  final Set<String> _awardedQuestions = {};
+  String? _categoryId;
+  int? _levelNumber;
+  bool _levelAlreadyCompleted = false;
 
   @override
   void didChangeDependencies() {
@@ -43,6 +47,8 @@ class _AptitudeQuestionsScreenState extends State<AptitudeQuestionsScreen> {
 
   Future<void> _load(String category, int level) async {
     try {
+      _categoryId = category;
+      _levelNumber = level;
       final path = 'assets/data/aptitude/$category/level$level.json';
       final jsonStr = await rootBundle.loadString(path);
       final data = jsonDecode(jsonStr) as List<dynamic>;
@@ -56,6 +62,8 @@ class _AptitudeQuestionsScreenState extends State<AptitudeQuestionsScreen> {
         }
         return MCQQuestion.fromJson(m);
       }).toList();
+      final status = await _service.getStatus(category);
+      _levelAlreadyCompleted = (status[level] ?? false) == true;
       setState(() {
         _questions = list;
         _feedback = _questions.isEmpty ? 'No questions found.' : 'Loaded ${_questions.length} questions.';
@@ -78,6 +86,14 @@ class _AptitudeQuestionsScreenState extends State<AptitudeQuestionsScreen> {
       _feedback = isCorrect ? 'Correct! +10 XP' : 'Incorrect';
     });
     if (_selected == _questions[_index].correctIndex) {
+      final qid = _questions[_index].id;
+      if (_levelAlreadyCompleted) {
+        return;
+      }
+      if (_awardedQuestions.contains(qid)) {
+        return;
+      }
+      _awardedQuestions.add(qid);
       await context.read<XPService>().addXP(10);
       await _achievements.recordAptitudeQuestionCorrect();
       await AchievementService().recordXPUpdated();
@@ -191,4 +207,3 @@ class _AptitudeQuestionsScreenState extends State<AptitudeQuestionsScreen> {
     );
   }
 }
-

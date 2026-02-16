@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../models/achievement_model.dart';
+import 'dart:math';
 
 class AchievementService {
   final _db = FirebaseFirestore.instance;
@@ -81,6 +82,48 @@ class AchievementService {
     if (opened >= 5) await _unlock('curious_mind');
   }
 
+  Future<void> _updateStreakOnActivity() async {
+    final uid = _auth.currentUser?.uid;
+    if (uid == null) return;
+    final userRef = _db.collection('users').doc(uid);
+    await _db.runTransaction((tx) async {
+      final snap = await tx.get(userRef);
+      final data = snap.data() ?? {};
+      final lastStr = data['lastActiveDate'] as String?;
+      final currentStreak = (data['streak'] ?? 0) as int;
+      final longestStreak = (data['longestStreak'] ?? 0) as int;
+      final now = DateTime.now();
+      final today = DateTime(now.year, now.month, now.day);
+      DateTime? lastDate;
+      if (lastStr != null) {
+        try {
+          lastDate = DateTime.parse(lastStr);
+        } catch (_) {
+          lastDate = null;
+        }
+      }
+      int newStreak = currentStreak;
+      if (lastDate == null) {
+        newStreak = 1;
+      } else {
+        final diffDays = today.difference(DateTime(lastDate.year, lastDate.month, lastDate.day)).inDays;
+        if (diffDays == 0) {
+          return;
+        } else if (diffDays == 1) {
+          newStreak = currentStreak + 1;
+        } else {
+          newStreak = 1;
+        }
+      }
+      final newLongest = max(longestStreak, newStreak);
+      tx.set(userRef, {
+        'streak': newStreak,
+        'longestStreak': newLongest,
+        'lastActiveDate': today.toIso8601String(),
+      }, SetOptions(merge: true));
+    });
+  }
+
   Future<void> recordXPUpdated() async {
     final uid = _auth.currentUser?.uid;
     if (uid == null) return;
@@ -113,6 +156,7 @@ class AchievementService {
   }
 
   Future<void> recordMcqLevelComplete(String subject, int level, {required bool perfect}) async {
+    await _updateStreakOnActivity();
     if (level == 1) {
       if (subject == 'os') await _unlock('os_explorer');
       if (subject == 'dbms') await _unlock('dbms_explorer');
@@ -135,6 +179,7 @@ class AchievementService {
   }
 
   Future<void> recordAptitudeLevelComplete(String category, int level) async {
+    await _updateStreakOnActivity();
     if (level == 1) await _unlock('aptitude_starter');
     if (category == 'quantitative' && level >= 3) await _unlock('quant_champ');
     if (category == 'logical' && level >= 3) await _unlock('logic_pro');
@@ -142,6 +187,7 @@ class AchievementService {
   }
 
   Future<void> recordDebugSolve({required bool firstAttempt}) async {
+    await _updateStreakOnActivity();
     await _incrementStat('debugSolved', 1);
     await _unlock('debug_rookie');
     final uid = _auth.currentUser?.uid;

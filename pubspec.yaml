@@ -33,9 +33,10 @@ flutter:
   assets:
     - assets/data/mcq_data.json
     - assets/data/interview_material.json
-    - assets/data/debug_questions.json
     - assets/data/aptitude_questions.json
-    - assets/data/debug/basic.json
+    - assets/data/debug/python/
+    - assets/data/debug/java/
+    - assets/data/debug/c/
     - assets/data/mcq/os/
     - assets/data/mcq/dbms/
     - assets/data/mcq/cn/

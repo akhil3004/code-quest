@@ -56,7 +56,8 @@ class XPService extends ChangeNotifier {
   static String titleForLevel(int level) {
     if (level <= 5) return 'Rookie Coder';
     if (level <= 10) return 'Logic Learner';
-    if (level <= 20) return 'Quiz Champion';
-    return 'Quiz Champion';
+    if (level <= 20) return 'Explorer';
+    if (level <= 30) return 'Galaxy Debugger';
+    return 'Code Master';
   }
 }

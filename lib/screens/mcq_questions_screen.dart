@@ -30,6 +30,10 @@ class _McqQuestionsScreenState extends State<McqQuestionsScreen> {
   int _correctCount = 0;
   final _progress = ProgressService();
   final _achievements = AchievementService();
+  final Set<String> _awardedQuestions = {};
+  String? _subjectId;
+  int? _levelNumber;
+  bool _levelAlreadyCompleted = false;
 
   @override
   void didChangeDependencies() {
@@ -44,10 +48,14 @@ class _McqQuestionsScreenState extends State<McqQuestionsScreen> {
 
   Future<void> _load(String subject, int level) async {
     try {
+      _subjectId = subject;
+      _levelNumber = level;
       final path = 'assets/data/mcq/$subject/level$level.json';
       final jsonStr = await rootBundle.loadString(path);
       final data = jsonDecode(jsonStr) as List<dynamic>;
       final list = data.map((e) => MCQQuestion.fromJson(e as Map<String, dynamic>)).toList();
+      final status = await _progress.getCompletionStatus(subject);
+      _levelAlreadyCompleted = (status[level] ?? false) == true;
       setState(() {
         _questions = list;
         if (_questions.isEmpty) {
@@ -74,6 +82,14 @@ class _McqQuestionsScreenState extends State<McqQuestionsScreen> {
       _feedback = isCorrect ? 'Correct! +10 XP' : 'Incorrect';
     });
     if (_selected == _questions[_index].correctIndex) {
+      final qid = _questions[_index].id;
+      if (_levelAlreadyCompleted) {
+        return;
+      }
+      if (_awardedQuestions.contains(qid)) {
+        return;
+      }
+      _awardedQuestions.add(qid);
       await context.read<XPService>().addXP(10);
       _correctCount++;
       await _achievements.recordMcqCorrect();
@@ -189,4 +205,3 @@ class _McqQuestionsScreenState extends State<McqQuestionsScreen> {
     );
   }
 }
-

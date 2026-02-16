@@ -3,7 +3,6 @@ import '../models/subject_model.dart';
 import '../services/progress_service.dart';
 import '../widgets/game_hud_appbar.dart';
 import '../widgets/starfield_background.dart';
-import '../widgets/floating_chat_button.dart';
 import '../widgets/planet_level_tile.dart';
 import '../widgets/fade_slide_transition.dart';
 
@@ -51,7 +50,6 @@ class _McqLevelsScreenState extends State<McqLevelsScreen> {
         showBack: true,
         subtitle: '${subject.name} Planets',
       ),
-      floatingActionButton: const FloatingChatButton(),
       body: StarfieldBackground(
         child: FadeSlideTransition(
           child: ListView.separated(

@@ -228,7 +228,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 final username = (d['username'] ?? '') as String;
                 final xp = (d['xp'] ?? 0) as int;
                 final level = (d['level'] ?? 0) as int;
-                final title = (d['title'] ?? '') as String;
+                // Calculate title from level instead of reading stale Firestore value
+                final title = _calculateTitle(level);
                 final streak = (d['streak'] ?? 0) as int;
                 final photoFromDoc = (d['photoURL'] ?? '') as String;
                 final authUser = FirebaseAuth.instance.currentUser;
@@ -288,6 +289,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
       ),
     );
+  }
+
+  String _calculateTitle(int level) {
+    if (level <= 5) return 'Rookie Coder';
+    if (level <= 10) return 'Logic Learner';
+    if (level <= 20) return 'Explorer';
+    if (level <= 30) return 'Galaxy Debugger';
+    return 'Code Master';
   }
 }
 

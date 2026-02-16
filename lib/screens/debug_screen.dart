@@ -2,6 +2,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import '../models/debug_question_model.dart';
 import '../services/judge0_service.dart';
 import '../services/xp_service.dart';
@@ -12,7 +14,6 @@ import '../widgets/code_editor_widget.dart';
 import '../widgets/debug_console.dart';
 import '../widgets/game_hud_appbar.dart';
 import '../widgets/starfield_background.dart';
-import '../widgets/floating_chat_button.dart';
 
 class DebugScreen extends StatefulWidget {
   const DebugScreen({super.key});
@@ -33,10 +34,37 @@ class _DebugScreenState extends State<DebugScreen> {
 
   Future<void> _load() async {
     try {
-      final str = await rootBundle.loadString('assets/data/debug_questions.json');
-      final data = jsonDecode(str) as List<dynamic>;
+      const debugFiles = [
+        'assets/data/debug/java/level1.json',
+        'assets/data/debug/c/level1.json',
+        'assets/data/debug/python/level1.json',
+      ];
+      final List<DebugQuestion> all = [];
+
+      for (final file in debugFiles) {
+        try {
+          final jsonStr = await rootBundle.loadString(file);
+          final decoded = jsonDecode(jsonStr);
+          final List<dynamic> rawList = decoded is List
+              ? decoded
+              : (decoded is Map<String, dynamic> && decoded['questions'] is List
+                  ? decoded['questions'] as List
+                  : <dynamic>[]);
+
+          for (final e in rawList) {
+            if (e is Map<String, dynamic>) {
+              all.add(DebugQuestion.fromJson(e));
+            }
+          }
+        } catch (err) {
+          // Ignore missing or invalid files
+        }
+      }
+
+      all.sort((a, b) => a.id.compareTo(b.id));
+
       setState(() {
-        _questions = data.map((e) => DebugQuestion.fromJson(e)).toList();
+        _questions = all;
         _loading = false;
       });
     } catch (e) {
@@ -51,79 +79,80 @@ class _DebugScreenState extends State<DebugScreen> {
         showBack: true,
         subtitle: 'Debug Console',
       ),
-      floatingActionButton: const FloatingChatButton(),
       body: StarfieldBackground(
         child: _loading
             ? const Center(child: CircularProgressIndicator())
-            : ListView.builder(
-                padding: const EdgeInsets.all(16),
-                itemCount: _questions.length,
-                itemBuilder: (context, index) {
-                  final q = _questions[index];
-                  return Container(
-                    margin: const EdgeInsets.only(bottom: 16),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      border: Border.all(
-                        color: RetroTheme.primary.withValues(alpha: 0.8),
-                        width: 1.5,
-                      ),
-                      gradient: LinearGradient(
-                        colors: [
-                          RetroTheme.primary.withValues(alpha: 0.2),
-                          Colors.transparent,
-                        ],
-                        begin: Alignment.topLeft,
-                        end: Alignment.bottomRight,
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: RetroTheme.primary.withValues(alpha: 0.45),
-                          blurRadius: 16,
-                          spreadRadius: 1,
+            : (_questions.isEmpty
+                ? const Center(child: Text('No debug questions found'))
+                : ListView.builder(
+                    padding: const EdgeInsets.all(16),
+                    itemCount: _questions.length,
+                    itemBuilder: (context, index) {
+                      final q = _questions[index];
+                      return Container(
+                        margin: const EdgeInsets.only(bottom: 16),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(
+                            color: RetroTheme.primary.withValues(alpha: 0.8),
+                            width: 1.5,
+                          ),
+                          gradient: LinearGradient(
+                            colors: [
+                              RetroTheme.primary.withValues(alpha: 0.2),
+                              Colors.transparent,
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              color: RetroTheme.primary.withValues(alpha: 0.45),
+                              blurRadius: 16,
+                              spreadRadius: 1,
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                    child: ListTile(
-                      contentPadding: const EdgeInsets.all(16),
-                      title: Text(
-                        q.title,
-                        style: Theme.of(context).textTheme.titleLarge,
-                      ),
-                      subtitle: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const SizedBox(height: 8),
-                          Text(
-                            'Language: ${q.language.toUpperCase()}',
-                            style: Theme.of(context).textTheme.bodyMedium,
+                        child: ListTile(
+                          contentPadding: const EdgeInsets.all(16),
+                          title: Text(
+                            q.title,
+                            style: Theme.of(context).textTheme.titleLarge,
                           ),
-                          Text(
-                            'Difficulty: ${q.difficulty}/5',
-                            style: Theme.of(context).textTheme.bodyMedium,
+                          subtitle: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const SizedBox(height: 8),
+                              Text(
+                                'Language: ${q.language.toUpperCase()}',
+                                style: Theme.of(context).textTheme.bodyMedium,
+                              ),
+                              Text(
+                                'Difficulty: ${q.difficulty}/5',
+                                style: Theme.of(context).textTheme.bodyMedium,
+                              ),
+                              Text(
+                                'XP: ${q.xp}',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium
+                                    ?.copyWith(color: RetroTheme.primary),
+                              ),
+                            ],
                           ),
-                          Text(
-                            'XP: ${q.xp}',
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyMedium
-                                ?.copyWith(color: RetroTheme.primary),
-                          ),
-                        ],
-                      ),
-                      trailing: const Icon(Icons.arrow_forward_ios, color: RetroTheme.primary),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (_) => DebugEditorScreen(question: q),
-                          ),
-                        );
-                      },
-                    ),
-                  );
-                },
-              ),
+                          trailing: const Icon(Icons.arrow_forward_ios, color: RetroTheme.primary),
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => DebugEditorScreen(question: q),
+                              ),
+                            );
+                          },
+                        ),
+                      );
+                    },
+                  )),
       ),
     );
   }
@@ -141,6 +170,7 @@ class _DebugEditorScreenState extends State<DebugEditorScreen> {
   late TextEditingController _controller;
   final _judgeService = Judge0Service();
   final _achievements = AchievementService();
+  final Set<String> _awardedSession = {};
   
   bool _isRunning = false;
   int _runs = 0;
@@ -212,10 +242,28 @@ class _DebugEditorScreenState extends State<DebugEditorScreen> {
   }
 
   Future<void> _handleSuccess() async {
-    await context.read<XPService>().addXP(widget.question.xp);
-    await _achievements.recordDebugSolve(firstAttempt: _runs == 1);
-    await AchievementService().recordXPUpdated();
-    await TitleService().recalculateTitle();
+    final qid = widget.question.id;
+    if (_awardedSession.contains(qid)) {
+      return;
+    }
+    final uid = FirebaseAuth.instance.currentUser?.uid;
+    if (uid != null) {
+      final ref = FirebaseFirestore.instance
+          .collection('users')
+          .doc(uid)
+          .collection('debugSolved')
+          .doc(qid);
+      final snap = await ref.get();
+      if (snap.exists) {
+        return;
+      }
+      _awardedSession.add(qid);
+      await context.read<XPService>().addXP(widget.question.xp);
+      await _achievements.recordDebugSolve(firstAttempt: _runs == 1);
+      await AchievementService().recordXPUpdated();
+      await TitleService().recalculateTitle();
+      await ref.set({'solved': true, 'ts': FieldValue.serverTimestamp()});
+    }
     
     if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(

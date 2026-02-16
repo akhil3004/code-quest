@@ -95,7 +95,7 @@ class LeaderboardScreen extends StatelessWidget {
                             ),
                             const SizedBox(height: 4),
                             Text(
-                              'Level ${u.level} • ${u.title}',
+                              'Level ${u.level} • ${_calculateTitle(u.level)}',
                               style: RetroTheme.bodyMono.copyWith(
                                 fontSize: 11,
                                 color: RetroTheme.text.withValues(alpha: 0.7),
@@ -121,5 +121,13 @@ class LeaderboardScreen extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  String _calculateTitle(int level) {
+    if (level <= 5) return 'Rookie Coder';
+    if (level <= 10) return 'Logic Learner';
+    if (level <= 20) return 'Explorer';
+    if (level <= 30) return 'Galaxy Debugger';
+    return 'Code Master';
   }
 }

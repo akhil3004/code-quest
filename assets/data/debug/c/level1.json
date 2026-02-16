@@ -1,0 +1,41 @@
+[
+  {
+    "id": "c_pointer_misuse_1",
+    "title": "Pointer Misuse",
+    "difficulty": 2,
+    "language": "c",
+    "problem": "Fix pointer dereference to print value 42.",
+    "starterCode": "#include <stdio.h>\nint main(){ int x=42; int *p; printf(\"%d\\n\", *p); return 0; }",
+    "testCases": [
+      { "input": "", "output": "42\n" }
+    ],
+    "hidden": false,
+    "xp": 50
+  },
+  {
+    "id": "c_array_overflow_1",
+    "title": "Array Index Overflow",
+    "difficulty": 2,
+    "language": "c",
+    "problem": "Avoid writing beyond array bounds and print last element.",
+    "starterCode": "#include <stdio.h>\nint main(){ int a[3]={1,2,3}; a[3]=4; printf(\"%d\\n\", a[2]); return 0; }",
+    "testCases": [
+      { "input": "", "output": "3\n" }
+    ],
+    "hidden": false,
+    "xp": 50
+  },
+  {
+    "id": "c_missing_return_1",
+    "title": "Missing Return in main",
+    "difficulty": 1,
+    "language": "c",
+    "problem": "Ensure main returns int and print OK.",
+    "starterCode": "#include <stdio.h>\nint main(){ printf(\"OK\\n\"); }",
+    "testCases": [
+      { "input": "", "output": "OK\n" }
+    ],
+    "hidden": false,
+    "xp": 30
+  }
+]
