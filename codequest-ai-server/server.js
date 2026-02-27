@@ -29,10 +29,10 @@ app.post("/chat", async (req, res) => {
     return res.status(400).json({ error: "Message too long" });
   }
 
-  // Rate limit (10 per minute per user)
+  // Rate limit (30 per minute per user)
   const now = Date.now();
   const windowMs = 60 * 1000;
-  const limit = 10;
+  const limit = 30;
 
   if (!requestLog[userId]) requestLog[userId] = [];
   requestLog[userId] = requestLog[userId].filter(ts => now - ts < windowMs);
@@ -43,21 +43,27 @@ app.post("/chat", async (req, res) => {
 
   requestLog[userId].push(now);
 
-  const systemPrompt = `
-You are Code Quest AI, a sci-fi themed learning assistant.
-Give hints first and encourage reasoning.
-Do not directly reveal MCQ answers unless asked twice.
-Never fully solve exams automatically.
-Keep responses under 500 tokens.
-Context: ${screen}
-`;
+  const systemPrompt = `You are Code Quest AI, a friendly sci-fi themed coding and CS learning assistant.
+Rules:
+- Answer concisely and completely — never stop mid-sentence.
+- Write in flowing prose, NOT bullet points or headers. Keep it compact with no extra blank lines.
+- For CS/coding topics, give a clear direct answer in 2-4 short paragraphs max.
+- On MCQ questions: give hints and guide reasoning first. Only reveal the answer if the user explicitly asks a second time.
+- Never auto-solve exam or assignment questions — guide instead.
+- Context (current screen): ${screen}`;
 
   try {
     const result = await genAI.models.generateContent({
-      model: "gemini-2.0-flash",
-      contents: systemPrompt + "\nUser: " + message,
+      model: "gemini-2.5-flash",
+      contents: [
+        {
+          role: "user",
+          parts: [{ text: message }],
+        },
+      ],
       config: {
-        maxOutputTokens: 200,
+        systemInstruction: systemPrompt,
+        maxOutputTokens: 1024,
         temperature: 0.7,
       },
     });
@@ -67,24 +73,24 @@ Context: ${screen}
     res.json({ reply });
 
   } catch (error) {
-  console.error("Gemini error:", error);
+    console.error("Gemini error:", error);
 
-  if (error.status === 429) {
-    return res.status(429).json({
-      error: "Rate limit reached. Please wait 30 seconds and try again."
+    if (error.status === 429) {
+      return res.status(429).json({
+        error: "Rate limit reached. Please wait 30 seconds and try again."
+      });
+    }
+
+    if (error.status === 403) {
+      return res.status(403).json({
+        error: "API key invalid or quota exceeded."
+      });
+    }
+
+    res.status(500).json({
+      error: "AI generation failed"
     });
   }
-
-  if (error.status === 403) {
-    return res.status(403).json({
-      error: "API key invalid or quota exceeded."
-    });
-  }
-
-  res.status(500).json({
-    error: "AI generation failed"
-  });
-}
 
 });
 

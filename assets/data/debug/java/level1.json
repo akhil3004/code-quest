@@ -31,7 +31,7 @@
     "difficulty": 2,
     "language": "java",
     "problem": "Compare strings correctly and print YES if equal, else NO.",
-    "starterCode": "import java.util.*; class Main{ public static void main(String[] args){ Scanner sc=new Scanner(System.in); String a=sc.nextLine(); String b=sc.nextLine(); if(a==b){ System.out.println(\"YES\"); } else { System.out.println(\"NO\"); } } }",
+    "starterCode": "import java.util.*;\n class Main{ public static void main(String[] args){\n Scanner sc=new Scanner(System.in);\n String a=sc.nextLine();\n String b=sc.nextLine();\n if(a==b){\n System.out.println(\"YES\"); \n} else {\n System.out.println(\"NO\"); } } }",
     "testCases": [
       { "input": "abc\nabc", "output": "YES\n" },
       { "input": "abc\nabd", "output": "NO\n" }

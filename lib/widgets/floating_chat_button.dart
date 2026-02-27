@@ -1,3 +1,4 @@
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import '../theme/star_wars_retro_theme.dart';
 import '../services/ai_assistant_service.dart';
@@ -191,11 +192,22 @@ class _AiAssistantPanelState extends State<AiAssistantPanel> {
                   child: ListView.builder(
                     controller: _scrollController,
                     reverse: true,
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                    itemCount: _messages.length,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 12),
+                    // +1 slot for typing indicator when sending
+                    itemCount: _messages.length + (_isSending ? 1 : 0),
                     itemBuilder: (context, index) {
-                      final msg = _messages[_messages.length - 1 - index];
+                      // The top slot (index 0 in reversed list) = typing indicator
+                      if (_isSending && index == 0) {
+                        return const Align(
+                          alignment: Alignment.centerLeft,
+                          child: _TypingIndicator(),
+                        );
+                      }
+                      final msgIndex = _messages.length -
+                          1 -
+                          (index - (_isSending ? 1 : 0));
+                      final msg = _messages[msgIndex];
                       return Align(
                         alignment: msg.fromUser
                             ? Alignment.centerRight
@@ -221,12 +233,14 @@ class _AiAssistantPanelState extends State<AiAssistantPanel> {
                           ),
                           child: Text(
                             msg.text,
-                            style:
-                                Theme.of(context).textTheme.bodyMedium?.copyWith(
-                                      color: msg.fromUser
-                                          ? Colors.black
-                                          : StarWarsRetroColors.textBright,
-                                    ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium
+                                ?.copyWith(
+                                  color: msg.fromUser
+                                      ? Colors.black
+                                      : StarWarsRetroColors.textBright,
+                                ),
                           ),
                         ),
                       );
@@ -296,4 +310,79 @@ class _AiMessage {
     required this.fromUser,
     required this.text,
   });
+}
+
+// ── Typing indicator: three pulsing neon dots ──────────────────────────────
+class _TypingIndicator extends StatefulWidget {
+  const _TypingIndicator();
+
+  @override
+  State<_TypingIndicator> createState() => _TypingIndicatorState();
+}
+
+class _TypingIndicatorState extends State<_TypingIndicator>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 900),
+    )..repeat();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: Colors.white.withValues(alpha: 0.05),
+        border: Border.all(
+          color: StarWarsRetroColors.accentPurple.withValues(alpha: 0.5),
+        ),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: List.generate(3, (i) {
+          return AnimatedBuilder(
+            animation: _controller,
+            builder: (_, __) {
+              // Stagger each dot by 0.3 of the cycle
+              final phase = (_controller.value - i * 0.28).clamp(0.0, 1.0);
+              final scale = 0.6 +
+                  0.4 *
+                      math.sin(phase * math.pi).clamp(0.0, 1.0);
+              return Container(
+                margin: const EdgeInsets.symmetric(horizontal: 3),
+                width: 7 * scale,
+                height: 7 * scale,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: StarWarsRetroColors.primaryNeon
+                      .withValues(alpha: 0.4 + 0.6 * scale),
+                  boxShadow: [
+                    BoxShadow(
+                      color: StarWarsRetroColors.primaryNeon
+                          .withValues(alpha: 0.3 * scale),
+                      blurRadius: 6,
+                    ),
+                  ],
+                ),
+              );
+            },
+          );
+        }),
+      ),
+    );
+  }
 }
