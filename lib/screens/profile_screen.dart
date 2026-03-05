@@ -4,6 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../models/achievement_model.dart';
+import '../services/achievement_service.dart';
 import '../theme/retro_theme.dart';
 import '../theme/star_wars_retro_theme.dart';
 import '../widgets/game_hud_appbar.dart';
@@ -432,6 +434,7 @@ class _AvatarOrb extends StatelessWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
+            // Outer glow ring
             Container(
               width: 96,
               height: 96,
@@ -445,6 +448,7 @@ class _AvatarOrb extends StatelessWidget {
                 ),
               ),
             ),
+            // Avatar circle
             Container(
               width: 76,
               height: 76,
@@ -468,6 +472,17 @@ class _AvatarOrb extends StatelessWidget {
                   ? Image.network(
                       photoUrl,
                       fit: BoxFit.cover,
+                      errorBuilder: (_, __, ___) => Center(
+                        child: Text(
+                          initials,
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium
+                              ?.copyWith(
+                                color: StarWarsRetroColors.textBright,
+                              ),
+                        ),
+                      ),
                     )
                   : Center(
                       child: Text(
@@ -480,6 +495,34 @@ class _AvatarOrb extends StatelessWidget {
                             ),
                       ),
                     ),
+            ),
+            // Camera badge — signals the avatar is tappable
+            Positioned(
+              right: 2,
+              bottom: 2,
+              child: Container(
+                width: 26,
+                height: 26,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: StarWarsRetroColors.surfaceDark,
+                  border: Border.all(
+                    color: StarWarsRetroColors.primaryNeon,
+                    width: 1.5,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: StarWarsRetroColors.primaryNeon.withValues(alpha: 0.5),
+                      blurRadius: 8,
+                    ),
+                  ],
+                ),
+                child: const Icon(
+                  Icons.camera_alt,
+                  size: 14,
+                  color: StarWarsRetroColors.primaryNeon,
+                ),
+              ),
             ),
           ],
         ),
@@ -758,69 +801,161 @@ class _TopAchievementsSection extends StatelessWidget {
 
   const _TopAchievementsSection({required this.snapshot});
 
+  // Same icon lookup table as achievements_screen.dart
+  static IconData _iconFromName(String name) {
+    const map = <String, IconData>{
+      'star': Icons.star,
+      'school': Icons.school,
+      'flag': Icons.flag,
+      'explore': Icons.explore,
+      'memory': Icons.memory,
+      'storage': Icons.storage,
+      'router': Icons.router,
+      'api': Icons.api,
+      'build': Icons.build,
+      'military_tech': Icons.military_tech,
+      'emoji_events': Icons.emoji_events,
+      'star_outline': Icons.star_outline,
+      'psychology': Icons.psychology,
+      'calculate': Icons.calculate,
+      'scatter_plot': Icons.scatter_plot,
+      'text_fields': Icons.text_fields,
+      'fitness_center': Icons.fitness_center,
+      'bug_report': Icons.bug_report,
+      'handyman': Icons.handyman,
+      'code': Icons.code,
+      'verified': Icons.verified,
+      'schedule': Icons.schedule,
+      'event': Icons.event,
+      'calendar_month': Icons.calendar_month,
+      'rocket': Icons.rocket_launch,
+      'bolt': Icons.bolt,
+      'battery_charging_full': Icons.battery_charging_full,
+      'battery_alert': Icons.battery_alert,
+      'trending_up': Icons.trending_up,
+      'workspace_premium': Icons.workspace_premium,
+    };
+    return map[name] ?? Icons.emoji_events;
+  }
+
   @override
   Widget build(BuildContext context) {
+    // Build a lookup map: achievement id → AchievementModel
+    final allMap = <String, AchievementModel>{
+      for (final a in AchievementService().all()) a.id: a,
+    };
+
     if (snapshot == null || snapshot!.docs.isEmpty) {
-      return Text(
-        'Unlock achievements to display them here.',
-        style: RetroTheme.bodyMono.copyWith(
-          fontSize: 12,
-          color: RetroTheme.text.withValues(alpha: 0.7),
+      return Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(
+            color: RetroTheme.accent.withValues(alpha: 0.3),
+          ),
+          color: RetroTheme.cardBg.withValues(alpha: 0.5),
+        ),
+        child: Row(
+          children: [
+            Icon(Icons.lock_outline,
+                color: RetroTheme.accent.withValues(alpha: 0.5), size: 20),
+            const SizedBox(width: 12),
+            Text(
+              'Unlock achievements to display them here.',
+              style: RetroTheme.bodyMono.copyWith(
+                fontSize: 12,
+                color: RetroTheme.text.withValues(alpha: 0.6),
+              ),
+            ),
+          ],
         ),
       );
     }
 
-    final docs = snapshot!.docs.take(3).toList();
+    // Take up to 3 unlocked achievements and look up their model data
+    final achievementItems = snapshot!.docs
+        .take(3)
+        .map((d) => allMap[d.id])
+        .whereType<AchievementModel>()
+        .toList();
+
+    if (achievementItems.isEmpty) {
+      return const SizedBox.shrink();
+    }
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Top Achievements',
-          style: RetroTheme.hudLabel.copyWith(
-            color: RetroTheme.accent,
-          ),
+        Row(
+          children: [
+            const Icon(
+              Icons.emoji_events,
+              color: RetroTheme.gold,
+              size: 16,
+            ),
+            const SizedBox(width: 8),
+            Text(
+              'Top Achievements',
+              style: RetroTheme.hudLabel.copyWith(
+                color: RetroTheme.gold,
+                letterSpacing: 1.5,
+              ),
+            ),
+          ],
         ),
         const SizedBox(height: 12),
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: docs
-              .map(
-                (d) => Expanded(
-                  child: Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 4),
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 8),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(999),
-                      border: Border.all(
-                        color: RetroTheme.gold.withValues(alpha: 0.85),
-                        width: 1.5,
-                      ),
-                      gradient: LinearGradient(
-                        colors: [
-                          RetroTheme.gold.withValues(alpha: 0.28),
-                          Colors.transparent,
-                        ],
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                      ),
-                    ),
-                    child: Center(
-                      child: Text(
-                        (d.data()['title'] ?? '') as String,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: RetroTheme.bodyMono.copyWith(
-                          fontSize: 11,
-                          color: RetroTheme.background,
-                        ),
-                      ),
-                    ),
+          children: achievementItems.map((model) {
+            return Expanded(
+              child: Container(
+                margin: const EdgeInsets.symmetric(horizontal: 4),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 10, vertical: 10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: RetroTheme.gold.withValues(alpha: 0.7),
+                    width: 1.5,
                   ),
+                  gradient: LinearGradient(
+                    colors: [
+                      RetroTheme.gold.withValues(alpha: 0.18),
+                      Colors.transparent,
+                    ],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: RetroTheme.gold.withValues(alpha: 0.2),
+                      blurRadius: 10,
+                    ),
+                  ],
                 ),
-              )
-              .toList(),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      _iconFromName(model.icon),
+                      color: RetroTheme.gold,
+                      size: 24,
+                    ),
+                    const SizedBox(height: 6),
+                    Text(
+                      model.title,
+                      maxLines: 2,
+                      textAlign: TextAlign.center,
+                      overflow: TextOverflow.ellipsis,
+                      style: RetroTheme.bodyMono.copyWith(
+                        fontSize: 10,
+                        color: RetroTheme.text,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          }).toList(),
         ),
       ],
     );

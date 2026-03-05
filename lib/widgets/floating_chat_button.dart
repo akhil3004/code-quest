@@ -76,6 +76,20 @@ class _AiAssistantPanelState extends State<AiAssistantPanel> {
   final List<_AiMessage> _messages = [];
 
   @override
+  void initState() {
+    super.initState();
+    // Pre-load a themed welcome message from the AI
+    _messages.add(
+      _AiMessage(
+        fromUser: false,
+        text: '🚀 Greetings, cadet! I\'m your Code Quest AI co-pilot.\n\n'
+            'Whether you need a hint, a code explanation, or just want to understand a concept — I\'ve got your back.\n\n'
+            'What\'s your mission today?',
+      ),
+    );
+  }
+
+  @override
   void dispose() {
     _controller.dispose();
     _scrollController.dispose();

@@ -15,11 +15,29 @@ class SignupScreen extends StatefulWidget {
 class _SignupScreenState extends State<SignupScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
+  final _confirmPasswordController = TextEditingController();
   final _usernameController = TextEditingController();
   bool _loading = false;
+  bool _obscurePassword = true;
+  bool _obscureConfirmPassword = true;
   String? _error;
 
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    _confirmPasswordController.dispose();
+    _usernameController.dispose();
+    super.dispose();
+  }
+
   Future<void> _signup() async {
+    // Password match validation
+    if (_passwordController.text != _confirmPasswordController.text) {
+      setState(() => _error = 'Passwords do not match. Check your entry and try again.');
+      return;
+    }
+
     setState(() {
       _loading = true;
       _error = null;
@@ -48,7 +66,7 @@ class _SignupScreenState extends State<SignupScreen> {
       body: StarfieldBackground(
         child: SafeArea(
           child: Center(
-            child: Padding(
+            child: SingleChildScrollView(
               padding: const EdgeInsets.all(16),
               child: ConstrainedBox(
                 constraints: const BoxConstraints(maxWidth: 480),
@@ -85,9 +103,40 @@ class _SignupScreenState extends State<SignupScreen> {
                     const SizedBox(height: 12),
                     TextField(
                       controller: _passwordController,
-                      decoration:
-                          const InputDecoration(labelText: 'Password'),
-                      obscureText: true,
+                      obscureText: _obscurePassword,
+                      decoration: InputDecoration(
+                        labelText: 'Password',
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            _obscurePassword
+                                ? Icons.visibility_off_outlined
+                                : Icons.visibility_outlined,
+                            color: RetroTheme.primary,
+                            size: 20,
+                          ),
+                          onPressed: () =>
+                              setState(() => _obscurePassword = !_obscurePassword),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    TextField(
+                      controller: _confirmPasswordController,
+                      obscureText: _obscureConfirmPassword,
+                      decoration: InputDecoration(
+                        labelText: 'Confirm Password',
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            _obscureConfirmPassword
+                                ? Icons.visibility_off_outlined
+                                : Icons.visibility_outlined,
+                            color: RetroTheme.primary,
+                            size: 20,
+                          ),
+                          onPressed: () => setState(() =>
+                              _obscureConfirmPassword = !_obscureConfirmPassword),
+                        ),
+                      ),
                     ),
                     const SizedBox(height: 16),
                     if (_error != null)
@@ -111,6 +160,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             : const Text('CREATE ACCOUNT'),
                       ),
                     ),
+                    const SizedBox(height: 24),
                   ],
                 ),
               ),
