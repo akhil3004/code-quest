@@ -1,0 +1,55 @@
+[
+  {
+    "id": "c_scanf_misuse_2",
+    "title": "scanf Address Bug",
+    "difficulty": 2,
+    "language": "c",
+    "problem": "The scanf call is missing the address-of operator for the integer variable. Fix it so the program reads an integer and prints it doubled. For input 5, output should be 10.",
+    "starterCode": "#include <stdio.h>\nint main(){ int n; scanf(\"%d\", n); printf(\"%d\\n\", n * 2); return 0; }",
+    "testCases": [
+      { "input": "5", "output": "10\n" },
+      { "input": "7", "output": "14\n" }
+    ],
+    "hidden": false,
+    "xp": 50
+  },
+  {
+    "id": "c_uninitialized_var_2",
+    "title": "Uninitialized Variable Sum",
+    "difficulty": 2,
+    "language": "c",
+    "problem": "The variable `sum` is never initialized before use, causing undefined behavior. Fix it so it correctly prints the sum 1+2+3+4+5 = 15.",
+    "starterCode": "#include <stdio.h>\nint main(){ int sum; for(int i = 1; i <= 5; i++){ sum += i; } printf(\"%d\\n\", sum); return 0; }",
+    "testCases": [
+      { "input": "", "output": "15\n" }
+    ],
+    "hidden": false,
+    "xp": 50
+  },
+  {
+    "id": "c_off_by_one_loop_2",
+    "title": "Off-by-One in While Loop",
+    "difficulty": 2,
+    "language": "c",
+    "problem": "The while loop should print numbers from 1 to 5, but the condition is wrong so it prints 1 to 4 only. Fix the condition.",
+    "starterCode": "#include <stdio.h>\nint main(){ int i = 1; while(i < 5){ printf(\"%d\\n\", i); i++; } return 0; }",
+    "testCases": [
+      { "input": "", "output": "1\n2\n3\n4\n5\n" }
+    ],
+    "hidden": false,
+    "xp": 40
+  },
+  {
+    "id": "c_string_no_null_2",
+    "title": "String Buffer Too Small",
+    "difficulty": 3,
+    "language": "c",
+    "problem": "The char array is too small to hold the string plus the null terminator, causing overflow. Fix the array size so the program safely prints Hello.",
+    "starterCode": "#include <stdio.h>\n#include <string.h>\nint main(){ char s[5]; strcpy(s, \"Hello\"); printf(\"%s\\n\", s); return 0; }",
+    "testCases": [
+      { "input": "", "output": "Hello\n" }
+    ],
+    "hidden": false,
+    "xp": 60
+  }
+]

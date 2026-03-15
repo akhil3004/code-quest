@@ -13,7 +13,7 @@ class InterviewPdfsScreen extends StatelessWidget {
   const InterviewPdfsScreen({super.key});
 
   List<String> get pdfAssets => const [
-        'assets/interview_pdfs/sample.pdf',
+        'assets/interview_pdfs/Quantitative_Aptitude.pdf',
       ];
 
   Future<bool> assetExists(String path) async {

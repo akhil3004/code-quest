@@ -4,8 +4,8 @@
     "title": "Pointer Misuse",
     "difficulty": 2,
     "language": "c",
-    "problem": "Fix pointer dereference to print value 42.",
-    "starterCode": "#include <stdio.h>\nint main(){ int x=42; int *p; printf(\"%d\\n\", *p); return 0; }",
+    "problem": "Fix the pointer dereference so the program prints the value 42. The pointer is declared but never assigned.",
+    "starterCode": "#include <stdio.h>\nint main(){ int x = 42; int *p; printf(\"%d\\n\", *p); return 0; }",
     "testCases": [
       { "input": "", "output": "42\n" }
     ],
@@ -17,8 +17,8 @@
     "title": "Array Index Overflow",
     "difficulty": 2,
     "language": "c",
-    "problem": "Avoid writing beyond array bounds and print last element.",
-    "starterCode": "#include <stdio.h>\nint main(){ int a[3]={1,2,3}; a[3]=4; printf(\"%d\\n\", a[2]); return 0; }",
+    "problem": "The code writes beyond array bounds and reads the wrong element. Fix it so it safely prints the last element (value 3) of the array.",
+    "starterCode": "#include <stdio.h>\nint main(){ int a[3] = {1, 2, 3}; a[3] = 4; printf(\"%d\\n\", a[3]); return 0; }",
     "testCases": [
       { "input": "", "output": "3\n" }
     ],
@@ -27,13 +27,13 @@
   },
   {
     "id": "c_missing_return_1",
-    "title": "Missing Return in main",
+    "title": "Wrong Format Specifier",
     "difficulty": 1,
     "language": "c",
-    "problem": "Ensure main returns int and print OK.",
-    "starterCode": "#include <stdio.h>\nint main(){ printf(\"OK\\n\"); }",
+    "problem": "The program uses the wrong format specifier. Fix printf so it correctly prints the integer 100.",
+    "starterCode": "#include <stdio.h>\nint main(){ int x = 100; printf(\"%s\\n\", x); return 0; }",
     "testCases": [
-      { "input": "", "output": "OK\n" }
+      { "input": "", "output": "100\n" }
     ],
     "hidden": false,
     "xp": 30

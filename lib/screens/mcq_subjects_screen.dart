@@ -30,8 +30,9 @@ class McqSubjectsScreen extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: GridView.count(
               crossAxisCount: 2,
-              mainAxisSpacing: 32,
-              crossAxisSpacing: 32,
+              childAspectRatio: 1.0,
+              mainAxisSpacing: 24,
+              crossAxisSpacing: 24,
               children: subjects
                   .map(
                     (s) => GalaxyCard(

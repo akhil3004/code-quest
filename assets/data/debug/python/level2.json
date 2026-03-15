@@ -1,0 +1,67 @@
+[
+  {
+    "id": "py_str_reverse_bug_2",
+    "title": "String Reversal Bug",
+    "difficulty": 2,
+    "language": "python",
+    "problem": "The function is supposed to reverse a string and return it, but it always returns the original string unchanged. Find and fix the bug.",
+    "starterCode": "def reverse_string(s):\n    result = s\n    for i in range(len(s)):\n        result = result + s[i]\n    return result\n\nprint(reverse_string(\"hello\"))",
+    "testCases": [
+      { "input": "", "output": "olleh\n" }
+    ],
+    "hidden": false,
+    "xp": 50
+  },
+  {
+    "id": "py_recursion_missing_base_2",
+    "title": "Missing Recursion Base Case",
+    "difficulty": 2,
+    "language": "python",
+    "problem": "The factorial function has no base case and will recurse forever. Fix it so it correctly returns the factorial. It should print 120.",
+    "starterCode": "def factorial(n):\n    return n * factorial(n - 1)\n\nprint(factorial(5))",
+    "testCases": [
+      { "input": "", "output": "120\n" }
+    ],
+    "hidden": false,
+    "xp": 50
+  },
+  {
+    "id": "py_dict_key_error_2",
+    "title": "Dictionary Key Error",
+    "difficulty": 2,
+    "language": "python",
+    "problem": "The code crashes with a KeyError when the key does not exist. Fix it so missing keys return 0 instead. The output should be 0.",
+    "starterCode": "scores = {'alice': 90, 'bob': 85}\nprint(scores['charlie'])",
+    "testCases": [
+      { "input": "", "output": "0\n" }
+    ],
+    "hidden": false,
+    "xp": 50
+  },
+  {
+    "id": "py_type_error_concat_2",
+    "title": "Type Error: String + Integer",
+    "difficulty": 2,
+    "language": "python",
+    "problem": "The code crashes with a TypeError because you cannot concatenate a string with an integer directly. Fix it so it prints: Score: 42",
+    "starterCode": "score = 42\nprint(\"Score: \" + score)",
+    "testCases": [
+      { "input": "", "output": "Score: 42\n" }
+    ],
+    "hidden": false,
+    "xp": 40
+  },
+  {
+    "id": "py_wrong_max_logic_2",
+    "title": "Wrong Maximum Logic",
+    "difficulty": 2,
+    "language": "python",
+    "problem": "The function is supposed to return the largest number in a list, but the initial value of `max_val` is wrong. Fix it so it correctly returns the maximum. It should print 97.",
+    "starterCode": "def find_max(nums):\n    max_val = 0\n    for n in nums:\n        if n > max_val:\n            max_val = n\n    return max_val\n\nprint(find_max([-5, -20, -3]))",
+    "testCases": [
+      { "input": "", "output": "-3\n" }
+    ],
+    "hidden": false,
+    "xp": 60
+  }
+]
