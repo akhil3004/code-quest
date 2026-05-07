@@ -5,7 +5,7 @@
     "difficulty": 2,
     "language": "c",
     "problem": "The scanf call is missing the address-of operator for the integer variable. Fix it so the program reads an integer and prints it doubled. For input 5, output should be 10.",
-    "starterCode": "#include <stdio.h>\nint main(){ int n; scanf(\"%d\", n); printf(\"%d\\n\", n * 2); return 0; }",
+    "starterCode": "#include <stdio.h>\nint main(){\n int n;\n scanf(\"%d\", n);\n printf(\"%d\\n\", n * 2);\n return 0; }",
     "testCases": [
       { "input": "5", "output": "10\n" },
       { "input": "7", "output": "14\n" }
@@ -19,7 +19,7 @@
     "difficulty": 2,
     "language": "c",
     "problem": "The variable `sum` is never initialized before use, causing undefined behavior. Fix it so it correctly prints the sum 1+2+3+4+5 = 15.",
-    "starterCode": "#include <stdio.h>\nint main(){ int sum; for(int i = 1; i <= 5; i++){ sum += i; } printf(\"%d\\n\", sum); return 0; }",
+    "starterCode": "#include <stdio.h>\nint main(){\n int sum;\n for(int i = 1; i <= 5; i++){\n sum += i;\n } printf(\"%d\\n\", sum);\n return 0; }",
     "testCases": [
       { "input": "", "output": "15\n" }
     ],
@@ -32,7 +32,7 @@
     "difficulty": 2,
     "language": "c",
     "problem": "The while loop should print numbers from 1 to 5, but the condition is wrong so it prints 1 to 4 only. Fix the condition.",
-    "starterCode": "#include <stdio.h>\nint main(){ int i = 1; while(i < 5){ printf(\"%d\\n\", i); i++; } return 0; }",
+    "starterCode": "#include <stdio.h>\nint main(){\n int i = 1;\n while(i < 5){\n printf(\"%d\\n\", i);\n i++; \n} \nreturn 0; }",
     "testCases": [
       { "input": "", "output": "1\n2\n3\n4\n5\n" }
     ],
@@ -45,7 +45,7 @@
     "difficulty": 3,
     "language": "c",
     "problem": "The char array is too small to hold the string plus the null terminator, causing overflow. Fix the array size so the program safely prints Hello.",
-    "starterCode": "#include <stdio.h>\n#include <string.h>\nint main(){ char s[5]; strcpy(s, \"Hello\"); printf(\"%s\\n\", s); return 0; }",
+    "starterCode": "#include <stdio.h>\n#include <string.h>\nint main(){\n char s[5];\n strcpy(s, \"Hello\");\n printf(\"%s\\n\", s);\n return 0; }",
     "testCases": [
       { "input": "", "output": "Hello\n" }
     ],

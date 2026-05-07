@@ -1,15 +1,12 @@
-{
-  "level": 10,
-  "questions": [
-    {"id": "cd_l10_q1", "question": "Intermediate representation closer to machine code is", "options": ["AST", "Three address code", "Parse tree", "Symbol table"], "correctIndex": 1},
-    {"id": "cd_l10_q2", "question": "Tail recursion can be optimized into", "options": ["Loop", "Function call", "Inline code", "Dead code"], "correctIndex": 0},
-    {"id": "cd_l10_q3", "question": "Which optimization may increase code size?", "options": ["Dead code elimination", "Loop unrolling", "Constant folding", "Copy propagation"], "correctIndex": 1},
-    {"id": "cd_l10_q4", "question": "Inline expansion replaces", "options": ["Loop with function", "Function call with body", "Variables with constants", "Expressions with values"], "correctIndex": 1},
-    {"id": "cd_l10_q5", "question": "Which analysis ensures variable initialized before use?", "options": ["Liveness", "Def-use chain", "Reaching definitions", "Syntax analysis"], "correctIndex": 2},
-    {"id": "cd_l10_q6", "question": "Dominator in flow graph is used in", "options": ["Parsing", "Optimization", "Lexical analysis", "Code generation"], "correctIndex": 1},
-    {"id": "cd_l10_q7", "question": "Natural loop is identified using", "options": ["Back edge", "Forward edge", "Cross edge", "Tree edge"], "correctIndex": 0},
-    {"id": "cd_l10_q8", "question": "Register spilling happens when", "options": ["Registers are free", "Registers are insufficient", "Memory is full", "CPU overheats"], "correctIndex": 1},
-    {"id": "cd_l10_q9", "question": "Which is machine-independent optimization?", "options": ["Register allocation", "Peephole optimization", "Constant propagation", "Instruction scheduling"], "correctIndex": 2},
-    {"id": "cd_l10_q10", "question": "The main goal of a compiler is to", "options": ["Transform source code to machine code", "Optimize machine code", "Debug source code", "None of the above"], "correctIndex": 0}
-  ]
-}
+[
+  {"id": "cd_l10_q1", "question": "Intermediate representation closer to machine code is", "options": ["AST", "Three address code", "Parse tree", "Symbol table"], "correctIndex": 1},
+  {"id": "cd_l10_q2", "question": "Tail recursion can be optimized into", "options": ["Loop", "Function call", "Inline code", "Dead code"], "correctIndex": 0},
+  {"id": "cd_l10_q3", "question": "Which optimization may increase code size?", "options": ["Dead code elimination", "Loop unrolling", "Constant folding", "Copy propagation"], "correctIndex": 1},
+  {"id": "cd_l10_q4", "question": "Inline expansion replaces", "options": ["Loop with function", "Function call with body", "Variables with constants", "Expressions with values"], "correctIndex": 1},
+  {"id": "cd_l10_q5", "question": "Which analysis ensures variable initialized before use?", "options": ["Liveness", "Def-use chain", "Reaching definitions", "Syntax analysis"], "correctIndex": 2},
+  {"id": "cd_l10_q6", "question": "Dominator in flow graph is used in", "options": ["Parsing", "Optimization", "Lexical analysis", "Code generation"], "correctIndex": 1},
+  {"id": "cd_l10_q7", "question": "Natural loop is identified using", "options": ["Back edge", "Forward edge", "Cross edge", "Tree edge"], "correctIndex": 0},
+  {"id": "cd_l10_q8", "question": "Register spilling happens when", "options": ["Registers are free", "Registers are insufficient", "Memory is full", "CPU overheats"], "correctIndex": 1},
+  {"id": "cd_l10_q9", "question": "Which is machine-independent optimization?", "options": ["Register allocation", "Peephole optimization", "Constant propagation", "Instruction scheduling"], "correctIndex": 2},
+  {"id": "cd_l10_q10", "question": "The main goal of a compiler is to", "options": ["Transform source code to machine code", "Optimize machine code", "Debug source code", "None of the above"], "correctIndex": 0}
+]

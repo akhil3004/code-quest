@@ -1,15 +1,12 @@
-{
-  "level": 2,
-  "questions": [
-    {"id": "cd_l2_q1", "question": "Symbol table is mainly used by", "options": ["Lexical analyzer", "Syntax analyzer", "Semantic analyzer", "All phases"], "correctIndex": 3},
-    {"id": "cd_l2_q2", "question": "Which phase produces intermediate code?", "options": ["Lexical", "Syntax", "Intermediate code generation", "Code optimization"], "correctIndex": 2},
-    {"id": "cd_l2_q3", "question": "Which phase improves code efficiency?", "options": ["Lexical analysis", "Parsing", "Code optimization", "Code generation"], "correctIndex": 2},
-    {"id": "cd_l2_q4", "question": "Final phase of compiler is", "options": ["Optimization", "Code generation", "Semantic analysis", "Parsing"], "correctIndex": 1},
-    {"id": "cd_l2_q5", "question": "Which tool automatically generates lexical analyzer?", "options": ["YACC", "LEX", "GCC", "BISON"], "correctIndex": 1},
-    {"id": "cd_l2_q6", "question": "Which tool is used to generate parsers?", "options": ["LEX", "YACC", "GCC", "JVM"], "correctIndex": 1},
-    {"id": "cd_l2_q7", "question": "Grammar of programming language is defined using", "options": ["Regular expressions", "Context-free grammar", "Assembly code", "Machine code"], "correctIndex": 1},
-    {"id": "cd_l2_q8", "question": "A compiler that runs on one machine and produces code for another is", "options": ["Interpreter", "Cross compiler", "Assembler", "Loader"], "correctIndex": 1},
-    {"id": "cd_l2_q9", "question": "Which of the following is not a compiler phase?", "options": ["Lexical analysis", "Syntax analysis", "Linking", "Code optimization"], "correctIndex": 2},
-    {"id": "cd_l2_q10", "question": "Which data structure stores identifiers?", "options": ["Stack", "Queue", "Symbol table", "Tree"], "correctIndex": 2}
-  ]
-}
+[
+  {"id": "cd_l2_q1", "question": "Symbol table is mainly used by", "options": ["Lexical analyzer", "Syntax analyzer", "Semantic analyzer", "All phases"], "correctIndex": 3},
+  {"id": "cd_l2_q2", "question": "Which phase produces intermediate code?", "options": ["Lexical", "Syntax", "Intermediate code generation", "Code optimization"], "correctIndex": 2},
+  {"id": "cd_l2_q3", "question": "Which phase improves code efficiency?", "options": ["Lexical analysis", "Parsing", "Code optimization", "Code generation"], "correctIndex": 2},
+  {"id": "cd_l2_q4", "question": "Final phase of compiler is", "options": ["Optimization", "Code generation", "Semantic analysis", "Parsing"], "correctIndex": 1},
+  {"id": "cd_l2_q5", "question": "Which tool automatically generates lexical analyzer?", "options": ["YACC", "LEX", "GCC", "BISON"], "correctIndex": 1},
+  {"id": "cd_l2_q6", "question": "Which tool is used to generate parsers?", "options": ["LEX", "YACC", "GCC", "JVM"], "correctIndex": 1},
+  {"id": "cd_l2_q7", "question": "Grammar of programming language is defined using", "options": ["Regular expressions", "Context-free grammar", "Assembly code", "Machine code"], "correctIndex": 1},
+  {"id": "cd_l2_q8", "question": "A compiler that runs on one machine and produces code for another is", "options": ["Interpreter", "Cross compiler", "Assembler", "Loader"], "correctIndex": 1},
+  {"id": "cd_l2_q9", "question": "Which of the following is not a compiler phase?", "options": ["Lexical analysis", "Syntax analysis", "Linking", "Code optimization"], "correctIndex": 2},
+  {"id": "cd_l2_q10", "question": "Which data structure stores identifiers?", "options": ["Stack", "Queue", "Symbol table", "Tree"], "correctIndex": 2}
+]

@@ -1,15 +1,12 @@
-{
-  "level": 7,
-  "questions": [
-    {"id": "cd_l7_q1", "question": "An LR parser reads input", "options": ["Left to right, rightmost derivation", "Right to left", "Left to right, leftmost derivation", "None"], "correctIndex": 0},
-    {"id": "cd_l7_q2", "question": "SLR stands for", "options": ["Simple LR", "Syntax LR", "Small LR", "Single LR"], "correctIndex": 0},
-    {"id": "cd_l7_q3", "question": "LALR parser is", "options": ["More powerful than LR", "Less powerful than SLR", "Similar to LR with fewer states", "Same as LL"], "correctIndex": 2},
-    {"id": "cd_l7_q4", "question": "Which grammar is parsed by LL(1)?", "options": ["Left recursive", "Ambiguous", "Non-left recursive & left factored", "Regular grammar"], "correctIndex": 2},
-    {"id": "cd_l7_q5", "question": "Bootstrapping in compiler means", "options": ["Writing compiler in machine code", "Writing compiler in its own language", "Removing errors", "Code optimization"], "correctIndex": 1},
-    {"id": "cd_l7_q6", "question": "A linker combines", "options": ["Source files", "Object files", "Tokens", "Parse trees"], "correctIndex": 1},
-    {"id": "cd_l7_q7", "question": "Loader loads program into", "options": ["Disk", "Memory", "CPU", "Cache"], "correctIndex": 1},
-    {"id": "cd_l7_q8", "question": "Which phase uses control flow graph?", "options": ["Lexical", "Optimization", "Parsing", "Semantic"], "correctIndex": 1},
-    {"id": "cd_l7_q9", "question": "Three address code contains at most", "options": ["One address", "Two addresses", "Three addresses", "Four addresses"], "correctIndex": 2},
-    {"id": "cd_l7_q10", "question": "Intermediate code helps in", "options": ["Portability", "Reducing memory", "Faster execution", "Syntax checking"], "correctIndex": 0}
-  ]
-}
+[
+  {"id": "cd_l7_q1", "question": "An LR parser reads input", "options": ["Left to right, rightmost derivation", "Right to left", "Left to right, leftmost derivation", "None"], "correctIndex": 0},
+  {"id": "cd_l7_q2", "question": "SLR stands for", "options": ["Simple LR", "Syntax LR", "Small LR", "Single LR"], "correctIndex": 0},
+  {"id": "cd_l7_q3", "question": "LALR parser is", "options": ["More powerful than LR", "Less powerful than SLR", "Similar to LR with fewer states", "Same as LL"], "correctIndex": 2},
+  {"id": "cd_l7_q4", "question": "Which grammar is parsed by LL(1)?", "options": ["Left recursive", "Ambiguous", "Non-left recursive & left factored", "Regular grammar"], "correctIndex": 2},
+  {"id": "cd_l7_q5", "question": "Bootstrapping in compiler means", "options": ["Writing compiler in machine code", "Writing compiler in its own language", "Removing errors", "Code optimization"], "correctIndex": 1},
+  {"id": "cd_l7_q6", "question": "A linker combines", "options": ["Source files", "Object files", "Tokens", "Parse trees"], "correctIndex": 1},
+  {"id": "cd_l7_q7", "question": "Loader loads program into", "options": ["Disk", "Memory", "CPU", "Cache"], "correctIndex": 1},
+  {"id": "cd_l7_q8", "question": "Which phase uses control flow graph?", "options": ["Lexical", "Optimization", "Parsing", "Semantic"], "correctIndex": 1},
+  {"id": "cd_l7_q9", "question": "Three address code contains at most", "options": ["One address", "Two addresses", "Three addresses", "Four addresses"], "correctIndex": 2},
+  {"id": "cd_l7_q10", "question": "Intermediate code helps in", "options": ["Portability", "Reducing memory", "Faster execution", "Syntax checking"], "correctIndex": 0}
+]

@@ -18,6 +18,50 @@ const genAI = new GoogleGenAI({
 
 const requestLog = {};
 
+
+const MODELS = [
+  "gemini-2.5-flash",
+  "gemini-2.0-flash",
+  "gemini-2.0-flash-lite",
+];
+
+
+async function generateWithRetry(contents, config, maxRetries = 2) {
+  for (const model of MODELS) {
+    for (let attempt = 0; attempt <= maxRetries; attempt++) {
+      try {
+        console.log(`Trying model: ${model} (attempt ${attempt + 1})`);
+        const result = await genAI.models.generateContent({
+          model,
+          contents,
+          config,
+        });
+        return result;
+      } catch (err) {
+       
+        if (err.status === 429) {
+          console.log(`Model ${model} quota exhausted (429), trying next model...`);
+          break;
+        }
+      
+        const isRetryable = err.status === 503 || err.status === 500;
+        if (isRetryable && attempt < maxRetries) {
+          const delay = 1000 * (attempt + 1);
+          console.log(`Model ${model} returned ${err.status}, retrying in ${delay}ms...`);
+          await new Promise(r => setTimeout(r, delay));
+          continue;
+        }
+        if (isRetryable) {
+          console.log(`Model ${model} exhausted retries, trying next model...`);
+          break;
+        }
+        throw err;
+      }
+    }
+  }
+  throw new Error("All models exhausted");
+}
+
 app.post("/chat", async (req, res) => {
   const { message, screen = "general", userId = "anonymous" } = req.body;
 
@@ -29,7 +73,7 @@ app.post("/chat", async (req, res) => {
     return res.status(400).json({ error: "Message too long" });
   }
 
-  // Rate limit (30 per minute per user)
+  
   const now = Date.now();
   const windowMs = 60 * 1000;
   const limit = 30;
@@ -53,23 +97,21 @@ Rules:
 - Context (current screen): ${screen}`;
 
   try {
-    const result = await genAI.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: [
+    const result = await generateWithRetry(
+      [
         {
           role: "user",
           parts: [{ text: message }],
         },
       ],
-      config: {
+      {
         systemInstruction: systemPrompt,
         maxOutputTokens: 1024,
         temperature: 0.7,
-      },
-    });
+      }
+    );
 
     const reply = result.text;
-
     res.json({ reply });
 
   } catch (error) {
@@ -87,8 +129,14 @@ Rules:
       });
     }
 
+    if (error.status === 503 || error.message === "All models exhausted") {
+      return res.status(503).json({
+        error: "AI service is temporarily busy. Please try again in a few seconds."
+      });
+    }
+
     res.status(500).json({
-      error: "AI generation failed"
+      error: "AI generation failed. Please try again."
     });
   }
 

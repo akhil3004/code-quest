@@ -1,15 +1,12 @@
-{
-  "level": 6,
-  "questions": [
-    {"id": "cd_l6_q1", "question": "Constant folding is done during", "options": ["Lexical analysis", "Optimization", "Parsing", "Code generation"], "correctIndex": 1},
-    {"id": "cd_l6_q2", "question": "Register allocation is part of", "options": ["Front end", "Back end", "Syntax analysis", "Lexical analysis"], "correctIndex": 1},
-    {"id": "cd_l6_q3", "question": "Peephole optimization works on", "options": ["Small code segments", "Entire program", "Parse tree", "Symbol table"], "correctIndex": 0},
-    {"id": "cd_l6_q4", "question": "A basic block has", "options": ["Multiple entry, multiple exit", "Single entry, single exit", "Single entry, multiple exit", "Multiple entry, single exit"], "correctIndex": 1},
-    {"id": "cd_l6_q5", "question": "Flow graph nodes represent", "options": ["Statements", "Basic blocks", "Tokens", "Parse tree"], "correctIndex": 1},
-    {"id": "cd_l6_q6", "question": "Liveness analysis helps in", "options": ["Parsing", "Register allocation", "Syntax checking", "Code generation"], "correctIndex": 1},
-    {"id": "cd_l6_q7", "question": "Syntax-directed translation uses", "options": ["Regular grammar", "Semantic rules", "Assembly code", "Machine code"], "correctIndex": 1},
-    {"id": "cd_l6_q8", "question": "Postfix notation is useful for", "options": ["Parsing", "Code generation", "Optimization", "Lexical analysis"], "correctIndex": 1},
-    {"id": "cd_l6_q9", "question": "Backpatching is used in", "options": ["Boolean expression code generation", "Lexical analysis", "Parsing", "Optimization"], "correctIndex": 0},
-    {"id": "cd_l6_q10", "question": "Which parser uses stack and input buffer?", "options": ["Recursive descent", "Predictive parser", "Shift-reduce parser", "LL parser"], "correctIndex": 2}
-  ]
-}
+[
+  {"id": "cd_l6_q1", "question": "Constant folding is done during", "options": ["Lexical analysis", "Optimization", "Parsing", "Code generation"], "correctIndex": 1},
+  {"id": "cd_l6_q2", "question": "Register allocation is part of", "options": ["Front end", "Back end", "Syntax analysis", "Lexical analysis"], "correctIndex": 1},
+  {"id": "cd_l6_q3", "question": "Peephole optimization works on", "options": ["Small code segments", "Entire program", "Parse tree", "Symbol table"], "correctIndex": 0},
+  {"id": "cd_l6_q4", "question": "A basic block has", "options": ["Multiple entry, multiple exit", "Single entry, single exit", "Single entry, multiple exit", "Multiple entry, single exit"], "correctIndex": 1},
+  {"id": "cd_l6_q5", "question": "Flow graph nodes represent", "options": ["Statements", "Basic blocks", "Tokens", "Parse tree"], "correctIndex": 1},
+  {"id": "cd_l6_q6", "question": "Liveness analysis helps in", "options": ["Parsing", "Register allocation", "Syntax checking", "Code generation"], "correctIndex": 1},
+  {"id": "cd_l6_q7", "question": "Syntax-directed translation uses", "options": ["Regular grammar", "Semantic rules", "Assembly code", "Machine code"], "correctIndex": 1},
+  {"id": "cd_l6_q8", "question": "Postfix notation is useful for", "options": ["Parsing", "Code generation", "Optimization", "Lexical analysis"], "correctIndex": 1},
+  {"id": "cd_l6_q9", "question": "Backpatching is used in", "options": ["Boolean expression code generation", "Lexical analysis", "Parsing", "Optimization"], "correctIndex": 0},
+  {"id": "cd_l6_q10", "question": "Which parser uses stack and input buffer?", "options": ["Recursive descent", "Predictive parser", "Shift-reduce parser", "LL parser"], "correctIndex": 2}
+]

@@ -1,15 +1,12 @@
-{
-  "level": 8,
-  "questions": [
-    {"id": "cd_l8_q1", "question": "An L-attributed definition can be evaluated in", "options": ["Bottom-up only", "Top-down only", "Left-to-right depth-first order", "Any order"], "correctIndex": 2},
-    {"id": "cd_l8_q2", "question": "S-attributed definitions use", "options": ["Inherited attributes", "Synthesized attributes", "Both", "None"], "correctIndex": 1},
-    {"id": "cd_l8_q3", "question": "Which parsing technique detects error earliest?", "options": ["LR", "LL", "Operator precedence", "Shift-reduce"], "correctIndex": 1},
-    {"id": "cd_l8_q4", "question": "Canonical LR parser has", "options": ["Most states", "Fewest states", "Same as SLR", "Same as LALR"], "correctIndex": 0},
-    {"id": "cd_l8_q5", "question": "Reduce-reduce conflict occurs in", "options": ["LL parser", "LR parser", "DFA", "NFA"], "correctIndex": 1},
-    {"id": "cd_l8_q6", "question": "Shift-reduce conflict occurs when", "options": ["Parser can shift or reduce", "Grammar is regular", "Input is empty", "Tokens are missing"], "correctIndex": 0},
-    {"id": "cd_l8_q7", "question": "SSA form means", "options": ["Single Syntax Analysis", "Static Single Assignment", "Simple Syntax Assignment", "Static Syntax Analysis"], "correctIndex": 1},
-    {"id": "cd_l8_q8", "question": "Loop invariant code motion is", "options": ["Syntax analysis", "Optimization", "Code generation", "Parsing"], "correctIndex": 1},
-    {"id": "cd_l8_q9", "question": "Strength reduction replaces", "options": ["Multiplication with addition", "Addition with subtraction", "Division with multiplication", "Loops with recursion"], "correctIndex": 0},
-    {"id": "cd_l8_q10", "question": "Data flow analysis is used in", "options": ["Lexical analysis", "Optimization", "Parsing", "Code generation"], "correctIndex": 1}
-  ]
-}
+[
+  {"id": "cd_l8_q1", "question": "An L-attributed definition can be evaluated in", "options": ["Bottom-up only", "Top-down only", "Left-to-right depth-first order", "Any order"], "correctIndex": 2},
+  {"id": "cd_l8_q2", "question": "S-attributed definitions use", "options": ["Inherited attributes", "Synthesized attributes", "Both", "None"], "correctIndex": 1},
+  {"id": "cd_l8_q3", "question": "Which parsing technique detects error earliest?", "options": ["LR", "LL", "Operator precedence", "Shift-reduce"], "correctIndex": 1},
+  {"id": "cd_l8_q4", "question": "Canonical LR parser has", "options": ["Most states", "Fewest states", "Same as SLR", "Same as LALR"], "correctIndex": 0},
+  {"id": "cd_l8_q5", "question": "Reduce-reduce conflict occurs in", "options": ["LL parser", "LR parser", "DFA", "NFA"], "correctIndex": 1},
+  {"id": "cd_l8_q6", "question": "Shift-reduce conflict occurs when", "options": ["Parser can shift or reduce", "Grammar is regular", "Input is empty", "Tokens are missing"], "correctIndex": 0},
+  {"id": "cd_l8_q7", "question": "SSA form means", "options": ["Single Syntax Analysis", "Static Single Assignment", "Simple Syntax Assignment", "Static Syntax Analysis"], "correctIndex": 1},
+  {"id": "cd_l8_q8", "question": "Loop invariant code motion is", "options": ["Syntax analysis", "Optimization", "Code generation", "Parsing"], "correctIndex": 1},
+  {"id": "cd_l8_q9", "question": "Strength reduction replaces", "options": ["Multiplication with addition", "Addition with subtraction", "Division with multiplication", "Loops with recursion"], "correctIndex": 0},
+  {"id": "cd_l8_q10", "question": "Data flow analysis is used in", "options": ["Lexical analysis", "Optimization", "Parsing", "Code generation"], "correctIndex": 1}
+]
